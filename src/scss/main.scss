@@ -1,0 +1,11 @@
+
+@import 'compass';
+@import './src/scss/others/bootstrap.scss';
+@import './src/scss/others/_variables.scss';
+
+
+$bg:rgb(255, 255, 255);
+
+body {
+    background-color: $bg; 
+}
