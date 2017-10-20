@@ -78,8 +78,8 @@ var components_path = [
 ];
 
 
-var appJS = [
-    'src/js/app.js'
+var userJS = [
+    config.jsPath + 'app.js'
 ];
 
 
@@ -120,8 +120,7 @@ gulp.task('copy', function () {
     ];
 
     var assetsFont = [
-        './src/fonts/*.*',
-        (!isProduction == true) ? './src/fonts/roboto/*.*' : '!./src/fonts/roboto/*.*',
+        './src/fonts/*.*', !isProduction ? './src/fonts/roboto/*.*' : '!./src/fonts/roboto/*.*',
     ];
   
 
@@ -237,19 +236,24 @@ gulp.task('css', function () {
 
 
 // User javascript Minify and Concatinate
-gulp.task('js'/* ['remCopy']*/, function () {
+gulp.task('js', function () {
     
         var uglifyoption = {
-            beautify: true,
+            parse: {},
+            compress: true,
             mangle: true,
-            semicolons: true,
-            ie_proof: true,
-            space_colon: true,
+            output: {},
+            sourceMap: {},
+            nameCache: null, // or specify a name cache object
+            toplevel: true,
+            ie8: true,
+            warnings: true,
+        
         };
 
         // App JavaScript
        function appjs() {
-            return gulp.src(appJS)
+            return gulp.src(userJS)
                 .pipe($.sourcemaps.init())
                 .pipe($.concat('app.js'))
                 .pipe($.if(isProduction, $.uglify().on('error', function (e) {
@@ -258,10 +262,11 @@ gulp.task('js'/* ['remCopy']*/, function () {
                 .pipe($.notify({
                     title: 'JavaScript',
                     subtitle: 'Success',
-                    message: 'Development App.js successfully compiled!',
+                    message: 'App.js successfully compiled!',
                     icon: path.join(__dirname, config.imgPath + "js-noti.png"),
                 }))
                 .pipe($.if(!isProduction, $.sourcemaps.write('./maps')))
+                .pipe( $.if(isProduction, $.rename({suffix: '.min'})))
                 .pipe(gulp.dest('./build/js/'));
         }
     
@@ -274,10 +279,11 @@ gulp.task('js'/* ['remCopy']*/, function () {
                 .pipe($.notify({
                     title: 'JavaScript',
                     subtitle: 'Success',
-                    message: 'Production Assets.js successfully compiled!',
+                    message: 'Assets.js successfully compiled!',
                     icon: path.join(__dirname, config.imgPath + "js-noti.png"),
                 }))
                 .pipe($.header(fs.readFileSync(config.binPath + 'pack.txt', 'utf8'), {pkg: pkg}))
+                .pipe( $.if(isProduction, $.rename({suffix: '.min'})))
                 .pipe(gulp.dest('./build/js/'));
         }
     
@@ -286,6 +292,7 @@ gulp.task('js'/* ['remCopy']*/, function () {
                 .pipe($.sourcemaps.init())
                 .pipe($.concat('assets.js'))
                 .pipe($.sourcemaps.write())
+                .pipe( $.if(isProduction, $.rename({suffix: '.min'})))
                 .pipe(gulp.dest('./build/js/'));
         }
     
