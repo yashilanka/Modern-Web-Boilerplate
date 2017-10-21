@@ -7,3 +7,4 @@ build
 .sass-cache
 .idea/code-comments.xml
 .idea/runConfigurations/
+/src/scss/others/_fonts.scss

@@ -12,6 +12,7 @@ var config = {
     src_zip_name: 'new-website',
     backup_folder_name: 'new-website',
     build_zip_name: 'new-website',
+    font_file: require ('./src/fonts/fonts.json')
 };
 
 
@@ -38,7 +39,7 @@ var     $               =   require('gulp-load-plugins')(),
         cleanCSS        =   require('gulp-clean-css');
 
 
-
+module.exports = gulp;
 // Check for --production flag
 var isProduction = !!(argv.production);
 
@@ -92,7 +93,7 @@ var jq_version = pkg.dependencies.jquery.replace(/[^\d.-]/g, '');
 
 // Cleans the build directory
 gulp.task('clean', function () {
-    return del('./build');
+    return del(['./build', './src/scss/others/_fonts.scss']);
 });
 
 
@@ -120,7 +121,9 @@ gulp.task('copy', function () {
     ];
 
     var assetsFont = [
-        './src/fonts/*.*', !isProduction ? './src/fonts/roboto/*.*' : '!./src/fonts/roboto/*.*',
+        './src/fonts/*.*', 
+        !isProduction ? './src/fonts/roboto/*.*' : '!./src/fonts/roboto/*.*',
+        '!./src/fonts/*{.tpl,.json}'
     ];
   
 
@@ -179,7 +182,7 @@ gulp.task('pages:reset', function (cb) {
 
 
 // Main App SCSS
-gulp.task('css', function () {
+gulp.task('css', ['fonts'], function () {
     gulp.src(config.sassPath + '/' + config.css_scssName +'.scss')
         .pipe($.if(!isProduction, $.changed('./build/css/')))
         .pipe($.sourcemaps.init())
@@ -232,6 +235,13 @@ gulp.task('css', function () {
         .pipe(gulp.dest('./build/css/'))
         .pipe(browser.stream());
 
+});
+
+gulp.task('fonts', function () {
+  gulp.src(config.fontsPath + 'fonts.tpl')
+    .pipe($.consolidate('underscore', config.font_file, { useContents: true }))
+    .pipe($.rename({prefix: '_', extname: '.scss'}))
+      .pipe(gulp.dest(config.sassPath + 'others/'));
 });
 
 
@@ -362,7 +372,7 @@ gulp.task('server', ['build'], function () {
         open: true,
         notify: true,
         // browser: ["google chrome", "firefox"],
-        reloadDelay: 2000,
+        // reloadDelay: 2000,
         // reloadDebounce: 500,
         // online: true,
         reloadOnRestart: true,
