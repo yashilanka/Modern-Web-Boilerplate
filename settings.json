@@ -1,4 +1,17 @@
 {
+    "sitename":"Your New Website",
+    "cssName": "style",
+    "jsName":"userjs",
+    "sassPath": "src/scss/",
+    "sassFiles": "*.scss",
+    "jsPath": "src/js/",
+    "jsFiles": "**/*.js",
+    "imgPath": "src/img/",
+    "webpagePath" : "src/web_pages/",
+    "othersPath" : "src/others/",
+    "src_zip_name": "new-website",
+    "backup_folder_name": "new-website",
+    "build_zip_name": "new-website",
     "fontPath":"css/fonts/",
     "remoteFont": {
         "enable": false,

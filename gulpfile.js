@@ -1,23 +1,5 @@
-// Gulp Local Customization
-var config = {
-    sitename : 'Your New Website',
-    css_scssName : 'main',
-    sassPath: 'src/scss/',
-    jsPath : 'src/js/',
-    imgPath : 'src/img/',
-    fontsPath : 'src/fonts/',
-    binPath : 'src/_bin/',
-    webpagePath : 'src/web_pages/',
-    othersPath : 'src/others/',
-    src_zip_name: 'new-website',
-    backup_folder_name: 'new-website',
-    build_zip_name: 'new-website',
-    font_file: require ('./src/fonts/fonts.json')
-};
-
-
-
-var     $               =   require('gulp-load-plugins')(),
+var     config          =   require('./settings.json', 'utf8'),
+        $               =   require('gulp-load-plugins')(),
         argv            =   require('yargs').argv,
         browser         =   require('browser-sync').create( config.sitename + 'Front End Dev Server'),
         htmlInjector    =   require('bs-html-injector'),
@@ -78,24 +60,15 @@ var components_path = [
     'node_modules/viewport-units-buggyfill/viewport-units-buggyfill.js',
 ];
 
-
-var userJS = [
-    config.jsPath + 'app.js'
-];
-
-
 // Combine onTime if neccesory and read package.json. also read jquery version
 var combine_js = cdn_js.concat(components_path);
 var pkg = require('./package.json');
 var jq_version = pkg.dependencies.jquery.replace(/[^\d.-]/g, '');
 
-
-
 // Cleans the build directory
 gulp.task('clean', function () {
     return del(['./build', './src/scss/others/_fonts.scss']);
 });
-
 
 var currentdate = new Date();
 var datetime = "backup--" + currentdate.getDate() + "-"
@@ -107,12 +80,11 @@ var datetime = "backup--" + currentdate.getDate() + "-"
 
 var desktop = '~/Desktop';
 
-
 // Copies user-created files
 gulp.task('copy', function () {
     var dirs = [
         './src/**/*.*',
-        '!./src/{scss,svg,sketch,js,fonts,img,tempCss,svg-icon,_bin,others}/**/*.*',
+        '!./src/{scss,svg,sketch,js,fonts,img,tempCss,svg-icon,.hidden,others}/**/*.*',
         '!./src/_bin/**/*.*',
         '!./src/data/**/*.*',
         '!' + config.webpagePath + 'layouts/**/*.*',
@@ -125,7 +97,6 @@ gulp.task('copy', function () {
         !isProduction ? './src/fonts/roboto/*.*' : '!./src/fonts/roboto/*.*',
         '!./src/fonts/*{.tpl,.json}'
     ];
-  
 
     gulp.src(dirs, {
         base: './src/'
@@ -134,7 +105,7 @@ gulp.task('copy', function () {
     // fonts
     gulp.src(assetsFont)
         .pipe(gulp.dest('./build/css/fonts/'));
-    
+
     //jquery
     gulp.src('./node_modules/jquery/dist/jquery.min.js')
     .pipe(gulp.dest('./build/js/'));
@@ -143,9 +114,6 @@ gulp.task('copy', function () {
     .pipe(gulp.dest('./build/'));
 
 });
-
-
-
 
 // Copy page templates into finished HTML files
 gulp.task('pages', function () {
@@ -161,7 +129,8 @@ gulp.task('pages', function () {
             context: {
                 isProduction: !!(argv.production),
                 name: config.sitename,
-                css: config.css_scssName,
+                css: config.cssName,
+                js: config.jsName,
                 DEBUG: true
             }
         }))
@@ -180,10 +149,9 @@ gulp.task('pages:reset', function (cb) {
     panini.refresh();
 });
 
-
 // Main App SCSS
 gulp.task('css', ['fonts'], function () {
-    gulp.src(config.sassPath + '/' + config.css_scssName +'.scss')
+    gulp.src(config.sassPath + config.sassFiles)
         .pipe($.if(!isProduction, $.changed('./build/css/')))
         .pipe($.sourcemaps.init())
         .pipe($.sass({
@@ -197,7 +165,7 @@ gulp.task('css', ['fonts'], function () {
         .pipe($.notify({
             title: 'CSS',
             subtitle: 'Success',
-            message: 'Main.css successfully compiled!',
+            message: config.cssName + '.css successfully compiled!',
             icon: path.join(__dirname, config.imgPath + "css-noti.png"),
         }))
         .pipe($.if(isProduction, $.autoprefixer({
@@ -230,24 +198,22 @@ gulp.task('css', ['fonts'], function () {
             // inline: ['local', 'remote', googleFontsource],
             processImport: false
         })))
-        .pipe( $.if(isProduction, $.rename({suffix: '.min'})))
-        .pipe($.if(isProduction, $.header(fs.readFileSync(config.binPath + 'pack.txt', 'utf8'), {pkg: pkg})))
+        .pipe($.if(isProduction, $.rename({basename: config.cssName, suffix: '.min', extname: '.css'}), $.rename({basename: config.cssName, extname: '.css'})))
+        .pipe($.if(isProduction, $.header(fs.readFileSync('src/.hidden/pack.txt', 'utf8'), {pkg: pkg})))
         .pipe(gulp.dest('./build/css/'))
         .pipe(browser.stream());
 
 });
 
 gulp.task('fonts', function () {
-  gulp.src(config.fontsPath + 'fonts.tpl')
-    .pipe($.consolidate('underscore', config.font_file, { useContents: true }))
+  gulp.src('src/.hidden/fonts.tpl')
+    .pipe($.consolidate('underscore', config, { useContents: true }))
     .pipe($.rename({prefix: '_', extname: '.scss'}))
       .pipe(gulp.dest(config.sassPath + 'others/'));
 });
 
-
 // User javascript Minify and Concatinate
 gulp.task('js', function () {
-    
         var uglifyoption = {
             parse: {},
             compress: true,
@@ -258,28 +224,28 @@ gulp.task('js', function () {
             toplevel: true,
             ie8: true,
             warnings: true,
-        
         };
 
         // App JavaScript
        function appjs() {
-            return gulp.src(userJS)
+            return gulp.src(config.jsPath + config.jsFiles)
                 .pipe($.sourcemaps.init())
-                .pipe($.concat('app.js'))
+                .pipe($.concat(config.jsName))
                 .pipe($.if(isProduction, $.uglify().on('error', function (e) {
                     console.log(e);
                 })))
                 .pipe($.notify({
                     title: 'JavaScript',
                     subtitle: 'Success',
-                    message: 'App.js successfully compiled!',
+                    message: config.jsName + '.js successfully compiled!',
                     icon: path.join(__dirname, config.imgPath + "js-noti.png"),
                 }))
                 .pipe($.if(!isProduction, $.sourcemaps.write('./maps')))
-                .pipe( $.if(isProduction, $.rename({suffix: '.min'})))
+                .pipe($.if(isProduction, $.header(fs.readFileSync('src/.hidden/pack.txt', 'utf8'), {pkg: pkg})))
+                .pipe($.if(isProduction, $.rename({basename: config.jsName, suffix: '.min', extname: '.js'}), $.rename({basename: config.jsName, extname: '.js'})))
                 .pipe(gulp.dest('./build/js/'));
         }
-    
+        
         function components() {
             return gulp.src(components_path)
                 .pipe($.concat('assets.js'))
@@ -292,7 +258,7 @@ gulp.task('js', function () {
                     message: 'Assets.js successfully compiled!',
                     icon: path.join(__dirname, config.imgPath + "js-noti.png"),
                 }))
-                .pipe($.header(fs.readFileSync(config.binPath + 'pack.txt', 'utf8'), {pkg: pkg}))
+                .pipe($.header(fs.readFileSync('src/.hidden/pack.txt', 'utf8'), {pkg: pkg}))
                 .pipe( $.if(isProduction, $.rename({suffix: '.min'})))
                 .pipe(gulp.dest('./build/js/'));
         }
@@ -302,7 +268,6 @@ gulp.task('js', function () {
                 .pipe($.sourcemaps.init())
                 .pipe($.concat('assets.js'))
                 .pipe($.sourcemaps.write())
-                .pipe( $.if(isProduction, $.rename({suffix: '.min'})))
                 .pipe(gulp.dest('./build/js/'));
         }
     
@@ -403,13 +368,15 @@ gulp.task('server', ['build'], function () {
 gulp.task('backup', function () {
     var dirs = [
         './**/*.*',
+        '!**/.git/**/*.*',
+        '!**/.git', '!**/.git/**',
         '!./node_modules/**/*.*',
         '!./bower_components/**/*.*',
         '!./build/**/*.*',
     ];
     if (isProduction) {
 
-        var src = gulp.src(dirs)
+        var src = gulp.src(dirs, {dot: true})
             .pipe($.zip(config.src_zip_name + '-' + datetime + '.zip'))
             .pipe(gulp.dest(home.resolve(desktop, config.backup_folder_name + '/src/')));
 
@@ -431,13 +398,15 @@ gulp.task('backup', function () {
 gulp.task('backup-src', function () {
     var dirs = [
         './**/*.*',
+        '!**/.git/**/*.*',
+        '!**/.git', '!**/.git/**',
         '!./node_modules/**/*.*',
         '!./bower_components/**/*.*',
         '!./build/**/*.*',
     ];
     if (isProduction) {
 
-        gulp.src(dirs)
+        gulp.src(dirs, {dot: true})
             .pipe($.zip(config.src_zip_name + '-' + datetime + '.zip'))
             .pipe($.notify({
                 title: 'Backup Completed',
@@ -477,7 +446,7 @@ gulp.task('build', function (done) {
         answer3 = "i want to backup both folder";
 
     if (isProduction) {
-        ui.log.write(fs.readFileSync('src/_bin/build.txt', 'utf8'));
+        ui.log.write(fs.readFileSync('src/.hidden/build.txt', 'utf8'));
         inquirer.prompt([{
             type: 'confirm',
             message: 'Do you want me to create a backup file for Build and Src folders ?',
@@ -523,9 +492,9 @@ gulp.task('default', ['build', 'server'], function () {
     // Watch HTML Injection
     gulp.watch([config.webpagePath + '{layouts,pages,partials}/**/*.html'], ['pages', 'pages:reset'], htmlInjector);
     // Watch Sass
-    gulp.watch(config.sassPath + '**/*.scss', ['css']);
+    gulp.watch(config.sassPath + config.sassfiles + '**/*.scss', ['css']);
     // Watch JavaScript
-    gulp.watch([config.jsPath + '**/*', './js/**/*'], ['js', browser.reload]);
+    gulp.watch([config.jsPath + config.jsFiles, './js/**/*'], ['js', browser.reload]);
     // Watch Images
     //gulp.watch(['./src/assets/img/**/*'], ['images', browser.reload]);
     // Watch icon file changed

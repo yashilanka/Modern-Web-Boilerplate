@@ -1,12 +1,12 @@
 <script type="text/javascript" src="/js/jquery.min.js"></script>
  <!-- @if isProduction -->
 <script src="{{root}}/js/assets.min.js"></script>
-<script src="{{root}}/js/app.min.js"></script>
+<script src="{{root}}/js/<!-- @echo js -->.min.js"></script>
 <!-- @endif -->
 
  <!-- @if !isProduction -->
  <script src="{{root}}/js/assets.js"></script>
- <script src="{{root}}/js/app.js"></script>
+ <script src="{{root}}/js/<!-- @echo js -->.js"></script>
  <!-- @endif -->
 
  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
