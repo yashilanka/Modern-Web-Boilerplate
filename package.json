@@ -28,6 +28,7 @@
       "del": "^3.0.0",
       "gulp": "^3.9.1",
       "gulp-autoprefixer": "^4.0.0",
+      "gulp-cache-bust": "^1.1.0",
       "gulp-cdnizer": "^1.1.7",
       "gulp-changed": "^3.1.0",
       "gulp-clean-css": "^3.9.0",
@@ -57,14 +58,15 @@
       "gulp-zip": "^4.0.0",
       "home": "^1.0.1",
       "inquirer": "^3.3.0",
+      "klaw": "^2.1.0",
       "merge-stream": "^1.0.1",
       "panini": "^1.5.1",
+      "process-nextick-args": "^1.0.7",
+      "pseudomap": "^1.0.2",
       "run-sequence": "^2.2.0",
       "through2": "^2.0.3",
       "util-deprecate": "^1.0.2",
-      "process-nextick-args": "^1.0.7",
-      "yargs": "^9.0.1",
-      "klaw": "^2.1.0"
+      "yargs": "^9.0.1"
    },
    "dependencies": {
       "bootstrap": "^4.0.0-beta",

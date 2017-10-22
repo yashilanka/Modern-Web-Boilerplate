@@ -40,30 +40,29 @@ $fontPath:'<%= fontPath %>';
 <%}%>
 
 // Custom @Font-face Mixings
-@mixin fontface($name, $font_file_name) {
+@mixin fontface($name, $font_file_name, $fontweight:$font-weight-base, $fontstyle:normal) {
     @font-face {
-        font-family: "#{$name}",sans-serif;
-        src: url($fontPath + "#{$font_file_name}-webfont.eot");
-        src: url($fontPath + "#{$font_file_name}-webfont.eot?#iefix") format("embedded-opentype"),
-        url($fontPath + "#{$font_file_name}-webfont.woff2" ) format("woff2"),
-        url($fontPath + "#{$font_file_name}-webfont.woff") format("woff"),
-        url($fontPath + "#{$font_file_name}-webfont.ttf") format("truetype"),
-        url($fontPath + "#{$font_file_name}-webfont.svg") format("svg");
-        font-weight: $font-weight-base;
-        font-style: normal;
+        font-family: "#{$name}";
+        src: url("<%= fontPath %>#{$font_file_name}.eot");
+        src: url("<%= fontPath %>#{$font_file_name}.eot?#iefix") format("embedded-opentype"),
+        url("<%= fontPath %>#{$font_file_name}.woff2" ) format("woff2"),
+        url("<%= fontPath %>#{$font_file_name}.woff") format("woff"),
+        url("<%= fontPath %>#{$font_file_name}.ttf") format("truetype");
+        font-weight: $fontweight;
+        font-style: $fontstyle;
     }
 }
 <% if(remoteFont.enable !== true) {%> <% _.each(fontFaceSets, function(font) {%>
-@include fontface(<%= font.name %>, <%= font.fileName %>);<% });}%>
+@include fontface(<%= font.fontName %>, <%= font.fileName %>, <%= font.weight %>, <%= font.style %>);<% });}%>
 
 <% _.each(fontFaceSets, function(font) {%>
-@mixin <%= font.name %>($font_size, $color:null) {<% if(remoteFont.enable == true) {%>
-	font-family: "<%= remoteFont.name %>", sans-serif !important;
-    font-weight: <%= font.weight %>; <% } else { %>
-	font-family: "<%= font.name %>", Helvetica, Arial, sans-serif !important; <% } %>
+@mixin <%= font.mixinName %>($font_size, $color:null) {<% if(remoteFont.enable == true) {%>
+	font-family: "<%= remoteFont.name %>", sans-serif !important;<% } else { %>
+	font-family: "<%= font.fontName %>", Helvetica, Arial, sans-serif !important; <% } %>
+    font-weight: <%= font.weight %>;
+    font-style: <%= font.style %>;
     font-size: $font_size;
     color: $color;
-    font-style: <%= font.style %> !important;
     speak: none;
     font-variant: normal;
     text-transform: none;

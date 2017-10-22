@@ -7,32 +7,34 @@
     "license": "ISC",
     "cssName": "style",
     "jsName":"userjs",
-    "sassPath": "src/scss/",
+    "sassPath": "./src/scss/",
     "sassFiles": "*.scss",
-    "jsPath": "src/js/",
+    "jsPath": "./src/js/",
     "jsFiles": "**/*.js",
-    "imgPath": "src/img/",
-    "webpagePath" : "src/web_pages/",
-    "othersPath" : "src/others/",
+    "imgPath": "./src/img/",
+    "webpagePath" : "./src/web_pages/",
+    "othersPath" : "./src/others/",
     "src_zip_name": "new-website",
     "backup_folder_name": "new-website",
     "build_zip_name": "new-website",
-    "fontPath":"css/fonts/",
+    "fontPath":"/css/fonts/",
     "remoteFont": {
         "enable": false,
         "name":"Montserrat",
         "remotePath": "https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
     },
     "fontFaceSets":[{
-        "name":"mono",
-        "fileName":"montserrat-italic",
+        "mixinName":"l-i",
+        "fontName":"AvertaStd-LightItalic",
+        "fileName":"hinted-subset-AvertaStd-LightItalic",
         "style":"italic",
-        "weight":"normal"
+        "weight":300
     },{
-        "name":"mono-reg",
-        "fileName":"montserrat-reguler",
-        "style":"normal",
-        "weight":"400"
+        "mixinName":"e-t-i",
+        "fontName":"AvertaStd-ExtrathinItalic",
+        "fileName":"hinted-subset-AvertaStd-ExtrathinItalic",
+        "style":"italic",
+        "weight":100
     }
 ]
 }
