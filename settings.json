@@ -1,5 +1,10 @@
 {
-    "sitename":"Your New Website",
+    "sitename":"Your New Site",
+    "version": "1.0.3",
+    "description": "Website For your new site",
+    "homepage": "http://yoursite.com",
+    "author": "Yashi <yashilanka@gmail.com>",
+    "license": "ISC",
     "cssName": "style",
     "jsName":"userjs",
     "sassPath": "src/scss/",

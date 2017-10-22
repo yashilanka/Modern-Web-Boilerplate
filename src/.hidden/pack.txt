@@ -10,7 +10,7 @@
   |     Optimized & Shared with Love     |              
   +--------------------------------------+              
                                                         
-  Name - <%= pkg.name %>                                
+  Site Name - <%= pkg.sitename %>                               
   Description - <%= pkg.description %>                  
                                                         
   @link - <%= pkg.homepage %>                           
