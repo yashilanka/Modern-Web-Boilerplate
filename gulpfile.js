@@ -293,9 +293,12 @@ var uglifyoption = {
 // App JavaScript
 function appjs() {
   return gulp
-    .src(jsPath + jsFiles)
-    .pipe($.sourcemaps.init())
-    .pipe($.concat(jsName))
+  .src([jsPath + jsFiles])
+  .pipe($.sort({
+    asc: false
+    }))
+  .pipe($.sourcemaps.init())
+  .pipe($.concat(jsName, {newLine: ';'}))
     .pipe(
       $.if(
         isProduction,
@@ -334,7 +337,7 @@ function appjs() {
 function components() {
   return gulp
     .src(components_path)
-    .pipe($.concat("assets.js"))
+    .pipe($.concat("assets.js", {newLine: ';'}))
     .pipe(
       $.if(
         isProduction,
@@ -437,7 +440,8 @@ browser.init({
   files: [
     webPath + "{layouts,pages,partials}/**/*.html",
     sassPath + sassFiles,
-    jsPath + jsFiles
+    jsPath + jsFiles,
+    jsPath + '**/*.js'
   ],
   server: {
     baseDir: "./build"
@@ -620,7 +624,7 @@ gulp.watch([webPath + "{layouts,pages,partials}/**/*.html"], ["pages", "pages:re
 // Watch Sass
 gulp.watch(sassPath + "**/*.scss", ["css"]);
 // Watch JavaScript
-gulp.watch(jsPath + jsFiles, ["js"]).on('change', browser.reload);
+gulp.watch([jsPath + jsFiles, jsPath + '**/*.*'], ["js"]).on('change', browser.reload);
 // Watch Images
 gulp.watch([imgPath + '/**/*.*'], ['images']).on('change', browser.reload);
 // Watch icon file changed

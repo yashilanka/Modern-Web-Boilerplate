@@ -61,7 +61,8 @@ $fontPath:'<%= fontPath %>';
 	font-family: "<%= font.fontName %>", Helvetica, Arial, sans-serif !important; <% } %>
     font-weight: <%= font.weight %>;
     font-style: <%= font.style %>;
-    font-size: $font_size;
+    //font-size: $font_size;
+    @include rfs($font_size);
     color: $color;
     speak: none;
     font-variant: normal;
