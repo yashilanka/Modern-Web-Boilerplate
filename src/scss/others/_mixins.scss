@@ -42,3 +42,11 @@ $path: "/node_modules/bootstrap/scss/";
 // @import "../../node_modules/bootstrap/scss/mixins/grid-framework";
 // @import "../../node_modules/bootstrap/scss/mixins/grid";
 @import "../../node_modules/bootstrap/scss/mixins/float";
+
+
+
+@mixin va ($position: relative) {
+    position: $position;
+    top: 50%;
+    @include transform(translateY(-50%));
+}
