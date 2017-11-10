@@ -542,7 +542,7 @@ gulp.task('deploy', function() {
       buffer: ftp.defaults.buffer
     })
     // .pipe( conn.mode( ftp.connect.remotePath, ftp.connect.filePermission ) ) // ftp file and foler permission
-    // .pipe( conn.newer( ftp.connect.remotePath ) ) // only upload newer files 
+    .pipe(conn.newer(ftp.connect.remotePath)) // only upload newer files 
     .pipe(conn.dest(ftp.connect.remotePath))
     .pipe(
       $.notify({
@@ -675,6 +675,7 @@ gulp.task("build", function(done) {
         name: "start"
       }])
       .then(function(answers) {
+
         if (answers.start) {
           inquirer
             .prompt([{
@@ -713,8 +714,23 @@ gulp.task("build", function(done) {
               }
             });
         } else {
-          sequence("clean", ["pages", "css", "js", "images", "copy"], done);
+          inquirer
+            .prompt([{
+              type: "confirm",
+              message: "Do you want to upload your build files & folders to the cloud server ?",
+              default: false,
+              name: "yes"
+            }]).then(function(ans) {
+              if (ans.yes) {
+                sequence("clean", ["pages", "css", "js", "images", "copy"], 'deploy', function() {
+                  console.log('---------------- Project has been successfuly build and deployed to the server  ---------------- ');
+                });
+              } else {
+                sequence("clean", ["pages", "css", "js", "images", "copy"], done);
+              }
+            })
         }
+
       });
   } else {
     sequence("clean", ["pages", "css", "js", "images", "copy"], done);
