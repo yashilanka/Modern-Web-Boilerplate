@@ -281,14 +281,21 @@ gulp.task("fonts", function() {
 gulp.task("js", function() {
   var uglifyoption = {
     parse: {},
-    compress: true,
-    mangle: true,
+    compress: {
+      drop_console : true,
+      hoist_props: true,
+      passes:3,
+      toplevel:true
+    },
+    mangle: {
+      toplevel:true
+    },
     output: {},
     sourceMap: {},
     nameCache: null, // or specify a name cache object
     toplevel: true,
     ie8: true,
-    warnings: true
+    warnings: false
   };
 
   // App JavaScript
