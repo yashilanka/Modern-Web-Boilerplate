@@ -22,6 +22,7 @@ var fs = require("fs"),
   cdnizer = require("gulp-cdnizer"),
   cachebust = require('gulp-cache-bust'),
   deploy = require('vinyl-ftp'),
+  encrypt = require('gulp-javascript-obfuscator'),
   cleanCSS = require("gulp-clean-css");
 
 
@@ -327,6 +328,13 @@ gulp.task("js", function() {
         })
       )
       .pipe($.if(!isProduction, $.sourcemaps.write(".")))
+      .pipe($.if(isProduction && !config.combineJsFile, encrypt({
+        compact:true,
+        mangle:true,
+        disableConsoleOutput: true,
+        stringArray:true,
+        target:'browser'
+      })))
       .pipe(
         $.if(
           isProduction,
@@ -375,6 +383,13 @@ gulp.task("js", function() {
           onLast: true
         })
       )
+      .pipe($.if(isProduction && !config.combineJsFile, encrypt({
+        compact:true,
+        mangle:true,
+        disableConsoleOutput: true,
+        stringArray:true,
+        target:'browser'
+      })))
       .pipe(
         $.header(fs.readFileSync("src/.hidden/pack.txt", "utf8"), {
           pkg: config
@@ -413,6 +428,13 @@ gulp.task("js", function() {
         })
       )
       .pipe($.if(!isProduction, $.sourcemaps.write(".")))
+      .pipe($.if(isProduction, encrypt({
+        compact:true,
+        mangle:true,
+        disableConsoleOutput: true,
+        stringArray:true,
+        target:'browser'
+      })))
       .pipe(
         $.if(
           isProduction,
