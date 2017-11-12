@@ -333,7 +333,8 @@ gulp.task("js", function() {
         mangle:true,
         disableConsoleOutput: true,
         stringArray:true,
-        target:'browser'
+        target:'browser',
+        selfDefending:true
       })))
       .pipe(
         $.if(
