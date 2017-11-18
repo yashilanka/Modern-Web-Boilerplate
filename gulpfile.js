@@ -26,7 +26,7 @@ var fs = require("fs"),
   cleanCSS = require("gulp-clean-css");
 
 
-// Variable Caching
+// Variable Caching  
 var jsPath = config.jsPath,
   jsName = config.jsName,
   cssName = config.cssName,
