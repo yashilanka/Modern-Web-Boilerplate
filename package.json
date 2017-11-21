@@ -1,12 +1,11 @@
 {
-  "name": "new_project",
+  "name": "modern_frontend_boilerplate",
   "version": "1.0.0",
   "main": "gulpfile.js",
   "author": "Yashi EL",
-  "description": "",
+  "description": "Modern Updated Frontend Development boilerplate with lot of usefull features.",
   "homepage": "http://yashiel.com",
   "license": "MIT",
-  "private": true,
   "scripts": {
       "start": "gulp",
       "build": "gulp build --production",
