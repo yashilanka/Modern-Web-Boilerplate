@@ -32,7 +32,7 @@
 // 900		Boldest.
 // inherit
 // initial
-
+$line-height-base:1.5 !default;
 // Local Font Folder Path
 $fontPath:'<%= fontPath %>';
 // Remote Font URL<% if(remoteFont.enable == true) {%>
