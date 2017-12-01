@@ -7,15 +7,16 @@
   "homepage": "http://yashiel.com",
   "license": "MIT",
   "scripts": {
-      "start": "gulp",
-      "build": "gulp build --production",
-      "deploy": "gulp deploy"
-   },
+    "start": "gulp",
+    "build": "gulp build --production",
+    "deploy": "gulp deploy"
+  },
   "dependencies": {
     "animejs": "^2.2.0",
     "barba.js": "^1.0.0",
     "bootstrap": "4.0.0-beta.2",
     "fastclick": "^1.0.6",
+    "foundation-sites": "^6.4.4-rc1",
     "gsap": "^1.20.3",
     "hamsterjs": "^1.1.2",
     "howler": "^2.0.5",
@@ -69,7 +70,7 @@
     "gulp-util": "^3.0.8",
     "gulp-zip": "^4.0.0",
     "home": "^1.0.1",
-    "inquirer": "^4.0.0",
+    "inquirer": "^4.0.1",
     "klaw": "^2.1.1",
     "merge-stream": "^1.0.1",
     "panini": "^1.5.1",
@@ -83,9 +84,9 @@
     "yargs": "^10.0.3"
   },
   "ignore": [
-      "**/.*",
-      "node_modules",
-      "test",
-      "tests"
-   ]
+    "**/.*",
+    "node_modules",
+    "test",
+    "tests"
+  ]
 }
