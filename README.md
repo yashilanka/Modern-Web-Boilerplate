@@ -41,7 +41,7 @@ Download the package from github and start to configure using **setting.json** f
 
 ### Installing
 
-Once you download the project file **CD/dir** into folder and run
+Once you download the project files **CD/dir** into folder and run
 
 
 ```
@@ -53,29 +53,16 @@ yarn
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+Rename **ftp-config. Jason. tpl -> FTP-config. json** and enter your remote host details. once you done with the edit run build command and choose appropriate answser to deploy your project. thats it !!
 
-## Built With
+#### Deployment Preview
+![alt text](https://raw.githubusercontent.com/yashiel/Modern-Web-Boilerplate/master/src/img/web-boilerplate%20-%20Visual%20Studio%20Code.png)
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Author
 
-* **Yashi EL** - *Initial work* 
+* **Yashi EL** -  [Github](https://github.com/yashiel)
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
