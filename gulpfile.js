@@ -328,7 +328,7 @@ gulp.task("js", function () {
                 })
             )
             .pipe($.if(!isProduction, $.sourcemaps.write(".")))
-            .pipe($.if(isProduction && !config.combineJsFile, encrypt({
+            .pipe($.if(isProduction && config.secureJS, encrypt({
                 compact: true,
                 mangle: true,
                 disableConsoleOutput: true,
@@ -384,7 +384,7 @@ gulp.task("js", function () {
                     onLast: true
                 })
             )
-            .pipe($.if(isProduction && !config.combineJsFile, encrypt({
+            .pipe($.if(isProduction && config.secureJS, encrypt({
                 compact: true,
                 mangle: true,
                 disableConsoleOutput: true,
@@ -404,6 +404,44 @@ gulp.task("js", function () {
 
 
     function combine() {
+
+        gulp.src(combijs)
+            .pipe($.concat('bundle.js', {
+                newLine: ';'
+            }))
+            .pipe(
+                $.if(
+                    isProduction,
+                    $.uglify(uglifyoption).on("error", function (e) {
+                        console.log(e);
+                    })
+                )
+            )
+            .pipe(
+                $.notify({
+                    title: "JavaScript",
+                    subtitle: "Success",
+                    message: "bundle.js successfully compiled!",
+                    icon: path.join(__dirname, imgPath + "js-noti.png"),
+                    onLast: true
+                })
+            )
+            .pipe($.if(!isProduction, $.sourcemaps.write(".")))
+            .pipe(
+                $.if(
+                    isProduction,
+                    $.header(fs.readFileSync("src/.hidden/pack.txt", "utf8"), {
+                        pkg: config
+                    })
+                )
+            )
+            .pipe($.if(isProduction, $.rename({
+                suffix: ".min"
+            })))
+            .pipe(gulp.dest("./build/js/"));
+    }
+
+    function secure() {
 
         gulp.src(combijs)
             .pipe($.concat('bundle.js', {
@@ -448,7 +486,9 @@ gulp.task("js", function () {
             .pipe(gulp.dest("./build/js/"));
     }
 
-    if (config.combineJsFile) {
+    if (config.combineJsFile  && config.secureJS) {
+       secure();
+    } else if (config.combineJsFile) {
         combine();
     } else {
         components();

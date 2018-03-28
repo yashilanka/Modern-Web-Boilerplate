@@ -8,6 +8,7 @@
     "cssName": "style",
     "jsName":"userjs",
     "combineJsFile": true,
+    "secureJS" : false,
     "sassPath": "./src/scss/",
     "sassFiles": "*.scss",
     "jsPath": "./src/js/",
