@@ -75,8 +75,8 @@ Rename **ftp-config. Jason. tpl -> FTP-config. json** and enter your remote host
 
 #### Roadmap / Upcoming Feature
 
-* Ablitiy to read and extract vector data from Adobe Illustrator and Sketch files and genarate icon fonts on the fly.
-* ++ More usefull features
+* Ability to read and extract vector data from Adobe Illustrator and Sketch files and generate icon fonts on the fly.
+* ++ More useful features
 ## Author
 
 * **Yashi EL** -  [Github](https://github.com/yashiel)
