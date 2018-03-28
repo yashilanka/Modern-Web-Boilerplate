@@ -78,6 +78,6 @@ Rename **ftp-config. Jason. tpl -> FTP-config. json** and enter your remote host
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) file for details
 
 
