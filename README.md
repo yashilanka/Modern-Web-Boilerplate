@@ -36,7 +36,7 @@ Download the package from github and start to configure using **setting.json** f
 **Nodejs**
 
 ### Folder Structure
-![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+![alt text](https://raw.githubusercontent.com/yashiel/Modern-Web-Boilerplate/master/src/img/web-boilerplate%20-%20Visual%20Studio%20Code.png)
 
 ### Installing
 
