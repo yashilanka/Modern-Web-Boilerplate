@@ -72,6 +72,11 @@ Rename **ftp-config. Jason. tpl -> FTP-config. json** and enter your remote host
 #### Deployment Preview
 ![alt text](https://raw.githubusercontent.com/yashiel/Modern-Web-Boilerplate/master/src/img/snap2.png)
 
+
+#### Roadmap / Upcoming Feature
+
+* Ablitiy to read and extract vector data from Adobe Illustrator and Sketch files and genarate icon fonts on the fly.
+* ++ More usefull features
 ## Author
 
 * **Yashi EL** -  [Github](https://github.com/yashiel)
