@@ -1,5 +1,5 @@
 ![alt text](https://raw.githubusercontent.com/yashiel/Modern-Web-Boilerplate/master/src/img/intro.png)
-# Modern Front-end Development Boilerplate - 1.0
+# Modern Front-end Development Boilerplate - 1.1
 
 Easy to use, all-in-one starter boilerplate to develop, build and deploy your next web project
 
