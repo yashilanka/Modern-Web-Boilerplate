@@ -1,24 +1,22 @@
 @import 'compass';
+@import 'colors';
 
 //Decide Which one you want to use bootstrap or foundation
-
 @import 'bootstrap';
 // @import 'foundation';
 
 @import 'fonts';
-/* @echo icoName */
-@import 'ModernFramework';
+
+// DO NOT REMOVE BELOW COMMENT
+/* iconfonts:scss */
+@import "_ModernFramework.scss";
+/* endinject */
+
+
 @import 'pnotify_overwrites';
 @import 'responsive-typo'; // responsive typo use rfs as a mixin
 
 //Your code here
-
-
-
-
-// body{
-//   @include l-i(30px, red);
-// }
 
 
 

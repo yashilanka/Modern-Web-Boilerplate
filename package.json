@@ -49,7 +49,7 @@
     "gulp-iconfont": "^9.1.0",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^4.1.0",
-    "gulp-inject": "^4.3.1",
+    "gulp-inject": "^4.3.2",
     "gulp-inline-image": "^1.0.0",
     "gulp-javascript-obfuscator": "^1.1.4",
     "gulp-load-plugins": "^1.5.0",

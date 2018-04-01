@@ -7,6 +7,7 @@ var fs = require("fs"),
         config.sitename + "Front End Dev Server"
     ),
     htmlInjector = require("bs-html-injector"),
+    inject = require('gulp-inject'),
     gulp = require("gulp"),
     del = require("del"),
     panini = require("panini"),
@@ -242,14 +243,15 @@ gulp.task('Iconfont', !isWindows ? ['cleanicons'] : '', function () {
     }
 
     function addRefs() {
+        var target = gulp.src('./src/scss/main.scss');
+        var source = gulp.src(['./src/scss/_'+ iconfontName +'.scss'], {read:false});
         gulp
-        .src(sassPath + sassFiles)
-        
-        .pipe(gulp.dest("."))
+        return target.pipe(inject(source, {relative: true, name: 'iconfonts', ignorePath:'./src/scss/'}))
+        .pipe(gulp.dest('./src/scss/'));
     }
     
     icons();
-    // addRefs();
+    addRefs();
 
 });
 
@@ -259,10 +261,8 @@ gulp.task('Iconfont', !isWindows ? ['cleanicons'] : '', function () {
 gulp.task("css", ["fonts"], function () {
     gulp
         .src(sassPath + sassFiles)
-        
         .pipe($.if(!isProduction, $.changed("./build/css/")))
         .pipe($.sourcemaps.init())
-        
         .pipe(
             $.sass({
                 includePaths: ["./node_modules/foundation-sites/scss", "./src/scss/others"],
@@ -347,12 +347,6 @@ gulp.task("css", ["fonts"], function () {
             )
         )
         .pipe($.if(!isProduction, $.sourcemaps.write('.')))
-        // .pipe($.preprocess({
-        //     context: {
-        //         isProduction: !!argv.production,
-        //         icoName: config.iconfont.name
-        //     }
-        // }))
         .pipe(gulp.dest("./build/css/"))
         .pipe(browser.stream());
 });
