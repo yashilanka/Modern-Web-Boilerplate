@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "gulpfile.js",
   "author": "Yashi EL",
-  "description": "Modern Updated Frontend Development boilerplate with lot of usefull features.",
+  "description": "Modern Frontend Development boilerplate",
   "homepage": "http://yashiel.com",
   "license": "MIT",
   "scripts": {
@@ -71,7 +71,6 @@
     "home": "^1.0.1",
     "inquirer": "^5.2.0",
     "klaw": "^2.1.1",
-    "lodash": "^4.17.5",
     "merge-stream": "^1.0.1",
     "panini": "^1.6.2",
     "process-nextick-args": "^2.0.0",
