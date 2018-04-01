@@ -35,7 +35,11 @@ var jsPath = config.jsPath,
     jsFiles = config.jsFiles,
     webPath = config.webpagePath,
     imgPath = config.imgPath,
-    otherPath = config.othersPath;
+    otherPath = config.othersPath,
+    iconfontName = config.iconfont.name,
+    svgPath = config.iconfont.svgPath,
+    sketchPath = config.iconfont.sketchPath,
+    fontClassName = config.iconfont.fontClassName;
 
 
 // combine js
@@ -52,7 +56,7 @@ var desktop = "~/Desktop";
 // Check for --production flag
 var isProduction = !!argv.production;
 
-// Browsers to target when prefixing CSS.
+// Browsers targets when prefixing CSS.
 // var COMPATIBILITY = ['> 5%', 'last 5 versions', 'ie >= 9', 'ie 6-8', 'last 2 Android versions', 'Firefox ESR'];
 var COMPATIBILITY = [
     "> 5%",
@@ -172,12 +176,98 @@ gulp.task("pages:reset", function () {
     panini.refresh();
 });
 
+// Icon Font Genaration
+// First Clean Icon Folder
+var runTimestamp = Math.round(Date.now() / 1000);
+gulp.task('cleanicons', function (done) {
+    // $.if(!isWindows,);
+    if (!isWindows) {
+        return del(svgPath);
+    }
+
+});
+
+// Then Genarate Icons
+gulp.task('Iconfont', !isWindows ? ['cleanicons'] : '', function () {
+    
+    // convert sketch to svg
+    function icons() {
+        return $.if(!isWindows, gulp.src(sketchPath + '*.sketch'), gulp.src(svgPath + '*.svg'))
+        .pipe($.if(!isWindows, $.sketch({
+            export: 'artboards',
+            formats: 'svg',
+            compact: true,
+            saveForWeb: 'yes',
+        })))
+        .pipe($.imagemin())
+        .pipe($.if(!isWindows, gulp.dest(svgPath)))
+        .pipe($.iconfont({
+            fontName: iconfontName, // required
+            prependUnicode: true, // recommended option
+            formats: ['ttf', 'eot', 'woff', 'woff2'], // default, 'woff2' and 'svg' are available
+            timestamp: runTimestamp, // recommended to get consistent builds when watching files
+            centerHorizontally: true,
+            fontHeight:1000,
+            normalize: true,
+
+        }).on('glyphs', function (glyphs) {
+            "use strict";
+
+            var options = {
+                glyphs: glyphs,
+                fontName: iconfontName,
+                fontPath: 'fonts/', // set path to font (from your CSS file if relative)
+                className: fontClassName // set class name in your CSS
+            };
+
+            gulp.src('./src/.hidden/_font-template.scss')
+                .pipe($.consolidate('lodash', options))
+                .pipe($.rename({basename: '_' + iconfontName}))
+                .pipe(gulp.dest('./src/scss/'));
+
+            gulp.src('./src/.hidden/font-template.html')
+                .pipe($.consolidate('lodash', options))
+                .pipe($.rename({basename: 'font-preview'}))
+                .pipe($.preprocess({
+                    context: {
+                        // isProduction: !!(argv.production),
+                        isProduction: !!argv.production,
+                        name: config.sitename,
+                        css: cssName,
+                        DEBUG: true
+                    }
+                }))
+                .pipe(gulp.dest('./build/'));
+        })).pipe(gulp.dest('./src/fonts/'));
+    }
+
+    function addRefs() {
+        gulp
+        .src(sassPath + sassFiles)
+        .pipe($.preprocess({
+            context: {
+                isProduction: !!argv.production,
+                icoName: config.iconfont.name
+            }
+        }))
+        .pipe(gulp.dest("."))
+    }
+    
+    icons();
+    // addRefs();
+
+});
+
+
+
 // Main App SCSS
 gulp.task("css", ["fonts"], function () {
     gulp
         .src(sassPath + sassFiles)
+        
         .pipe($.if(!isProduction, $.changed("./build/css/")))
         .pipe($.sourcemaps.init())
+        
         .pipe(
             $.sass({
                 includePaths: ["./node_modules/foundation-sites/scss", "./src/scss/others"],
@@ -191,6 +281,7 @@ gulp.task("css", ["fonts"], function () {
                 })
             )
         )
+        
         .pipe(inlineimage())
         .pipe(
             $.notify({
@@ -761,20 +852,20 @@ gulp.task("build", function (done) {
                         .then(function (check) {
                             if (check.build === answer1) {
                                 sequence(
-                                    "clean", ["pages", "css", "js", "images", "copy"],
+                                    "clean", "Iconfont", ["pages", "css", "js", "images", "copy"],
                                     "backup-src",
                                     done
                                 );
                                 // sequence('clean', ['Iconfont'], ['pages', 'css',  'js', 'images', 'copy'], 'backup-src', done);
                             } else if (check.build === answer2) {
                                 sequence(
-                                    "clean", ["pages", "css", "js", "images", "copy"],
+                                    "clean", "Iconfont", ["pages", "css", "js", "images", "copy"],
                                     "backup-build",
                                     done
                                 );
                             } else if (check.build === answer3) {
                                 sequence(
-                                    "clean", ["pages", "css", "js", "images", "copy"],
+                                    "clean", "Iconfont", ["pages", "css", "js", "images", "copy"],
                                     "backup-src",
                                     "backup-build",
                                     done
@@ -790,18 +881,18 @@ gulp.task("build", function (done) {
                             name: "yes"
                         }]).then(function (ans) {
                         if (ans.yes) {
-                            sequence("clean", ["pages", "css", "js", "images", "copy"], 'deploy', function () {
+                            sequence("clean", "Iconfont", ["pages", "css", "js", "images", "copy"], 'deploy', function () {
                                 console.log('---------------- Project has been successfuly build and deployed to the server  ---------------- ');
                             });
                         } else {
-                            sequence("clean", ["pages", "css", "js", "images", "copy"], done);
+                            sequence("clean", "Iconfont", ["pages", "css", "js", "images", "copy"], done);
                         }
                     })
                 }
 
             });
     } else {
-        sequence("clean", ["pages", "css", "js", "images", "copy"], done);
+        sequence("clean", "Iconfont", ["pages", "css", "js", "images", "copy"], done);
     }
 });
 

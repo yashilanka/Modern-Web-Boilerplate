@@ -2,10 +2,12 @@
 
 //Decide Which one you want to use bootstrap or foundation
 
-//@import 'bootstrap';
-@import 'foundation';
+@import 'bootstrap';
+// @import 'foundation';
 
 @import 'fonts';
+/* @echo icoName */
+@import 'HCMCloud';
 @import 'responsive-typo'; // responsive typo use rfs as a mixin
 
 //Your code here
@@ -13,7 +15,9 @@
 
 
 
-body{
-  @include flex();
-  @include l-i(30px, red);
-}
+// body{
+//   @include l-i(30px, red);
+// }
+
+
+

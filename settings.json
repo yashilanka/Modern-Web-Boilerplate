@@ -20,6 +20,12 @@
     "backup_folder_name": "new-website",
     "build_zip_name": "new-website",
     "fontPath":"/css/fonts/",
+    "iconfont":{
+        "name":"HCMCloud",
+        "svgPath":"./src/.hidden/svg/",
+        "sketchPath": "./src/helpers/sketch/",
+        "fontClassName":"mi"
+    },
     "remoteFont": {
         "enable": false,
         "name":"Montserrat",
@@ -41,21 +47,6 @@
 ],
 "jsComponents":[
     "node_modules/fastclick/lib/fastclick.js",
-    "node_modules/handlebars/dist/handlebars.min.js",
-    "node_modules/gsap/src/minified/TweenMax.min.js",
-    "node_modules/gsap/src/minified/jquery.gsap.min.js",
-    "node_modules/gsap/src/minified/plugins/RoundPropsPlugin.min.js",
-    "node_modules/gsap/src/minified/utils/Draggable.min.js",
-    "node_modules/gsap/src/minified/plugins/ScrollToPlugin.min.js",
-    "node_modules/gsap/src/minified/plugins/TextPlugin.min.js",
-    "node_modules/gsap/src/minified/plugins/ColorPropsPlugin.min.js",
-    "node_modules/gsap/src/minified/plugins/CSSRulePlugin.min.js",
-    "node_modules/gsap/src/minified/plugins/AttrPlugin.min.js",
-    "node_modules/gsap/src/minified/plugins/BezierPlugin.min.js",
-    "node_modules/gsap/src/minified/plugins/EndArrayPlugin.min.js",
-    "node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js",
-    "node_modules/velocity-animate/velocity.min.js",
-    "node_modules/velocity-animate/velocity.ui.min.js",
     "node_modules/viewport-units-buggyfill/viewport-units-buggyfill.js"
 ]
 }
