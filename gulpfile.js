@@ -7,6 +7,7 @@ var fs = require("fs"),
         config.sitename + "Front End Dev Server"
     ),
     htmlInjector = require("bs-html-injector"),
+    inject = require('gulp-inject'),
     gulp = require("gulp"),
     del = require("del"),
     panini = require("panini"),
@@ -35,7 +36,11 @@ var jsPath = config.jsPath,
     jsFiles = config.jsFiles,
     webPath = config.webpagePath,
     imgPath = config.imgPath,
-    otherPath = config.othersPath;
+    otherPath = config.othersPath,
+    iconfontName = config.iconfont.name,
+    svgPath = config.iconfont.svgPath,
+    sketchPath = config.iconfont.sketchPath,
+    fontClassName = config.iconfont.fontClassName;
 
 
 // combine js
@@ -52,7 +57,7 @@ var desktop = "~/Desktop";
 // Check for --production flag
 var isProduction = !!argv.production;
 
-// Browsers to target when prefixing CSS.
+// Browsers targets when prefixing CSS.
 // var COMPATIBILITY = ['> 5%', 'last 5 versions', 'ie >= 9', 'ie 6-8', 'last 2 Android versions', 'Firefox ESR'];
 var COMPATIBILITY = [
     "> 5%",
@@ -70,8 +75,8 @@ var isWindows = /^win/.test(os.platform());
 var pkg = require("./package.json");
 var jq_version = pkg.dependencies.jquery.replace(/[^\d.-]/g, "");
 
-// Cleans the build directory
-gulp.task("clean", function () {
+// Cleans build directory
+gulp.task("clean", function() {
     return del(["./build", "./src/scss/others/fonts.scss"]);
 });
 
@@ -92,10 +97,10 @@ var datetime =
 
 
 // Copies user-created files
-gulp.task("copy", function () {
+gulp.task("copy", function() {
     var dirs = [
         "./src/**/*.*",
-        "!./src/{scss,svg,sketch,js,fonts,img,tempCss,svg-icon,.hidden,others}/**/*.*",
+        "!./src/{scss,svg,sketch,js,fonts,img,tempCss,svg-icon,.hidden,helpers,others}/**/*.*",
         "!./src/_bin/**/*.*",
         "!./src/data/**/*.*",
         "!" + webPath + "layouts/**/*.*",
@@ -127,7 +132,7 @@ gulp.task("copy", function () {
 });
 
 // Copy page templates into finished HTML files
-gulp.task("pages", function () {
+gulp.task("pages", function() {
     gulp
         .src(webPath + "pages/**/*.{html,hbs,handlebars,md}")
         .pipe(cachebust({
@@ -168,12 +173,99 @@ gulp.task("pages", function () {
         .pipe(gulp.dest("./build"));
 });
 
-gulp.task("pages:reset", function () {
+gulp.task("pages:reset", function() {
     panini.refresh();
 });
 
+// Icon Font Genaration
+// First Clean Icon Folder
+var runTimestamp = Math.round(Date.now() / 1000);
+gulp.task('cleanicons', function(done) {
+    if (!isWindows) {
+        return del(svgPath);
+    }
+});
+
+// Then Genarate Icons
+gulp.task('Iconfont', !isWindows ? ['cleanicons'] : '', function() {
+
+    // convert sketch to svg
+    function icons() {
+        return $.if(!isWindows, gulp.src(sketchPath + '*.sketch'), gulp.src(svgPath + '*.svg'))
+            .pipe($.if(!isWindows, $.sketch({
+                export: 'artboards',
+                formats: 'svg',
+                compact: true,
+                saveForWeb: 'yes',
+            })))
+            .pipe($.imagemin())
+            .pipe($.if(!isWindows, gulp.dest(svgPath)))
+            .pipe($.iconfont({
+                fontName: iconfontName, // required
+                prependUnicode: true, // recommended option
+                formats: ['ttf', 'eot', 'woff', 'woff2'], // default, 'woff2' and 'svg' are available
+                timestamp: runTimestamp, // recommended to get consistent builds when watching files
+                centerHorizontally: true,
+                fontHeight: 1000,
+                normalize: true,
+
+            }).on('glyphs', function(glyphs) {
+                "use strict";
+
+                var options = {
+                    glyphs: glyphs,
+                    fontName: iconfontName,
+                    fontPath: 'fonts/', // set path to font (from your CSS file if relative)
+                    className: fontClassName // set class name in your CSS
+                };
+
+                gulp.src('./src/.hidden/_font-template.scss')
+                    .pipe($.consolidate('underscore', options))
+                    .pipe($.rename({
+                        basename: '_' + iconfontName
+                    }))
+                    .pipe(gulp.dest('./src/scss/'));
+
+                gulp.src('./src/.hidden/font-template.html')
+                    .pipe($.consolidate('underscore', options))
+                    .pipe($.rename({
+                        basename: 'iconfonts'
+                    }))
+                    .pipe($.preprocess({
+                        context: {
+                            isProduction: !!argv.production,
+                            name: config.sitename,
+                            css: cssName,
+                            DEBUG: true
+                        }
+                    }))
+                    .pipe(gulp.dest('./build/'));
+            })).pipe(gulp.dest('./src/fonts/'));
+    }
+
+    function addRefs() {
+        var target = gulp.src('./src/scss/main.scss');
+        var source = gulp.src(['./src/scss/_' + iconfontName + '.scss'], {
+            read: false
+        });
+        gulp
+        return target.pipe(inject(source, {
+                relative: true,
+                name: 'iconfonts',
+                ignorePath: './src/scss/'
+            }))
+            .pipe(gulp.dest('./src/scss/'));
+    }
+
+    icons();
+    addRefs();
+
+});
+
+
+
 // Main App SCSS
-gulp.task("css", ["fonts"], function () {
+gulp.task("css", ["fonts"], function() {
     gulp
         .src(sassPath + sassFiles)
         .pipe($.if(!isProduction, $.changed("./build/css/")))
@@ -186,11 +278,12 @@ gulp.task("css", ["fonts"], function () {
                 // outputStyle: 'compressed'
             }).on(
                 "error",
-                $.notify.onError(function (error) {
+                $.notify.onError(function(error) {
                     return "Error: " + error.message;
                 })
             )
         )
+
         .pipe(inlineimage())
         .pipe(
             $.notify({
@@ -265,7 +358,7 @@ gulp.task("css", ["fonts"], function () {
         .pipe(browser.stream());
 });
 
-gulp.task("fonts", function () {
+gulp.task("fonts", function() {
     gulp
         .src("src/.hidden/fonts.tpl")
         .pipe($.consolidate("underscore", config, {
@@ -279,7 +372,7 @@ gulp.task("fonts", function () {
 });
 
 // User javascript Minify and Concatinate
-gulp.task("js", function () {
+gulp.task("js", function() {
     var uglifyoption = {
         parse: {},
         compress: {
@@ -313,7 +406,7 @@ gulp.task("js", function () {
             .pipe(
                 $.if(
                     isProduction,
-                    $.uglify(uglifyoption).on("error", function (e) {
+                    $.uglify(uglifyoption).on("error", function(e) {
                         console.log(e);
                     })
                 )
@@ -370,7 +463,7 @@ gulp.task("js", function () {
             .pipe(
                 $.if(
                     isProduction,
-                    $.uglify(uglifyoption).on("error", function (e) {
+                    $.uglify(uglifyoption).on("error", function(e) {
                         console.log(e);
                     })
                 )
@@ -412,7 +505,7 @@ gulp.task("js", function () {
             .pipe(
                 $.if(
                     isProduction,
-                    $.uglify(uglifyoption).on("error", function (e) {
+                    $.uglify(uglifyoption).on("error", function(e) {
                         console.log(e);
                     })
                 )
@@ -450,7 +543,7 @@ gulp.task("js", function () {
             .pipe(
                 $.if(
                     isProduction,
-                    $.uglify(uglifyoption).on("error", function (e) {
+                    $.uglify(uglifyoption).on("error", function(e) {
                         console.log(e);
                     })
                 )
@@ -486,8 +579,8 @@ gulp.task("js", function () {
             .pipe(gulp.dest("./build/js/"));
     }
 
-    if (config.combineJsFile  && config.secureJS) {
-       secure();
+    if (config.combineJsFile && config.secureJS) {
+        secure();
     } else if (config.combineJsFile) {
         combine();
     } else {
@@ -497,8 +590,8 @@ gulp.task("js", function () {
 
 });
 
-// In production, the images are compressed
-gulp.task("images", function () {
+// In production, All images are compressed
+gulp.task("images", function() {
     var imagemin = $.if(
         isProduction,
         $.imagemin({
@@ -554,7 +647,7 @@ gulp.task("images", function () {
 });
 
 // Starts a test server, which you can view at http://localhost:3000
-gulp.task("server", ["build"], function () {
+gulp.task("server", ["build"], function() {
     browser.use(htmlInjector, {
         files: [webPath + "{layouts,pages,partials}/**/*.html"]
     });
@@ -562,8 +655,6 @@ gulp.task("server", ["build"], function () {
     browser.init({
         open: true,
         notify: true,
-        // reloadDelay: 2000,
-        // reloadDebounce: 500,
         reloadOnRestart: true,
         injectChanges: true,
         files: [
@@ -576,20 +667,12 @@ gulp.task("server", ["build"], function () {
             baseDir: "./build"
         },
         logPrefix: config.sitename,
-        // plugins: [
-        //   {
-        //     module: "bs-html-injector",
-        //     options: {
-        //       files: webPath + "{layouts,pages,partials}/**/*.html"
-        //     }
-        //   }
-        // ]
     });
 });
 
 // Deploy to server
 
-gulp.task('deploy', function () {
+gulp.task('deploy', function() {
 
     var conn = deploy.create({
         host: ftp.connect.host,
@@ -606,10 +689,10 @@ gulp.task('deploy', function () {
     });
 
     return gulp.src(ftp.connect.localPath, {
-        base: ftp.connect.base,
-        buffer: ftp.defaults.buffer
-    })
-    // .pipe( conn.mode( ftp.connect.remotePath, ftp.connect.filePermission ) ) // ftp file and foler permission
+            base: ftp.connect.base,
+            buffer: ftp.defaults.buffer
+        })
+        // .pipe( conn.mode( ftp.connect.remotePath, ftp.connect.filePermission ) ) // ftp file and foler permission
         .pipe(conn.newer(ftp.connect.remotePath)) // only upload newer files
         .pipe(conn.dest(ftp.connect.remotePath))
         .pipe(
@@ -617,7 +700,6 @@ gulp.task('deploy', function () {
                 title: "Deployment",
                 subtitle: "Success",
                 message: "Your Files Successfully Deployed to " + ftp.connect.host,
-                // icon: path.join(__dirname, imgPath + "js-noti.png")
                 onLast: true,
             })
         )
@@ -626,7 +708,7 @@ gulp.task('deploy', function () {
 });
 
 // Backup to Desktop
-gulp.task("backup", function () {
+gulp.task("backup", function() {
     var dirs = [
         "./**/*.*",
         "!**/.git/**/*.*",
@@ -670,7 +752,7 @@ gulp.task("backup", function () {
     }
 });
 
-gulp.task("backup-src", function () {
+gulp.task("backup-src", function() {
     var dirs = [
         "./**/*.*",
         "!**/.git/**/*.*",
@@ -704,7 +786,7 @@ gulp.task("backup-src", function () {
     }
 });
 
-gulp.task("backup-build", function () {
+gulp.task("backup-build", function() {
     if (isProduction) {
         gulp
             .src("./build/**/*.*")
@@ -728,7 +810,7 @@ gulp.task("backup-build", function () {
 });
 
 var ui = new inquirer.ui.BottomBar();
-gulp.task("build", function (done) {
+gulp.task("build", function(done) {
     var answer1 = "Backup source folder",
         answer2 = "Backup build folder",
         answer3 = "i want to backup both folder";
@@ -742,7 +824,7 @@ gulp.task("build", function (done) {
                 default: false,
                 name: "start"
             }])
-            .then(function (answers) {
+            .then(function(answers) {
 
                 if (answers.start) {
                     inquirer
@@ -751,30 +833,29 @@ gulp.task("build", function (done) {
                             message: "Which folder do you want to backup?",
                             name: "build",
                             choices: [answer1, answer2, answer3],
-                            validate: function (answer) {
+                            validate: function(answer) {
                                 if (answer.length < 1) {
                                     return "You must choose at least one option.";
                                 }
                                 return true;
                             }
                         }])
-                        .then(function (check) {
+                        .then(function(check) {
                             if (check.build === answer1) {
                                 sequence(
-                                    "clean", ["pages", "css", "js", "images", "copy"],
+                                    "clean", "Iconfont", ["pages", "css", "js", "images", "copy"],
                                     "backup-src",
                                     done
                                 );
-                                // sequence('clean', ['Iconfont'], ['pages', 'css',  'js', 'images', 'copy'], 'backup-src', done);
                             } else if (check.build === answer2) {
                                 sequence(
-                                    "clean", ["pages", "css", "js", "images", "copy"],
+                                    "clean", "Iconfont", ["pages", "css", "js", "images", "copy"],
                                     "backup-build",
                                     done
                                 );
                             } else if (check.build === answer3) {
                                 sequence(
-                                    "clean", ["pages", "css", "js", "images", "copy"],
+                                    "clean", "Iconfont", ["pages", "css", "js", "images", "copy"],
                                     "backup-src",
                                     "backup-build",
                                     done
@@ -788,25 +869,25 @@ gulp.task("build", function (done) {
                             message: "Do you want to upload your build files & folders to the cloud server ?",
                             default: false,
                             name: "yes"
-                        }]).then(function (ans) {
-                        if (ans.yes) {
-                            sequence("clean", ["pages", "css", "js", "images", "copy"], 'deploy', function () {
-                                console.log('---------------- Project has been successfuly build and deployed to the server  ---------------- ');
-                            });
-                        } else {
-                            sequence("clean", ["pages", "css", "js", "images", "copy"], done);
-                        }
-                    })
+                        }]).then(function(ans) {
+                            if (ans.yes) {
+                                sequence("clean", "Iconfont", ["pages", "css", "js", "images", "copy"], 'deploy', function() {
+                                    console.log('---------------- Project has been successfuly build and deployed to the server  ---------------- ');
+                                });
+                            } else {
+                                sequence("clean", "Iconfont", ["pages", "css", "js", "images", "copy"], done);
+                            }
+                        })
                 }
 
             });
     } else {
-        sequence("clean", ["pages", "css", "js", "images", "copy"], done);
+        sequence("clean", "Iconfont", ["pages", "css", "js", "images", "copy"], done);
     }
 });
 
 // Watch
-gulp.task("default", ["build", "server"], function () {
+gulp.task("default", ["build", "server"], function() {
     // Watch HTML Injection
     gulp.watch([webPath + "{layouts,pages,partials}/**/*.html"], ["pages", "pages:reset", htmlInjector]);
     // Watch Sass
