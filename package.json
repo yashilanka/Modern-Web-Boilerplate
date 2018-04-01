@@ -20,6 +20,7 @@
     "jquery": "^3.3.1",
     "jquery-visibility": "^1.0.11",
     "js-cookie": "^2.2.0",
+    "pnotify": "^4.0.0-alpha.2",
     "snapsvg": "^0.5.1",
     "underscore": "^1.8.3",
     "viewport-units-buggyfill": "^0.6.2"

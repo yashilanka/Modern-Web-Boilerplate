@@ -21,10 +21,10 @@
     "build_zip_name": "new-website",
     "fontPath":"/css/fonts/",
     "iconfont":{
-        "name":"HCMCloud",
-        "svgPath":"./src/.hidden/svg/",
+        "name":"ModernFramework",
+        "svgPath":"./src//helpers/svg/",
         "sketchPath": "./src/helpers/sketch/",
-        "fontClassName":"mi"
+        "fontClassName":"mfb"
     },
     "remoteFont": {
         "enable": false,

@@ -221,13 +221,13 @@ gulp.task('Iconfont', !isWindows ? ['cleanicons'] : '', function () {
             };
 
             gulp.src('./src/.hidden/_font-template.scss')
-                .pipe($.consolidate('lodash', options))
+                .pipe($.consolidate('underscore', options))
                 .pipe($.rename({basename: '_' + iconfontName}))
                 .pipe(gulp.dest('./src/scss/'));
 
             gulp.src('./src/.hidden/font-template.html')
-                .pipe($.consolidate('lodash', options))
-                .pipe($.rename({basename: 'font-preview'}))
+                .pipe($.consolidate('underscore', options))
+                .pipe($.rename({basename: 'iconfonts'}))
                 .pipe($.preprocess({
                     context: {
                         // isProduction: !!(argv.production),
@@ -244,12 +244,7 @@ gulp.task('Iconfont', !isWindows ? ['cleanicons'] : '', function () {
     function addRefs() {
         gulp
         .src(sassPath + sassFiles)
-        .pipe($.preprocess({
-            context: {
-                isProduction: !!argv.production,
-                icoName: config.iconfont.name
-            }
-        }))
+        
         .pipe(gulp.dest("."))
     }
     
@@ -352,6 +347,12 @@ gulp.task("css", ["fonts"], function () {
             )
         )
         .pipe($.if(!isProduction, $.sourcemaps.write('.')))
+        // .pipe($.preprocess({
+        //     context: {
+        //         isProduction: !!argv.production,
+        //         icoName: config.iconfont.name
+        //     }
+        // }))
         .pipe(gulp.dest("./build/css/"))
         .pipe(browser.stream());
 });
