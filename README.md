@@ -122,7 +122,10 @@ When you start your dev server, icon generator will read the sketch file and ext
 http://localhost:3000/iconfonts.html
 ```
 
+##### Demo
 
+![Iconfont Demo](https://raw.githubusercontent.com/yashiel/gifs/master/iconfonts.gif)
+![Iconfont Demo](https://raw.githubusercontent.com/yashiel/gifs/master/iconfont-prev.png)
 #### Roadmap / Upcoming Feature
 
 * Ability to read and extract vector data from Adobe Illustrator ~~*and Sketch files*~~ and generate icon fonts on the fly.
