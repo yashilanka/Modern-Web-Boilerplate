@@ -1,11 +1,11 @@
-![alt text](https://raw.githubusercontent.com/yashiel/Modern-Web-Boilerplate/master/src/img/intro.png)
+![alt text](https://raw.githubusercontent.com/yashiel/Modern-Web-Boilerplate/master/docs/img/intro.png)
 # Modern Front-end Development Boilerplate - v1.3
 
 Easy to use, all-in-one starter boilerplate to develop, build and deploy your next web project
 
 # What's New - v1.3
 * Read Sketch files and extract Artboards into icon-fonts.
-* Easy to use icon-font browser with following features
+* Easy to use **Icon-Font Browser** with following features,
     * Ability to **Copy-to-clipboard** HTML(CSS Class), SCSS, SCSS Shorthand and SCSS Unicode Variable
     * Clear documentation about how to use it.
     * Name your icon-font whatever you want.
@@ -34,9 +34,6 @@ Easy to use, all-in-one starter boilerplate to develop, build and deploy your ne
 * Image Minify and Optimization
 * Responsive Typography
 
-## Getting Started
-
-Download the package from GitHub and start to configure using **setting.json** file.
 
 ### Prerequisites
 
@@ -44,16 +41,30 @@ Download the package from GitHub and start to configure using **setting.json** f
 
 **Nodejs**
 
+## Getting Started
+
+Download the package from GitHub and start to configure using **setting.json** file.
+
+##### Demo
+
+![alt text](https://raw.githubusercontent.com/yashiel/Modern-Web-Boilerplate/master/docs/img/1.gif)
+
+
 ### Folder Structure
-![alt text](https://raw.githubusercontent.com/yashiel/Modern-Web-Boilerplate/master/src/img/web-boilerplate%20-%20Visual%20Studio%20Code.png)
+![alt text](https://raw.githubusercontent.com/yashiel/Modern-Web-Boilerplate/master/docs/img/web-boilerplate%20-%20Visual%20Studio%20Code.png)
 
 ### Installing
 
-Once you download the project files **CD/dir** into folder and run
+After you download the project files **CD/dir** into folder and run
 
 ```
 yarn
 ```
+
+##### Demo
+
+![alt text](https://raw.githubusercontent.com/yashiel/Modern-Web-Boilerplate/master/docs/img/2.gif)
+
 
 **NOTE:** make sure to install nodejs and yarn before run yarn commands.
 
@@ -63,7 +74,11 @@ Once you done with your dependency installation, open your **command prompt/term
 ```
 gulp
 ```
-For windows users. you can run **start_dev.cmd** file by double clicking it
+##### Demo
+
+![alt text](https://raw.githubusercontent.com/yashiel/Modern-Web-Boilerplate/master/docs/img/2.gif)
+
+**NOTE:** For windows users. you can run **start_dev.cmd** file by double clicking it
 
 ### Start Build Process
 
@@ -79,7 +94,7 @@ For windows users. you can run **start_build.cmd** file by double clicking it
 Rename **ftp-config. Json. tpl -> FTP-config. json** and enter your remote host details. once you done with the edit run build command and choose appropriate answer to deploy your project. that’s it !!
 
 #### Deployment Preview
-![alt text](https://raw.githubusercontent.com/yashiel/Modern-Web-Boilerplate/master/src/img/snap2.png)
+![alt text](https://raw.githubusercontent.com/yashiel/Modern-Web-Boilerplate/master/docs/img/snap2.png)
 
 
 #### Roadmap / Upcoming Feature
