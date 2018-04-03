@@ -1,4 +1,4 @@
-![Imgur](https://i.imgur.com/Nlhow35.png)
+![Intro](https://raw.githubusercontent.com/yashiel/gifs/master/intro.png)
 # Modern Front-end Development Boilerplate - v1.3
 
 Easy to use, all-in-one starter boilerplate to develop, build and deploy your next web project
@@ -49,7 +49,7 @@ ___
 Download the package from GitHub and start to configure using **setting.json** file.
 
 ### Folder Structure
-![Imgur](https://i.imgur.com/DR5jG2r.png)
+![Folder Structure](https://raw.githubusercontent.com/yashiel/gifs/master/web-boilerplate%20-%20Visual%20Studio%20Code.png)
 
 ---
 ### Installing
@@ -62,7 +62,7 @@ yarn
 
 ##### Demo
 
-![alt text](https://raw.githubusercontent.com/yashiel/Modern-Web-Boilerplate/master/docs/img/2.gif)
+![Yarn Demo](https://raw.githubusercontent.com/yashiel/gifs/master/2.gif)
 
 
 **NOTE:** make sure to install nodejs and yarn before run yarn commands.
@@ -77,7 +77,7 @@ gulp
 ```
 ##### Demo
 
-![Imgur](https://i.imgur.com/iPUxXJR.gif)
+![Gulp Demo](https://raw.githubusercontent.com/yashiel/gifs/master/3.gif)
 
 **NOTE:** For windows users. you can run **start_dev.cmd** file by double clicking it
 
@@ -97,7 +97,7 @@ For windows users. you can run **start_build.cmd** file by double clicking it
 Rename **ftp-config. Json. tpl -> FTP-config. json** and enter your remote host details. once you done with the edit run build command and choose appropriate answer to deploy your project. that’s it !!
 
 #### Deployment Preview
-![Imgur](https://i.imgur.com/lcTYEtX.png)
+![Deploy Preview](https://raw.githubusercontent.com/yashiel/gifs/master/snap2.png)
 
 
 #### Roadmap / Upcoming Feature
