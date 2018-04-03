@@ -1,9 +1,8 @@
 ![Intro](https://raw.githubusercontent.com/yashiel/gifs/master/intro.png)
 # Modern Front-end Development Boilerplate - v1.3
+##### Easy to use, all-in-one starter boilerplate to develop, build and deploy your next web project
 
-Easy to use, all-in-one starter boilerplate to develop, build and deploy your next web project
-
-# :pushpin: What's New - v1.3
+## :pushpin: What's New - v1.3
 * Read Sketch files and extract Artboards into icon-fonts.
 * Easy to use **Icon-Font Browser** with following features,
     * Ability to **Copy-to-clipboard** HTML(CSS Class), SCSS, SCSS Shorthand and SCSS Unicode Variable
@@ -11,7 +10,7 @@ Easy to use, all-in-one starter boilerplate to develop, build and deploy your ne
     * Name your icon-font whatever you want.
     * Can manage everything inside **setting.json** file.
 
-# :pushpin: Features
+## :pushpin: Features
 * Multiple Frontend SCSS frameworks at your disposal ( Eg:- **New Bootstrap 4** and **Foundation 6** )
 * Easy to manage folder structure but you can change whatever you want ( Eg:- MVC framework like folder structure )
 * Centralized place to manage your js, img, fonts and all project related settings.
@@ -84,7 +83,7 @@ gulp
 ---
 ### Start Build Process
 
-Once you finish with your development, run below command to get final production ready code.
+To get Production ready code, run below command.
 
 **Tip:** You can skip build questions by pressing **enter/return** key :smile:
 
@@ -107,6 +106,17 @@ Rename **ftp-config.json.tpl -> ftp-config.json** and enter your remote host det
 #### Deployment Preview
 ![Deploy Preview](https://raw.githubusercontent.com/yashiel/gifs/master/snap2.png)
 
+---
+## :pushpin: *New* :fire: Icon-Font Generator & Browser - v1.3 
+
+When you start your dev server, icon generator will read the sketch file and extract all contain artboards into icon fonts. you can change the icon-font name with other settings by editing setting. json file. 
+
+#### To view Icon-Font Browser go to
+
+```
+http://localhost:3000/iconfonts.html
+```
+
 
 #### Roadmap / Upcoming Feature
 
@@ -114,7 +124,7 @@ Rename **ftp-config.json.tpl -> ftp-config.json** and enter your remote host det
 * ++ More useful features
 ## Author
 
-* **Yashi EL** -  [Github](https://github.com/yashiel)
+* **Yashi EL** - [Github](https://github.com/yashiel)
 
 ## License
 
