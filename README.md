@@ -48,11 +48,6 @@ ___
 
 Download the package from GitHub and start to configure using **setting.json** file.
 
-##### Demo
-
-![Imgur](https://i.imgur.com/6w1GjRS.gif)
-
-
 ### Folder Structure
 ![Imgur](https://i.imgur.com/DR5jG2r.png)
 
