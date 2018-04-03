@@ -4,6 +4,7 @@ npm-debug.log
 bower_components
 backup
 build
+docs
 .sass-cache
 .idea/code-comments.xml
 .idea/runConfigurations/
