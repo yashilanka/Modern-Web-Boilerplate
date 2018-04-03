@@ -109,12 +109,12 @@ For windows users. you can run **start_build.cmd** file by double clicking it
 Rename **ftp-config.json.tpl -> ftp-config.json** and enter your remote host details. once you done with the edit run build command and choose appropriate answer to deploy your project. that’s it !!
 
 #### Deployment Preview
-![Deploy Preview](https://raw.githubusercontent.com/yashiel/gifs/master/snap2.png)
+![Deploy Preview](https://raw.githubusercontent.com/yashiel/gifs/master/deploy-prev.png)
 
 ---
 ## :pushpin: Icon-Font Generator & Browser - *v1.3* - *New* :fire:
 
-When you start your dev server, icon generator will read the sketch file and extract all contain artboards into icon fonts. you can change the icon-font name with other settings by editing setting. json file. 
+When you start your dev server, icon generator will read the sketch file and extract all contain art-boards into icon fonts. you can change the icon-font name with other settings by editing ***setting. json*** file. 
 
 #### To view Icon-Font Browser go to
 
@@ -126,6 +126,7 @@ http://localhost:3000/iconfonts.html
 #### Roadmap / Upcoming Feature
 
 * Ability to read and extract vector data from Adobe Illustrator ~~*and Sketch files*~~ and generate icon fonts on the fly.
+* Easy to use SVG Sprite based Icon Generation system
 * ++ More useful features
 ## Author
 
