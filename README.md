@@ -55,7 +55,7 @@ Download the package from GitHub and start to configure using **setting.json** f
 
 ### Installing
 
-After you download the project files **CD/dir** into folder and run
+After you download the project files, open your **command prompt/terminal/iTerm** or whatever you like and **cd/dir** into the folder and run
 
 ```
 yarn
@@ -70,13 +70,13 @@ yarn
 
 ### Start Development AKA Start Dev
 
-Once you done with your dependency installation, open your **command prompt/terminal/iterm**, whatever you like and **cd/dir** into the folder and run
+Once you done with your dependency installation, then run
 ```
 gulp
 ```
 ##### Demo
 
-![alt text](https://raw.githubusercontent.com/yashiel/Modern-Web-Boilerplate/master/docs/img/2.gif)
+![alt text](https://raw.githubusercontent.com/yashiel/Modern-Web-Boilerplate/master/docs/img/3.gif)
 
 **NOTE:** For windows users. you can run **start_dev.cmd** file by double clicking it
 
