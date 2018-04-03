@@ -1,4 +1,4 @@
-![alt text](https://raw.githubusercontent.com/yashiel/Modern-Web-Boilerplate/master/docs/img/intro.png)
+![Imgur](https://i.imgur.com/Nlhow35.png)
 # Modern Front-end Development Boilerplate - v1.3
 
 Easy to use, all-in-one starter boilerplate to develop, build and deploy your next web project
@@ -50,11 +50,11 @@ Download the package from GitHub and start to configure using **setting.json** f
 
 ##### Demo
 
-![alt text](https://raw.githubusercontent.com/yashiel/Modern-Web-Boilerplate/master/docs/img/1.gif)
+![Imgur](https://i.imgur.com/6w1GjRS.gif)
 
 
 ### Folder Structure
-![alt text](https://raw.githubusercontent.com/yashiel/Modern-Web-Boilerplate/master/docs/img/web-boilerplate%20-%20Visual%20Studio%20Code.png)
+![Imgur](https://i.imgur.com/DR5jG2r.png)
 
 ---
 ### Installing
@@ -67,7 +67,7 @@ yarn
 
 ##### Demo
 
-![alt text](https://raw.githubusercontent.com/yashiel/Modern-Web-Boilerplate/master/docs/img/2.gif)
+![Imgur](https://i.imgur.com/KKp7tHt.gif)
 
 
 **NOTE:** make sure to install nodejs and yarn before run yarn commands.
@@ -82,7 +82,7 @@ gulp
 ```
 ##### Demo
 
-![alt text](https://raw.githubusercontent.com/yashiel/Modern-Web-Boilerplate/master/docs/img/3.gif)
+![Imgur](https://i.imgur.com/iPUxXJR.gif)
 
 **NOTE:** For windows users. you can run **start_dev.cmd** file by double clicking it
 
@@ -102,7 +102,7 @@ For windows users. you can run **start_build.cmd** file by double clicking it
 Rename **ftp-config. Json. tpl -> FTP-config. json** and enter your remote host details. once you done with the edit run build command and choose appropriate answer to deploy your project. that’s it !!
 
 #### Deployment Preview
-![alt text](https://raw.githubusercontent.com/yashiel/Modern-Web-Boilerplate/master/docs/img/snap2.png)
+![Imgur](https://i.imgur.com/lcTYEtX.png)
 
 
 #### Roadmap / Upcoming Feature
