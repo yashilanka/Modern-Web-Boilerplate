@@ -3,7 +3,7 @@
 
 Easy to use, all-in-one starter boilerplate to develop, build and deploy your next web project
 
-# What's New - v1.3
+# :pushpin: What's New - v1.3
 * Read Sketch files and extract Artboards into icon-fonts.
 * Easy to use **Icon-Font Browser** with following features,
     * Ability to **Copy-to-clipboard** HTML(CSS Class), SCSS, SCSS Shorthand and SCSS Unicode Variable
@@ -11,7 +11,7 @@ Easy to use, all-in-one starter boilerplate to develop, build and deploy your ne
     * Name your icon-font whatever you want.
     * Can manage everything inside **Setting.json** file.
 
-# Features
+# :pushpin: Features
 * Multiple Frontend SCSS frameworks at your disposal ( Eg:- **New Bootstrap 4** and **Foundation 6** )
 * Easy to manage folder structure but you can change whatever you want ( Eg:- MVC framework like folder structure )
 * Centralized place to manage your js, img, fonts and all project related settings.
@@ -22,7 +22,7 @@ Easy to use, all-in-one starter boilerplate to develop, build and deploy your ne
 * Automatic Deployment to production server.
 * Hassle free build process
 * Secure JS file with JS obfuscation ( **Warning** :- Final Production JS file size may increase significantly )
-* Icon-Fonts Genaration - v1.3 ** **New** **
+* Icon-Fonts Genaration - v1.3 ** **:star: New** **
 
 ### Other Features
 
@@ -44,7 +44,7 @@ ___
 **Nodejs**
 
 ---
-## Getting Started
+## :pushpin: Getting Started
 
 Download the package from GitHub and start to configure using **setting.json** file.
 
@@ -69,7 +69,7 @@ yarn
 
 
 ---
-### Start Development AKA Start Dev
+### :pushpin: Start Development AKA Start Dev
 
 Once you done with your dependency installation, then run
 ```
@@ -82,17 +82,25 @@ gulp
 **NOTE:** For windows users. you can run **start_dev.cmd** file by double clicking it
 
 ---
-### Start Build Process
+### :pushpin: Start Build Process
 
 Once you finish with your development, run below command to get final production ready code.
+
+**Tip:** You can skip build question by pressing enter/return key :smile:
+
 ```
 gulp build --production
 ```
+
+##### Demo
+
+![Gulp Demo](https://raw.githubusercontent.com/yashiel/gifs/master/4.gif)
+
 For windows users. you can run **start_build.cmd** file by double clicking it
 
 
 ---
-## Deployment
+## :pushpin: Deployment
 
 Rename **ftp-config. Json. tpl -> FTP-config. json** and enter your remote host details. once you done with the edit run build command and choose appropriate answer to deploy your project. that’s it !!
 
