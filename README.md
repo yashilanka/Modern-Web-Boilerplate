@@ -9,7 +9,7 @@ Easy to use, all-in-one starter boilerplate to develop, build and deploy your ne
     * Ability to **Copy-to-clipboard** HTML(CSS Class), SCSS, SCSS Shorthand and SCSS Unicode Variable
     * Clear documentation about how to use it.
     * Name your icon-font whatever you want.
-    * Can manage everything inside **Setting.json** file.
+    * Can manage everything inside **setting.json** file.
 
 # :pushpin: Features
 * Multiple Frontend SCSS frameworks at your disposal ( Eg:- **New Bootstrap 4** and **Foundation 6** )
@@ -22,7 +22,7 @@ Easy to use, all-in-one starter boilerplate to develop, build and deploy your ne
 * Automatic Deployment to production server.
 * Hassle free build process
 * Secure JS file with JS obfuscation ( **Warning** :- Final Production JS file size may increase significantly )
-* Icon-Fonts Genaration - v1.3 ** **:star: New** **
+* Icon-Fonts Generation - v1.3 :star: **New**
 
 ### Other Features
 
@@ -65,11 +65,11 @@ yarn
 ![Yarn Demo](https://raw.githubusercontent.com/yashiel/gifs/master/2.gif)
 
 
-**NOTE:** make sure to install nodejs and yarn before run yarn commands.
+**NOTE:** make sure to install **nodejs** and **yarn** before run yarn commands.
 
 
 ---
-### :pushpin: Start Development AKA Start Dev
+### Start Development AKA Start Dev
 
 Once you done with your dependency installation, then run
 ```
@@ -82,11 +82,11 @@ gulp
 **NOTE:** For windows users. you can run **start_dev.cmd** file by double clicking it
 
 ---
-### :pushpin: Start Build Process
+### Start Build Process
 
 Once you finish with your development, run below command to get final production ready code.
 
-**Tip:** You can skip build question by pressing enter/return key :smile:
+**Tip:** You can skip build questions by pressing **enter/return** key :smile:
 
 ```
 gulp build --production
@@ -102,7 +102,7 @@ For windows users. you can run **start_build.cmd** file by double clicking it
 ---
 ## :pushpin: Deployment
 
-Rename **ftp-config. Json. tpl -> FTP-config. json** and enter your remote host details. once you done with the edit run build command and choose appropriate answer to deploy your project. that’s it !!
+Rename **ftp-config.json.tpl -> ftp-config.json** and enter your remote host details. once you done with the edit run build command and choose appropriate answer to deploy your project. that’s it !!
 
 #### Deployment Preview
 ![Deploy Preview](https://raw.githubusercontent.com/yashiel/gifs/master/snap2.png)
