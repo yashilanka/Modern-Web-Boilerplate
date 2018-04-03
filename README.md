@@ -44,7 +44,7 @@ ___
 
 ---
 ## :pushpin: Getting Started
-#### :black_circle: *Step 01*
+#### :point_right: *Step 01*
 
 Download the package from GitHub and start to configure using **setting.json** file.
 
@@ -52,7 +52,7 @@ Download the package from GitHub and start to configure using **setting.json** f
 ![Folder Structure](https://raw.githubusercontent.com/yashiel/gifs/master/web-boilerplate%20-%20Visual%20Studio%20Code.png)
 
 ---
-#### :black_circle: *Step 02*
+#### :point_right: *Step 02*
 ### Installing
 
 After you download the project files, open your **command prompt/terminal/iTerm** or whatever you like and **cd/dir** into the folder and run
@@ -70,7 +70,7 @@ yarn
 
 
 ---
-#### :black_circle: *Step 03*
+#### :point_right: *Step 03*
 ### Start Development AKA Start Dev
 
 Once you done with your dependency installation, then run
@@ -84,7 +84,7 @@ gulp
 **NOTE:** For windows users. you can run **start_dev.cmd** file by double clicking it
 
 ---
-#### :black_circle: *Step 04*
+#### :point_right: *Step 04*
 ### Start Build Process
 
 To get Production ready code, run below command.
@@ -103,7 +103,7 @@ For windows users. you can run **start_build.cmd** file by double clicking it
 
 
 ---
-#### :black_circle: *Step 05*
+#### :point_right: *Step 05*
 ## :pushpin: Deployment
 
 Rename **ftp-config.json.tpl -> ftp-config.json** and enter your remote host details. once you done with the edit run build command and choose appropriate answer to deploy your project. that’s it !!
