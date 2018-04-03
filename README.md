@@ -62,7 +62,7 @@ yarn
 
 ##### Demo
 
-![Imgur](https://i.imgur.com/KKp7tHt.gif)
+![alt text](https://raw.githubusercontent.com/yashiel/Modern-Web-Boilerplate/master/docs/img/2.gif)
 
 
 **NOTE:** make sure to install nodejs and yarn before run yarn commands.
