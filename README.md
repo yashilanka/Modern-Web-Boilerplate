@@ -34,6 +34,8 @@ Easy to use, all-in-one starter boilerplate to develop, build and deploy your ne
 * Image Minify and Optimization
 * Responsive Typography
 
+___
+
 
 ### Prerequisites
 
@@ -41,6 +43,7 @@ Easy to use, all-in-one starter boilerplate to develop, build and deploy your ne
 
 **Nodejs**
 
+---
 ## Getting Started
 
 Download the package from GitHub and start to configure using **setting.json** file.
@@ -53,6 +56,7 @@ Download the package from GitHub and start to configure using **setting.json** f
 ### Folder Structure
 ![alt text](https://raw.githubusercontent.com/yashiel/Modern-Web-Boilerplate/master/docs/img/web-boilerplate%20-%20Visual%20Studio%20Code.png)
 
+---
 ### Installing
 
 After you download the project files, open your **command prompt/terminal/iTerm** or whatever you like and **cd/dir** into the folder and run
@@ -68,6 +72,8 @@ yarn
 
 **NOTE:** make sure to install nodejs and yarn before run yarn commands.
 
+
+---
 ### Start Development AKA Start Dev
 
 Once you done with your dependency installation, then run
@@ -80,6 +86,7 @@ gulp
 
 **NOTE:** For windows users. you can run **start_dev.cmd** file by double clicking it
 
+---
 ### Start Build Process
 
 Once you finish with your development, run below command to get final production ready code.
@@ -89,6 +96,7 @@ gulp build --production
 For windows users. you can run **start_build.cmd** file by double clicking it
 
 
+---
 ## Deployment
 
 Rename **ftp-config. Json. tpl -> FTP-config. json** and enter your remote host details. once you done with the edit run build command and choose appropriate answer to deploy your project. that’s it !!

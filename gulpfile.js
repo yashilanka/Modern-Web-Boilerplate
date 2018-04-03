@@ -820,7 +820,7 @@ gulp.task("build", function(done) {
         inquirer
             .prompt([{
                 type: "confirm",
-                message: "Do you want me to create a backup file for Build and Src folders ?",
+                message: "Do you want to backup Build and Src folders ?",
                 default: false,
                 name: "start"
             }])
@@ -872,7 +872,7 @@ gulp.task("build", function(done) {
                         }]).then(function(ans) {
                             if (ans.yes) {
                                 sequence("clean", "Iconfont", ["pages", "css", "js", "images", "copy"], 'deploy', function() {
-                                    console.log('---------------- Project has been successfuly build and deployed to the server  ---------------- ');
+                                    console.log('---------------- Your Project has been successfully build and deployed to the server  ---------------- ');
                                 });
                             } else {
                                 sequence("clean", "Iconfont", ["pages", "css", "js", "images", "copy"], done);
