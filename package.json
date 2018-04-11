@@ -65,6 +65,7 @@
     "gulp-sketch": "^1.0.5",
     "gulp-sort": "^2.0.0",
     "gulp-sourcemaps": "^2.6.4",
+    "gulp-svg-sprite": "^1.4.0",
     "gulp-uglify": "^3.0.0",
     "gulp-uncss": "^1.0.6",
     "gulp-util": "^3.0.8",

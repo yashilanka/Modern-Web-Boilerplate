@@ -6,6 +6,7 @@ backup
 build
 # docs
 .sass-cache
+.idea
 .idea/code-comments.xml
 .idea/runConfigurations/
 /src/scss/others/_fonts.scss

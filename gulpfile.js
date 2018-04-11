@@ -23,6 +23,7 @@ var fs = require("fs"),
     cdnizer = require("gulp-cdnizer"),
     cachebust = require('gulp-cache-bust'),
     deploy = require('vinyl-ftp'),
+    svgSprite = require('gulp-svg-sprite'),
     encrypt = require('gulp-javascript-obfuscator'),
     cleanCSS = require("gulp-clean-css");
 
@@ -262,6 +263,54 @@ gulp.task('Iconfont', !isWindows ? ['cleanicons'] : '', function() {
 
 });
 
+
+
+// SVG Sprite Generator
+gulp.task('svgSpriteGen', function () {
+
+    svgConfig = {
+        shape: {
+          dimension: { // Set maximum dimensions
+            maxWidth: 100,
+            maxHeight: 100
+          },
+          spacing: { // Add padding
+            padding: 0
+          }, // Keep the intermediate files
+        },
+        mode: {
+          view: { // Activate the «view» mode
+            bust: false,
+            render: {
+              scss: true // Activate Sass output (with default options)
+            },
+            example: true	
+          },
+          symbol: {
+            render: {
+                scss: true // Activate Sass output (with default options)
+              },
+              example: true
+          }, // Activate the «symbol» mode
+          css: {
+            render: {
+                scss: true // Activate Sass output (with default options)
+              },
+              example: true
+          },
+          defs: {
+            render: {
+                scss: true // Activate Sass output (with default options)
+              },
+              example: true
+          }
+        }
+      };
+
+    gulp.src('**/*.svg', {cwd :svgPath})
+    .pipe(svgSprite(svgConfig))
+    .pipe(gulp.dest('./src/img/sprite'));
+  });
 
 
 // Main App SCSS
@@ -843,19 +892,19 @@ gulp.task("build", function(done) {
                         .then(function(check) {
                             if (check.build === answer1) {
                                 sequence(
-                                    "clean", "Iconfont", ["pages", "css", "js", "images", "copy"],
+                                    "clean", "Iconfont", "svgSpriteGen", ["pages", "css", "js", "images", "copy"],
                                     "backup-src",
                                     done
                                 );
                             } else if (check.build === answer2) {
                                 sequence(
-                                    "clean", "Iconfont", ["pages", "css", "js", "images", "copy"],
+                                    "clean", "Iconfont", "svgSpriteGen", ["pages", "css", "js", "images", "copy"],
                                     "backup-build",
                                     done
                                 );
                             } else if (check.build === answer3) {
                                 sequence(
-                                    "clean", "Iconfont", ["pages", "css", "js", "images", "copy"],
+                                    "clean", "Iconfont", "svgSpriteGen", ["pages", "css", "js", "images", "copy"],
                                     "backup-src",
                                     "backup-build",
                                     done
@@ -871,18 +920,18 @@ gulp.task("build", function(done) {
                             name: "yes"
                         }]).then(function(ans) {
                             if (ans.yes) {
-                                sequence("clean", "Iconfont", ["pages", "css", "js", "images", "copy"], 'deploy', function() {
+                                sequence("clean", "Iconfont", "svgSpriteGen", ["pages", "css", "js", "images", "copy"], 'deploy', function() {
                                     console.log('---------------- Your Project has been successfully build and deployed to the server  ---------------- ');
                                 });
                             } else {
-                                sequence("clean", "Iconfont", ["pages", "css", "js", "images", "copy"], done);
+                                sequence("clean", "Iconfont", "svgSpriteGen", ["pages", "css", "js", "images", "copy"], done);
                             }
                         })
                 }
 
             });
     } else {
-        sequence("clean", "Iconfont", ["pages", "css", "js", "images", "copy"], done);
+        sequence("clean", "Iconfont", "svgSpriteGen", ["pages", "css", "js", "images", "copy"], done);
     }
 });
 

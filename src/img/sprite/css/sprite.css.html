@@ -1,0 +1,6774 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+		<title>SVG CSS sprite preview | svg-sprite</title>
+		<style>@charset "UTF-8";body{padding:0;margin:0;color:#666;background:#fafafa;font-family:Arial,Helvetica,sans-serif;font-size:1em;line-height:1.4}header{display:block;padding:3em 3em 2em 3em;background-color:#fff}header p{margin:2em 0 0 0}section{border-top:1px solid #eee;padding:2em 3em 0 3em}section ul{margin:0;padding:0}section li{display:inline;display:inline-block;background-color:#fff;position:relative;margin:0 2em 2em 0;vertical-align:top;border:1px solid #ccc;padding:1em 1em 3em 1em;cursor:default}.icon-box{margin:0;width:144px;height:144px;position:relative;background:#ccc url("data:image/gif;base64,R0lGODlhDAAMAIAAAMzMzP///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQjk4OTI0MUY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQjk4OTI0MkY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNCOTg5MjNGRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNCOTg5MjQwRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAAAwADAAAAhaEH6mHmmzcgzJAUG/NVGrfOZ8YLlABADs=") top left repeat;border:1px solid #ccc;display:table-cell;vertical-align:middle;text-align:center}.icon{display:inline;display:inline-block}h1{margin-top:0}h2{margin:0;padding:0;font-size:1em;font-weight:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:absolute;left:1em;right:1em;bottom:1em}footer{display:block;margin:0;padding:0 3em 3em 3em}footer p{margin:0;font-size:.7em}footer a{color:#0f7595;margin-left:0}</style>
+		<style>i{text-indent:200%;white-space:nowrap;overflow:hidden;display:inline-block;background-size:2200px 2200px!important}</style>
+
+<!--
+
+Sprite CSS
+====================================================================================================
+This is an all-in-one inline version of the CSS necessary to use the SVG sprite.
+
+-->
+
+<style type="text/css">
+.svg-uEA01-add {
+	background: url("svg/sprite.css-1e9830ba.svg") 4.761904761904762% 0 no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA02-analytics-t {
+	background: url("svg/sprite.css-1e9830ba.svg") 0 71.42857142857143% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA03-archive-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 0 4.761904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA04-archive {
+	background: url("svg/sprite.css-1e9830ba.svg") 4.761904761904762% 4.761904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA05-arrow-down-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 9.523809523809524% 0 no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA06-arrow-down-3 {
+	background: url("svg/sprite.css-1e9830ba.svg") 9.523809523809524% 4.761904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA07-arrow-down {
+	background: url("svg/sprite.css-1e9830ba.svg") 0 9.523809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA08-arrow-l-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 4.761904761904762% 9.523809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA09-arrow-l-3 {
+	background: url("svg/sprite.css-1e9830ba.svg") 9.523809523809524% 9.523809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA0A-arrow-l-4 {
+	background: url("svg/sprite.css-1e9830ba.svg") 14.285714285714286% 0 no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA0B-arrow-l-5 {
+	background: url("svg/sprite.css-1e9830ba.svg") 14.285714285714286% 4.761904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA0C-arrow-l-6 {
+	background: url("svg/sprite.css-1e9830ba.svg") 14.285714285714286% 9.523809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA0D-arrow-l-7 {
+	background: url("svg/sprite.css-1e9830ba.svg") 0 14.285714285714286% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA0E-arrow-l-8 {
+	background: url("svg/sprite.css-1e9830ba.svg") 4.761904761904762% 14.285714285714286% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA0F-arrow-l-9 {
+	background: url("svg/sprite.css-1e9830ba.svg") 9.523809523809524% 14.285714285714286% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA10-arrow-l {
+	background: url("svg/sprite.css-1e9830ba.svg") 14.285714285714286% 14.285714285714286% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA11-arrow-r-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 19.047619047619047% 0 no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA12-arrow-r-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 19.047619047619047% 4.761904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA13-arrow-r-3 {
+	background: url("svg/sprite.css-1e9830ba.svg") 19.047619047619047% 9.523809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA14-arrow-r-4 {
+	background: url("svg/sprite.css-1e9830ba.svg") 19.047619047619047% 14.285714285714286% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA15-arrow-r-5 {
+	background: url("svg/sprite.css-1e9830ba.svg") 0 19.047619047619047% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA16-arrow-r-6 {
+	background: url("svg/sprite.css-1e9830ba.svg") 4.761904761904762% 19.047619047619047% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA17-arrow-r-7 {
+	background: url("svg/sprite.css-1e9830ba.svg") 9.523809523809524% 19.047619047619047% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA18-arrow-r-8 {
+	background: url("svg/sprite.css-1e9830ba.svg") 14.285714285714286% 19.047619047619047% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA19-arrow-r-9 {
+	background: url("svg/sprite.css-1e9830ba.svg") 19.047619047619047% 19.047619047619047% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA1A-arrow-up-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 23.80952380952381% 0 no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA1B-arrow-up-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 23.80952380952381% 4.761904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA1C-arrow-up-3 {
+	background: url("svg/sprite.css-1e9830ba.svg") 23.80952380952381% 9.523809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA1D-arrow-up {
+	background: url("svg/sprite.css-1e9830ba.svg") 23.80952380952381% 14.285714285714286% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA1E-attachment {
+	background: url("svg/sprite.css-1e9830ba.svg") 23.80952380952381% 19.047619047619047% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA1F-award-10 {
+	background: url("svg/sprite.css-1e9830ba.svg") 0 23.80952380952381% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA20-award-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 4.761904761904762% 23.80952380952381% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA21-award-3 {
+	background: url("svg/sprite.css-1e9830ba.svg") 9.523809523809524% 23.80952380952381% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA22-award-4 {
+	background: url("svg/sprite.css-1e9830ba.svg") 14.285714285714286% 23.80952380952381% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA23-award-5 {
+	background: url("svg/sprite.css-1e9830ba.svg") 19.047619047619047% 23.80952380952381% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA24-award-6 {
+	background: url("svg/sprite.css-1e9830ba.svg") 23.80952380952381% 23.80952380952381% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA25-award-7 {
+	background: url("svg/sprite.css-1e9830ba.svg") 28.571428571428573% 0 no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA26-award-8 {
+	background: url("svg/sprite.css-1e9830ba.svg") 28.571428571428573% 4.761904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA27-award-9 {
+	background: url("svg/sprite.css-1e9830ba.svg") 28.571428571428573% 9.523809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA28-award {
+	background: url("svg/sprite.css-1e9830ba.svg") 28.571428571428573% 14.285714285714286% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA29-azure-ad {
+	background: url("svg/sprite.css-1e9830ba.svg") 28.571428571428573% 19.047619047619047% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA2A-back-time {
+	background: url("svg/sprite.css-1e9830ba.svg") 28.571428571428573% 23.80952380952381% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA2B-back {
+	background: url("svg/sprite.css-1e9830ba.svg") 0 28.571428571428573% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA2C-bell {
+	background: url("svg/sprite.css-1e9830ba.svg") 4.761904761904762% 28.571428571428573% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA2D-block-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 9.523809523809524% 28.571428571428573% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA2E-block-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 14.285714285714286% 28.571428571428573% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA2F-block {
+	background: url("svg/sprite.css-1e9830ba.svg") 19.047619047619047% 28.571428571428573% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA30-book-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 23.80952380952381% 28.571428571428573% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA31-book-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 28.571428571428573% 28.571428571428573% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA32-book-3 {
+	background: url("svg/sprite.css-1e9830ba.svg") 33.333333333333336% 0 no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA33-book-4 {
+	background: url("svg/sprite.css-1e9830ba.svg") 33.333333333333336% 4.761904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA34-book-5 {
+	background: url("svg/sprite.css-1e9830ba.svg") 33.333333333333336% 9.523809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA35-book {
+	background: url("svg/sprite.css-1e9830ba.svg") 33.333333333333336% 14.285714285714286% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA36-bookmark {
+	background: url("svg/sprite.css-1e9830ba.svg") 33.333333333333336% 19.047619047619047% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA37-box-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 33.333333333333336% 23.80952380952381% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA38-box-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 33.333333333333336% 28.571428571428573% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA39-box-3 {
+	background: url("svg/sprite.css-1e9830ba.svg") 0 33.333333333333336% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA3A-box {
+	background: url("svg/sprite.css-1e9830ba.svg") 4.761904761904762% 33.333333333333336% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA3B-boy {
+	background: url("svg/sprite.css-1e9830ba.svg") 9.523809523809524% 33.333333333333336% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA3C-brightness {
+	background: url("svg/sprite.css-1e9830ba.svg") 14.285714285714286% 33.333333333333336% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA3D-building-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 19.047619047619047% 33.333333333333336% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA3E-building-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 23.80952380952381% 33.333333333333336% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA3F-building {
+	background: url("svg/sprite.css-1e9830ba.svg") 28.571428571428573% 33.333333333333336% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA40-calender-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 33.333333333333336% 33.333333333333336% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA41-calender-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 38.095238095238095% 0 no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA42-calender-3 {
+	background: url("svg/sprite.css-1e9830ba.svg") 38.095238095238095% 4.761904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA43-calender-4 {
+	background: url("svg/sprite.css-1e9830ba.svg") 38.095238095238095% 9.523809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA44-calender-5 {
+	background: url("svg/sprite.css-1e9830ba.svg") 38.095238095238095% 14.285714285714286% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA45-calender-6 {
+	background: url("svg/sprite.css-1e9830ba.svg") 38.095238095238095% 19.047619047619047% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA46-calender-7 {
+	background: url("svg/sprite.css-1e9830ba.svg") 38.095238095238095% 23.80952380952381% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA47-calender {
+	background: url("svg/sprite.css-1e9830ba.svg") 38.095238095238095% 28.571428571428573% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA48-cancel-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 38.095238095238095% 33.333333333333336% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA49-cancel-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 0 38.095238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA4A-cancel-3 {
+	background: url("svg/sprite.css-1e9830ba.svg") 4.761904761904762% 38.095238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA4B-cancel {
+	background: url("svg/sprite.css-1e9830ba.svg") 9.523809523809524% 38.095238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA4C-caret-down {
+	background: url("svg/sprite.css-1e9830ba.svg") 14.285714285714286% 38.095238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA4D-caret-up {
+	background: url("svg/sprite.css-1e9830ba.svg") 19.047619047619047% 38.095238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA4E-chart-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 23.80952380952381% 38.095238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA4F-chart-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 28.571428571428573% 38.095238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA50-chart-3 {
+	background: url("svg/sprite.css-1e9830ba.svg") 33.333333333333336% 38.095238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA51-chart-4 {
+	background: url("svg/sprite.css-1e9830ba.svg") 38.095238095238095% 38.095238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA52-chart-5 {
+	background: url("svg/sprite.css-1e9830ba.svg") 42.857142857142854% 0 no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA53-chart-6 {
+	background: url("svg/sprite.css-1e9830ba.svg") 42.857142857142854% 4.761904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA54-chart-7 {
+	background: url("svg/sprite.css-1e9830ba.svg") 42.857142857142854% 9.523809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA55-chart-circuar {
+	background: url("svg/sprite.css-1e9830ba.svg") 42.857142857142854% 14.285714285714286% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA56-chart-pie {
+	background: url("svg/sprite.css-1e9830ba.svg") 42.857142857142854% 19.047619047619047% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA57-chart {
+	background: url("svg/sprite.css-1e9830ba.svg") 42.857142857142854% 23.80952380952381% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA58-chat-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 42.857142857142854% 28.571428571428573% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA59-chat-10 {
+	background: url("svg/sprite.css-1e9830ba.svg") 42.857142857142854% 33.333333333333336% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA5A-chat-11 {
+	background: url("svg/sprite.css-1e9830ba.svg") 42.857142857142854% 38.095238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA5B-chat-12 {
+	background: url("svg/sprite.css-1e9830ba.svg") 0 42.857142857142854% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA5C-chat-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 4.761904761904762% 42.857142857142854% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA5D-chat-3 {
+	background: url("svg/sprite.css-1e9830ba.svg") 9.523809523809524% 42.857142857142854% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA5E-chat-4 {
+	background: url("svg/sprite.css-1e9830ba.svg") 14.285714285714286% 42.857142857142854% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA5F-chat-5 {
+	background: url("svg/sprite.css-1e9830ba.svg") 19.047619047619047% 42.857142857142854% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA60-chat-6 {
+	background: url("svg/sprite.css-1e9830ba.svg") 23.80952380952381% 42.857142857142854% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA61-chat-7 {
+	background: url("svg/sprite.css-1e9830ba.svg") 28.571428571428573% 42.857142857142854% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA62-chat-8 {
+	background: url("svg/sprite.css-1e9830ba.svg") 33.333333333333336% 42.857142857142854% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA63-chat-9 {
+	background: url("svg/sprite.css-1e9830ba.svg") 38.095238095238095% 42.857142857142854% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA64-chat {
+	background: url("svg/sprite.css-1e9830ba.svg") 42.857142857142854% 42.857142857142854% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA65-check-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 47.61904761904762% 0 no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA66-check-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 47.61904761904762% 4.761904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA67-check-3 {
+	background: url("svg/sprite.css-1e9830ba.svg") 47.61904761904762% 9.523809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA68-check-4 {
+	background: url("svg/sprite.css-1e9830ba.svg") 47.61904761904762% 14.285714285714286% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA69-check-fill {
+	background: url("svg/sprite.css-1e9830ba.svg") 47.61904761904762% 19.047619047619047% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA6A-check-line {
+	background: url("svg/sprite.css-1e9830ba.svg") 47.61904761904762% 23.80952380952381% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA6B-check {
+	background: url("svg/sprite.css-1e9830ba.svg") 47.61904761904762% 28.571428571428573% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA6C-checkbox-fill-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 47.61904761904762% 33.333333333333336% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA6D-checkbox-fill {
+	background: url("svg/sprite.css-1e9830ba.svg") 47.61904761904762% 38.095238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA6E-checkbox-line {
+	background: url("svg/sprite.css-1e9830ba.svg") 47.61904761904762% 42.857142857142854% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA6F-circle {
+	background: url("svg/sprite.css-1e9830ba.svg") 0 47.61904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA70-city-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 4.761904761904762% 47.61904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA71-city-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 9.523809523809524% 47.61904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA72-city-3 {
+	background: url("svg/sprite.css-1e9830ba.svg") 14.285714285714286% 47.61904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA73-city-4 {
+	background: url("svg/sprite.css-1e9830ba.svg") 19.047619047619047% 47.61904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA74-city-5 {
+	background: url("svg/sprite.css-1e9830ba.svg") 23.80952380952381% 47.61904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA75-city-6 {
+	background: url("svg/sprite.css-1e9830ba.svg") 28.571428571428573% 47.61904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA76-city-7 {
+	background: url("svg/sprite.css-1e9830ba.svg") 33.333333333333336% 47.61904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA77-city-8 {
+	background: url("svg/sprite.css-1e9830ba.svg") 38.095238095238095% 47.61904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA78-city {
+	background: url("svg/sprite.css-1e9830ba.svg") 42.857142857142854% 47.61904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA79-clap {
+	background: url("svg/sprite.css-1e9830ba.svg") 47.61904761904762% 47.61904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA7A-clock-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 52.38095238095238% 0 no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA7B-clock-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 52.38095238095238% 4.761904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA7C-clock-3 {
+	background: url("svg/sprite.css-1e9830ba.svg") 52.38095238095238% 9.523809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA7D-clock-4 {
+	background: url("svg/sprite.css-1e9830ba.svg") 52.38095238095238% 14.285714285714286% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA7E-clock-5 {
+	background: url("svg/sprite.css-1e9830ba.svg") 52.38095238095238% 19.047619047619047% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA7F-clock-6 {
+	background: url("svg/sprite.css-1e9830ba.svg") 52.38095238095238% 23.80952380952381% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA80-clock-7 {
+	background: url("svg/sprite.css-1e9830ba.svg") 52.38095238095238% 28.571428571428573% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA81-clock-8 {
+	background: url("svg/sprite.css-1e9830ba.svg") 52.38095238095238% 33.333333333333336% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA82-close-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 52.38095238095238% 38.095238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA83-close-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 52.38095238095238% 42.857142857142854% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA84-close {
+	background: url("svg/sprite.css-1e9830ba.svg") 52.38095238095238% 47.61904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA85-cloud {
+	background: url("svg/sprite.css-1e9830ba.svg") 0 52.38095238095238% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA86-cog {
+	background: url("svg/sprite.css-1e9830ba.svg") 4.761904761904762% 52.38095238095238% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA87-collapse-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 9.523809523809524% 52.38095238095238% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA88-collapse {
+	background: url("svg/sprite.css-1e9830ba.svg") 14.285714285714286% 52.38095238095238% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA89-commands {
+	background: url("svg/sprite.css-1e9830ba.svg") 19.047619047619047% 52.38095238095238% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA8A-comment {
+	background: url("svg/sprite.css-1e9830ba.svg") 23.80952380952381% 52.38095238095238% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA8B-competency {
+	background: url("svg/sprite.css-1e9830ba.svg") 28.571428571428573% 52.38095238095238% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA8C-computer {
+	background: url("svg/sprite.css-1e9830ba.svg") 33.333333333333336% 52.38095238095238% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA8D-config-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 38.095238095238095% 52.38095238095238% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA8E-config-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 42.857142857142854% 52.38095238095238% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA8F-config-3 {
+	background: url("svg/sprite.css-1e9830ba.svg") 47.61904761904762% 52.38095238095238% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA90-config-4 {
+	background: url("svg/sprite.css-1e9830ba.svg") 52.38095238095238% 52.38095238095238% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA91-config {
+	background: url("svg/sprite.css-1e9830ba.svg") 57.142857142857146% 0 no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA92-confirmation {
+	background: url("svg/sprite.css-1e9830ba.svg") 57.142857142857146% 4.761904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA93-contrast {
+	background: url("svg/sprite.css-1e9830ba.svg") 57.142857142857146% 9.523809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA94-conversation {
+	background: url("svg/sprite.css-1e9830ba.svg") 57.142857142857146% 14.285714285714286% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA95-copy-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 57.142857142857146% 19.047619047619047% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA96-copy-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 57.142857142857146% 23.80952380952381% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA97-copy {
+	background: url("svg/sprite.css-1e9830ba.svg") 57.142857142857146% 28.571428571428573% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA98-correct {
+	background: url("svg/sprite.css-1e9830ba.svg") 57.142857142857146% 33.333333333333336% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA99-crop {
+	background: url("svg/sprite.css-1e9830ba.svg") 57.142857142857146% 38.095238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA9A-crossover {
+	background: url("svg/sprite.css-1e9830ba.svg") 57.142857142857146% 42.857142857142854% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA9B-current-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 57.142857142857146% 47.61904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA9C-current-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 57.142857142857146% 52.38095238095238% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA9D-current-3 {
+	background: url("svg/sprite.css-1e9830ba.svg") 0 57.142857142857146% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA9E-current {
+	background: url("svg/sprite.css-1e9830ba.svg") 4.761904761904762% 57.142857142857146% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEA9F-cv-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 9.523809523809524% 57.142857142857146% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAA0-cv {
+	background: url("svg/sprite.css-1e9830ba.svg") 14.285714285714286% 57.142857142857146% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAA1-dashboard-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 19.047619047619047% 57.142857142857146% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAA2-dashboard {
+	background: url("svg/sprite.css-1e9830ba.svg") 23.80952380952381% 57.142857142857146% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAA3-diamond {
+	background: url("svg/sprite.css-1e9830ba.svg") 28.571428571428573% 57.142857142857146% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAA4-doc-duplicate-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 33.333333333333336% 57.142857142857146% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAA5-doc-duplicate {
+	background: url("svg/sprite.css-1e9830ba.svg") 38.095238095238095% 57.142857142857146% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAA6-doc-edit-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 42.857142857142854% 57.142857142857146% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAA7-doc-edit-3 {
+	background: url("svg/sprite.css-1e9830ba.svg") 47.61904761904762% 57.142857142857146% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAA8-doc-file {
+	background: url("svg/sprite.css-1e9830ba.svg") 52.38095238095238% 57.142857142857146% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAA9-doc-right {
+	background: url("svg/sprite.css-1e9830ba.svg") 57.142857142857146% 57.142857142857146% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAAA-doc-stack {
+	background: url("svg/sprite.css-1e9830ba.svg") 61.904761904761905% 0 no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAAB-document-edit {
+	background: url("svg/sprite.css-1e9830ba.svg") 61.904761904761905% 4.761904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAAC-document {
+	background: url("svg/sprite.css-1e9830ba.svg") 61.904761904761905% 9.523809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAAD-documents {
+	background: url("svg/sprite.css-1e9830ba.svg") 61.904761904761905% 14.285714285714286% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAAE-edit-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 61.904761904761905% 19.047619047619047% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAAF-edit {
+	background: url("svg/sprite.css-1e9830ba.svg") 61.904761904761905% 23.80952380952381% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAB0-emoji-smile {
+	background: url("svg/sprite.css-1e9830ba.svg") 61.904761904761905% 28.571428571428573% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAB1-emoji-surprised {
+	background: url("svg/sprite.css-1e9830ba.svg") 61.904761904761905% 33.333333333333336% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAB2-enter-door {
+	background: url("svg/sprite.css-1e9830ba.svg") 61.904761904761905% 38.095238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAB3-enter {
+	background: url("svg/sprite.css-1e9830ba.svg") 61.904761904761905% 42.857142857142854% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAB4-equal {
+	background: url("svg/sprite.css-1e9830ba.svg") 61.904761904761905% 47.61904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAB5-evaluation {
+	background: url("svg/sprite.css-1e9830ba.svg") 61.904761904761905% 52.38095238095238% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAB6-exit-door {
+	background: url("svg/sprite.css-1e9830ba.svg") 61.904761904761905% 57.142857142857146% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAB7-expand-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 0 61.904761904761905% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAB8-expand-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 4.761904761904762% 61.904761904761905% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAB9-expand {
+	background: url("svg/sprite.css-1e9830ba.svg") 9.523809523809524% 61.904761904761905% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEABA-export {
+	background: url("svg/sprite.css-1e9830ba.svg") 14.285714285714286% 61.904761904761905% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEABB-eye-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 19.047619047619047% 61.904761904761905% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEABC-eye-block {
+	background: url("svg/sprite.css-1e9830ba.svg") 23.80952380952381% 61.904761904761905% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEABD-eye {
+	background: url("svg/sprite.css-1e9830ba.svg") 28.571428571428573% 61.904761904761905% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEABE-facebook {
+	background: url("svg/sprite.css-1e9830ba.svg") 33.333333333333336% 61.904761904761905% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEABF-favourite {
+	background: url("svg/sprite.css-1e9830ba.svg") 38.095238095238095% 61.904761904761905% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAC0-feed {
+	background: url("svg/sprite.css-1e9830ba.svg") 42.857142857142854% 61.904761904761905% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAC1-feedback-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 47.61904761904762% 61.904761904761905% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAC2-feedback {
+	background: url("svg/sprite.css-1e9830ba.svg") 52.38095238095238% 61.904761904761905% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAC3-female {
+	background: url("svg/sprite.css-1e9830ba.svg") 57.142857142857146% 61.904761904761905% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAC4-files {
+	background: url("svg/sprite.css-1e9830ba.svg") 61.904761904761905% 61.904761904761905% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAC5-fill-dot-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 66.66666666666667% 0 no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAC6-fill-dot {
+	background: url("svg/sprite.css-1e9830ba.svg") 66.66666666666667% 4.761904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAC7-filter-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 66.66666666666667% 9.523809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAC8-filter {
+	background: url("svg/sprite.css-1e9830ba.svg") 66.66666666666667% 14.285714285714286% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAC9-finger-print {
+	background: url("svg/sprite.css-1e9830ba.svg") 66.66666666666667% 19.047619047619047% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEACA-fingerprint-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 66.66666666666667% 23.80952380952381% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEACB-flag {
+	background: url("svg/sprite.css-1e9830ba.svg") 66.66666666666667% 28.571428571428573% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEACC-folder-add {
+	background: url("svg/sprite.css-1e9830ba.svg") 66.66666666666667% 33.333333333333336% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEACD-folder {
+	background: url("svg/sprite.css-1e9830ba.svg") 66.66666666666667% 38.095238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEACE-food-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 66.66666666666667% 42.857142857142854% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEACF-food-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 66.66666666666667% 47.61904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAD0-food-3 {
+	background: url("svg/sprite.css-1e9830ba.svg") 66.66666666666667% 52.38095238095238% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAD1-food-4 {
+	background: url("svg/sprite.css-1e9830ba.svg") 66.66666666666667% 57.142857142857146% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAD2-food-5 {
+	background: url("svg/sprite.css-1e9830ba.svg") 66.66666666666667% 61.904761904761905% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAD3-food-6 {
+	background: url("svg/sprite.css-1e9830ba.svg") 0 66.66666666666667% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAD4-food-7 {
+	background: url("svg/sprite.css-1e9830ba.svg") 4.761904761904762% 66.66666666666667% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAD5-food {
+	background: url("svg/sprite.css-1e9830ba.svg") 9.523809523809524% 66.66666666666667% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAD6-gender {
+	background: url("svg/sprite.css-1e9830ba.svg") 14.285714285714286% 66.66666666666667% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAD7-girl-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 19.047619047619047% 66.66666666666667% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAD8-girl {
+	background: url("svg/sprite.css-1e9830ba.svg") 23.80952380952381% 66.66666666666667% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAD9-glass-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 28.571428571428573% 66.66666666666667% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEADA-glass-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 33.333333333333336% 66.66666666666667% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEADB-glass-3 {
+	background: url("svg/sprite.css-1e9830ba.svg") 38.095238095238095% 66.66666666666667% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEADC-glass-4 {
+	background: url("svg/sprite.css-1e9830ba.svg") 42.857142857142854% 66.66666666666667% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEADD-glass-5 {
+	background: url("svg/sprite.css-1e9830ba.svg") 47.61904761904762% 66.66666666666667% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEADE-glass-7 {
+	background: url("svg/sprite.css-1e9830ba.svg") 52.38095238095238% 66.66666666666667% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEADF-glass {
+	background: url("svg/sprite.css-1e9830ba.svg") 57.142857142857146% 66.66666666666667% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAE0-globe {
+	background: url("svg/sprite.css-1e9830ba.svg") 61.904761904761905% 66.66666666666667% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAE1-google {
+	background: url("svg/sprite.css-1e9830ba.svg") 66.66666666666667% 66.66666666666667% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAE2-greater-equal {
+	background: url("svg/sprite.css-1e9830ba.svg") 71.42857142857143% 0 no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAE3-greater-than {
+	background: url("svg/sprite.css-1e9830ba.svg") 71.42857142857143% 4.761904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAE4-half-moon {
+	background: url("svg/sprite.css-1e9830ba.svg") 71.42857142857143% 9.523809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAE5-hammer {
+	background: url("svg/sprite.css-1e9830ba.svg") 71.42857142857143% 14.285714285714286% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAE6-hand-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 71.42857142857143% 19.047619047619047% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAE7-hand-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 71.42857142857143% 23.80952380952381% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAE8-hand-3 {
+	background: url("svg/sprite.css-1e9830ba.svg") 71.42857142857143% 28.571428571428573% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAE9-hand-4 {
+	background: url("svg/sprite.css-1e9830ba.svg") 71.42857142857143% 33.333333333333336% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAEA-hand-5 {
+	background: url("svg/sprite.css-1e9830ba.svg") 71.42857142857143% 38.095238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAEB-hand-6 {
+	background: url("svg/sprite.css-1e9830ba.svg") 71.42857142857143% 42.857142857142854% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAEC-hand {
+	background: url("svg/sprite.css-1e9830ba.svg") 71.42857142857143% 47.61904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAED-handshake-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 71.42857142857143% 52.38095238095238% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAEE-handshake {
+	background: url("svg/sprite.css-1e9830ba.svg") 71.42857142857143% 57.142857142857146% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAEF-head-count {
+	background: url("svg/sprite.css-1e9830ba.svg") 71.42857142857143% 61.904761904761905% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAF0-head-hunt {
+	background: url("svg/sprite.css-1e9830ba.svg") 71.42857142857143% 66.66666666666667% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAF1-heart-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 0 0 no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAF2-heart-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 4.761904761904762% 71.42857142857143% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAF3-heart {
+	background: url("svg/sprite.css-1e9830ba.svg") 9.523809523809524% 71.42857142857143% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAF4-holyday-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 14.285714285714286% 71.42857142857143% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAF5-holyday-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 19.047619047619047% 71.42857142857143% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAF6-holyday-3 {
+	background: url("svg/sprite.css-1e9830ba.svg") 23.80952380952381% 71.42857142857143% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAF7-holyday-4 {
+	background: url("svg/sprite.css-1e9830ba.svg") 28.571428571428573% 71.42857142857143% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAF8-home-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 33.333333333333336% 71.42857142857143% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAF9-home {
+	background: url("svg/sprite.css-1e9830ba.svg") 38.095238095238095% 71.42857142857143% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAFA-hr {
+	background: url("svg/sprite.css-1e9830ba.svg") 42.857142857142854% 71.42857142857143% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAFB-idea {
+	background: url("svg/sprite.css-1e9830ba.svg") 47.61904761904762% 71.42857142857143% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAFC-info {
+	background: url("svg/sprite.css-1e9830ba.svg") 52.38095238095238% 71.42857142857143% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAFD-job-hiring {
+	background: url("svg/sprite.css-1e9830ba.svg") 57.142857142857146% 71.42857142857143% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAFE-job {
+	background: url("svg/sprite.css-1e9830ba.svg") 61.904761904761905% 71.42857142857143% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEAFF-jpg-file {
+	background: url("svg/sprite.css-1e9830ba.svg") 66.66666666666667% 71.42857142857143% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB00-keyboard {
+	background: url("svg/sprite.css-1e9830ba.svg") 71.42857142857143% 71.42857142857143% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB01-knowledge-sharing {
+	background: url("svg/sprite.css-1e9830ba.svg") 76.19047619047619% 0 no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB02-lab {
+	background: url("svg/sprite.css-1e9830ba.svg") 76.19047619047619% 4.761904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB03-law-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 76.19047619047619% 9.523809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB04-law {
+	background: url("svg/sprite.css-1e9830ba.svg") 76.19047619047619% 14.285714285714286% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB05-left {
+	background: url("svg/sprite.css-1e9830ba.svg") 76.19047619047619% 19.047619047619047% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB06-less-equal {
+	background: url("svg/sprite.css-1e9830ba.svg") 76.19047619047619% 23.80952380952381% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB07-less-than {
+	background: url("svg/sprite.css-1e9830ba.svg") 76.19047619047619% 28.571428571428573% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB08-letter {
+	background: url("svg/sprite.css-1e9830ba.svg") 76.19047619047619% 33.333333333333336% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB09-lightning-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 76.19047619047619% 38.095238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB0A-lightning {
+	background: url("svg/sprite.css-1e9830ba.svg") 76.19047619047619% 42.857142857142854% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB0B-like {
+	background: url("svg/sprite.css-1e9830ba.svg") 76.19047619047619% 47.61904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB0C-linkedin {
+	background: url("svg/sprite.css-1e9830ba.svg") 76.19047619047619% 52.38095238095238% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB0D-list-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 76.19047619047619% 57.142857142857146% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB0E-list-3 {
+	background: url("svg/sprite.css-1e9830ba.svg") 76.19047619047619% 61.904761904761905% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB0F-list {
+	background: url("svg/sprite.css-1e9830ba.svg") 76.19047619047619% 66.66666666666667% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB10-loading {
+	background: url("svg/sprite.css-1e9830ba.svg") 76.19047619047619% 71.42857142857143% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB11-lock-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 0 76.19047619047619% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB12-lock {
+	background: url("svg/sprite.css-1e9830ba.svg") 4.761904761904762% 76.19047619047619% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB13-login {
+	background: url("svg/sprite.css-1e9830ba.svg") 9.523809523809524% 76.19047619047619% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB14-logout {
+	background: url("svg/sprite.css-1e9830ba.svg") 14.285714285714286% 76.19047619047619% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB15-loop-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 19.047619047619047% 76.19047619047619% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB16-loop-3 {
+	background: url("svg/sprite.css-1e9830ba.svg") 23.80952380952381% 76.19047619047619% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB17-loop {
+	background: url("svg/sprite.css-1e9830ba.svg") 28.571428571428573% 76.19047619047619% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB18-lost-hours {
+	background: url("svg/sprite.css-1e9830ba.svg") 33.333333333333336% 76.19047619047619% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB19-mail-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 38.095238095238095% 76.19047619047619% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB1A-mail-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 42.857142857142854% 76.19047619047619% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB1B-mail {
+	background: url("svg/sprite.css-1e9830ba.svg") 47.61904761904762% 76.19047619047619% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB1C-male {
+	background: url("svg/sprite.css-1e9830ba.svg") 52.38095238095238% 76.19047619047619% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB1D-map-pin-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 57.142857142857146% 76.19047619047619% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB1E-map-pin-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 61.904761904761905% 76.19047619047619% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB1F-math-sets-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 66.66666666666667% 76.19047619047619% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB20-math-sets-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 71.42857142857143% 76.19047619047619% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB21-math-sets-3 {
+	background: url("svg/sprite.css-1e9830ba.svg") 76.19047619047619% 76.19047619047619% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB22-math-sets-4 {
+	background: url("svg/sprite.css-1e9830ba.svg") 80.95238095238095% 0 no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB23-maximize {
+	background: url("svg/sprite.css-1e9830ba.svg") 80.95238095238095% 4.761904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB24-menu-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 80.95238095238095% 9.523809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB25-menu {
+	background: url("svg/sprite.css-1e9830ba.svg") 80.95238095238095% 14.285714285714286% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB26-milestones {
+	background: url("svg/sprite.css-1e9830ba.svg") 80.95238095238095% 19.047619047619047% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB27-minimize {
+	background: url("svg/sprite.css-1e9830ba.svg") 80.95238095238095% 23.80952380952381% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB28-minus-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 80.95238095238095% 28.571428571428573% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB29-minus-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 80.95238095238095% 33.333333333333336% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB2A-minus-3 {
+	background: url("svg/sprite.css-1e9830ba.svg") 80.95238095238095% 38.095238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB2B-minus {
+	background: url("svg/sprite.css-1e9830ba.svg") 80.95238095238095% 42.857142857142854% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB2C-mobile {
+	background: url("svg/sprite.css-1e9830ba.svg") 80.95238095238095% 47.61904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB2D-money-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 80.95238095238095% 52.38095238095238% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB2E-money-10 {
+	background: url("svg/sprite.css-1e9830ba.svg") 80.95238095238095% 57.142857142857146% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB2F-money-11 {
+	background: url("svg/sprite.css-1e9830ba.svg") 80.95238095238095% 61.904761904761905% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB30-money-12 {
+	background: url("svg/sprite.css-1e9830ba.svg") 80.95238095238095% 66.66666666666667% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB31-money-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 80.95238095238095% 71.42857142857143% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB32-money-3 {
+	background: url("svg/sprite.css-1e9830ba.svg") 80.95238095238095% 76.19047619047619% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB33-money-4 {
+	background: url("svg/sprite.css-1e9830ba.svg") 0 80.95238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB34-money-5 {
+	background: url("svg/sprite.css-1e9830ba.svg") 4.761904761904762% 80.95238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB35-money-6 {
+	background: url("svg/sprite.css-1e9830ba.svg") 9.523809523809524% 80.95238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB36-money-7 {
+	background: url("svg/sprite.css-1e9830ba.svg") 14.285714285714286% 80.95238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB37-money-8 {
+	background: url("svg/sprite.css-1e9830ba.svg") 19.047619047619047% 80.95238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB38-money-9 {
+	background: url("svg/sprite.css-1e9830ba.svg") 23.80952380952381% 80.95238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB39-money {
+	background: url("svg/sprite.css-1e9830ba.svg") 28.571428571428573% 80.95238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB3A-more-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 33.333333333333336% 80.95238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB3B-more {
+	background: url("svg/sprite.css-1e9830ba.svg") 38.095238095238095% 80.95238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB3C-move-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 42.857142857142854% 80.95238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB3D-move-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 47.61904761904762% 80.95238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB3E-move {
+	background: url("svg/sprite.css-1e9830ba.svg") 52.38095238095238% 80.95238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB3F-new {
+	background: url("svg/sprite.css-1e9830ba.svg") 57.142857142857146% 80.95238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB40-not-equal {
+	background: url("svg/sprite.css-1e9830ba.svg") 61.904761904761905% 80.95238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB41-notice-board {
+	background: url("svg/sprite.css-1e9830ba.svg") 66.66666666666667% 80.95238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB42-notice-line {
+	background: url("svg/sprite.css-1e9830ba.svg") 71.42857142857143% 80.95238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB43-notice {
+	background: url("svg/sprite.css-1e9830ba.svg") 76.19047619047619% 80.95238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB44-onboard-task-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 80.95238095238095% 80.95238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB45-onboard-task {
+	background: url("svg/sprite.css-1e9830ba.svg") 85.71428571428571% 0 no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB46-org-level {
+	background: url("svg/sprite.css-1e9830ba.svg") 85.71428571428571% 4.761904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB47-owl {
+	background: url("svg/sprite.css-1e9830ba.svg") 85.71428571428571% 9.523809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB48-page-break-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 85.71428571428571% 14.285714285714286% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB49-page-break {
+	background: url("svg/sprite.css-1e9830ba.svg") 85.71428571428571% 19.047619047619047% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB4A-pause-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 85.71428571428571% 23.80952380952381% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB4B-pause {
+	background: url("svg/sprite.css-1e9830ba.svg") 85.71428571428571% 28.571428571428573% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB4C-payment {
+	background: url("svg/sprite.css-1e9830ba.svg") 85.71428571428571% 33.333333333333336% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB4D-pdf-file {
+	background: url("svg/sprite.css-1e9830ba.svg") 85.71428571428571% 38.095238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB4E-people-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 85.71428571428571% 42.857142857142854% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB4F-people-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 85.71428571428571% 47.61904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB50-people-3 {
+	background: url("svg/sprite.css-1e9830ba.svg") 85.71428571428571% 52.38095238095238% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB51-people-4 {
+	background: url("svg/sprite.css-1e9830ba.svg") 85.71428571428571% 57.142857142857146% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB52-people-5 {
+	background: url("svg/sprite.css-1e9830ba.svg") 85.71428571428571% 61.904761904761905% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB53-people {
+	background: url("svg/sprite.css-1e9830ba.svg") 85.71428571428571% 66.66666666666667% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB54-play-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 85.71428571428571% 71.42857142857143% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB55-play {
+	background: url("svg/sprite.css-1e9830ba.svg") 85.71428571428571% 76.19047619047619% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB56-plus-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 85.71428571428571% 80.95238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB57-plus-line {
+	background: url("svg/sprite.css-1e9830ba.svg") 0 85.71428571428571% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB58-plus {
+	background: url("svg/sprite.css-1e9830ba.svg") 4.761904761904762% 85.71428571428571% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB59-png-file {
+	background: url("svg/sprite.css-1e9830ba.svg") 9.523809523809524% 85.71428571428571% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB5A-post {
+	background: url("svg/sprite.css-1e9830ba.svg") 14.285714285714286% 85.71428571428571% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB5B-potential {
+	background: url("svg/sprite.css-1e9830ba.svg") 19.047619047619047% 85.71428571428571% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB5C-ppt-file {
+	background: url("svg/sprite.css-1e9830ba.svg") 23.80952380952381% 85.71428571428571% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB5D-present {
+	background: url("svg/sprite.css-1e9830ba.svg") 28.571428571428573% 85.71428571428571% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB5E-print {
+	background: url("svg/sprite.css-1e9830ba.svg") 33.333333333333336% 85.71428571428571% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB5F-profile-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 38.095238095238095% 85.71428571428571% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB60-profile-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 42.857142857142854% 85.71428571428571% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB61-profile-3 {
+	background: url("svg/sprite.css-1e9830ba.svg") 47.61904761904762% 85.71428571428571% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB62-profiles {
+	background: url("svg/sprite.css-1e9830ba.svg") 52.38095238095238% 85.71428571428571% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB63-protential {
+	background: url("svg/sprite.css-1e9830ba.svg") 57.142857142857146% 85.71428571428571% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB64-puzzle {
+	background: url("svg/sprite.css-1e9830ba.svg") 61.904761904761905% 85.71428571428571% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB65-quote-l {
+	background: url("svg/sprite.css-1e9830ba.svg") 66.66666666666667% 85.71428571428571% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB66-quote-r {
+	background: url("svg/sprite.css-1e9830ba.svg") 71.42857142857143% 85.71428571428571% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB67-radio-off-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 76.19047619047619% 85.71428571428571% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB68-radio-off {
+	background: url("svg/sprite.css-1e9830ba.svg") 80.95238095238095% 85.71428571428571% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB69-radio-on-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 85.71428571428571% 85.71428571428571% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB6A-radio-on-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 90.47619047619048% 0 no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB6B-radio-on {
+	background: url("svg/sprite.css-1e9830ba.svg") 90.47619047619048% 4.761904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB6C-redu-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 90.47619047619048% 9.523809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB6D-redu-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 90.47619047619048% 14.285714285714286% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB6E-redu {
+	background: url("svg/sprite.css-1e9830ba.svg") 90.47619047619048% 19.047619047619047% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB6F-requisition {
+	background: url("svg/sprite.css-1e9830ba.svg") 90.47619047619048% 23.80952380952381% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB70-resize-window {
+	background: url("svg/sprite.css-1e9830ba.svg") 90.47619047619048% 28.571428571428573% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB71-restore-window {
+	background: url("svg/sprite.css-1e9830ba.svg") 90.47619047619048% 33.333333333333336% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB72-rocket-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 90.47619047619048% 38.095238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB73-rocket-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 90.47619047619048% 42.857142857142854% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB74-rocket {
+	background: url("svg/sprite.css-1e9830ba.svg") 90.47619047619048% 47.61904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB75-save-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 90.47619047619048% 52.38095238095238% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB76-save {
+	background: url("svg/sprite.css-1e9830ba.svg") 90.47619047619048% 57.142857142857146% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB77-separator {
+	background: url("svg/sprite.css-1e9830ba.svg") 90.47619047619048% 61.904761904761905% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB78-service-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 90.47619047619048% 66.66666666666667% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB79-service {
+	background: url("svg/sprite.css-1e9830ba.svg") 90.47619047619048% 71.42857142857143% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB7A-shield {
+	background: url("svg/sprite.css-1e9830ba.svg") 90.47619047619048% 76.19047619047619% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB7B-shortlist {
+	background: url("svg/sprite.css-1e9830ba.svg") 90.47619047619048% 80.95238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB7C-shuffle {
+	background: url("svg/sprite.css-1e9830ba.svg") 90.47619047619048% 85.71428571428571% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB7D-social-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 0 90.47619047619048% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB7E-social-network {
+	background: url("svg/sprite.css-1e9830ba.svg") 4.761904761904762% 90.47619047619048% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB7F-social {
+	background: url("svg/sprite.css-1e9830ba.svg") 9.523809523809524% 90.47619047619048% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB80-sort-down {
+	background: url("svg/sprite.css-1e9830ba.svg") 14.285714285714286% 90.47619047619048% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB81-sort-up {
+	background: url("svg/sprite.css-1e9830ba.svg") 19.047619047619047% 90.47619047619048% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB82-spinner-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 23.80952380952381% 90.47619047619048% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB83-spinner-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 28.571428571428573% 90.47619047619048% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB84-spinner-3 {
+	background: url("svg/sprite.css-1e9830ba.svg") 33.333333333333336% 90.47619047619048% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB85-spinner-4 {
+	background: url("svg/sprite.css-1e9830ba.svg") 38.095238095238095% 90.47619047619048% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB86-spinner-5 {
+	background: url("svg/sprite.css-1e9830ba.svg") 42.857142857142854% 90.47619047619048% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB87-spinner-6 {
+	background: url("svg/sprite.css-1e9830ba.svg") 47.61904761904762% 90.47619047619048% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB88-spinner-7 {
+	background: url("svg/sprite.css-1e9830ba.svg") 52.38095238095238% 90.47619047619048% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB89-spinner-8 {
+	background: url("svg/sprite.css-1e9830ba.svg") 57.142857142857146% 90.47619047619048% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB8A-star-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 61.904761904761905% 90.47619047619048% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB8B-star {
+	background: url("svg/sprite.css-1e9830ba.svg") 66.66666666666667% 90.47619047619048% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB8C-stopwatch {
+	background: url("svg/sprite.css-1e9830ba.svg") 71.42857142857143% 90.47619047619048% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB8D-storage-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 76.19047619047619% 90.47619047619048% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB8E-storage-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 80.95238095238095% 90.47619047619048% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB8F-storage {
+	background: url("svg/sprite.css-1e9830ba.svg") 85.71428571428571% 90.47619047619048% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB90-suggetion {
+	background: url("svg/sprite.css-1e9830ba.svg") 90.47619047619048% 90.47619047619048% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB91-sun-half {
+	background: url("svg/sprite.css-1e9830ba.svg") 95.23809523809524% 0 no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB92-sun {
+	background: url("svg/sprite.css-1e9830ba.svg") 95.23809523809524% 4.761904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB93-support {
+	background: url("svg/sprite.css-1e9830ba.svg") 95.23809523809524% 9.523809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB94-swap {
+	background: url("svg/sprite.css-1e9830ba.svg") 95.23809523809524% 14.285714285714286% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB95-switch {
+	background: url("svg/sprite.css-1e9830ba.svg") 95.23809523809524% 19.047619047619047% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB96-tactics {
+	background: url("svg/sprite.css-1e9830ba.svg") 95.23809523809524% 23.80952380952381% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB97-target {
+	background: url("svg/sprite.css-1e9830ba.svg") 95.23809523809524% 28.571428571428573% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB98-team {
+	background: url("svg/sprite.css-1e9830ba.svg") 95.23809523809524% 33.333333333333336% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB99-template {
+	background: url("svg/sprite.css-1e9830ba.svg") 95.23809523809524% 38.095238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB9A-thumb-down {
+	background: url("svg/sprite.css-1e9830ba.svg") 95.23809523809524% 42.857142857142854% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB9B-thumb-up {
+	background: url("svg/sprite.css-1e9830ba.svg") 95.23809523809524% 47.61904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB9C-toggle-off {
+	background: url("svg/sprite.css-1e9830ba.svg") 95.23809523809524% 52.38095238095238% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB9D-toggle-on {
+	background: url("svg/sprite.css-1e9830ba.svg") 95.23809523809524% 57.142857142857146% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB9E-total-expected {
+	background: url("svg/sprite.css-1e9830ba.svg") 95.23809523809524% 61.904761904761905% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEB9F-transfer_learning {
+	background: url("svg/sprite.css-1e9830ba.svg") 95.23809523809524% 66.66666666666667% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBA0-transmission {
+	background: url("svg/sprite.css-1e9830ba.svg") 95.23809523809524% 71.42857142857143% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBA1-trash {
+	background: url("svg/sprite.css-1e9830ba.svg") 95.23809523809524% 76.19047619047619% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBA2-tube {
+	background: url("svg/sprite.css-1e9830ba.svg") 95.23809523809524% 80.95238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBA3-twitter {
+	background: url("svg/sprite.css-1e9830ba.svg") 95.23809523809524% 85.71428571428571% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBA4-txt-file {
+	background: url("svg/sprite.css-1e9830ba.svg") 95.23809523809524% 90.47619047619048% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBA5-undo-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 0 95.23809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBA6-undo {
+	background: url("svg/sprite.css-1e9830ba.svg") 4.761904761904762% 95.23809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBA7-unlock-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 9.523809523809524% 95.23809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBA8-unlock {
+	background: url("svg/sprite.css-1e9830ba.svg") 14.285714285714286% 95.23809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBA9-upload {
+	background: url("svg/sprite.css-1e9830ba.svg") 19.047619047619047% 95.23809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBAA-usb-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 23.80952380952381% 95.23809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBAB-usb {
+	background: url("svg/sprite.css-1e9830ba.svg") 28.571428571428573% 95.23809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBAC-user-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 33.333333333333336% 95.23809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBAD-user-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 38.095238095238095% 95.23809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBAE-user-3 {
+	background: url("svg/sprite.css-1e9830ba.svg") 42.857142857142854% 95.23809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBAF-user-4 {
+	background: url("svg/sprite.css-1e9830ba.svg") 47.61904761904762% 95.23809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBB0-user-5 {
+	background: url("svg/sprite.css-1e9830ba.svg") 52.38095238095238% 95.23809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBB1-user-6 {
+	background: url("svg/sprite.css-1e9830ba.svg") 57.142857142857146% 95.23809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBB2-user-7 {
+	background: url("svg/sprite.css-1e9830ba.svg") 61.904761904761905% 95.23809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBB3-user-8 {
+	background: url("svg/sprite.css-1e9830ba.svg") 66.66666666666667% 95.23809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBB4-user-9 {
+	background: url("svg/sprite.css-1e9830ba.svg") 71.42857142857143% 95.23809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBB5-user-add {
+	background: url("svg/sprite.css-1e9830ba.svg") 76.19047619047619% 95.23809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBB6-user-check {
+	background: url("svg/sprite.css-1e9830ba.svg") 80.95238095238095% 95.23809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBB7-user-group-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 85.71428571428571% 95.23809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBB8-user-group-10 {
+	background: url("svg/sprite.css-1e9830ba.svg") 90.47619047619048% 95.23809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBB9-user-group-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 95.23809523809524% 95.23809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBBA-user-group-3 {
+	background: url("svg/sprite.css-1e9830ba.svg") 100% 0 no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBBB-user-group-4 {
+	background: url("svg/sprite.css-1e9830ba.svg") 100% 4.761904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBBC-user-group-5 {
+	background: url("svg/sprite.css-1e9830ba.svg") 100% 9.523809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBBD-user-group-6 {
+	background: url("svg/sprite.css-1e9830ba.svg") 100% 14.285714285714286% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBBE-user-group-7 {
+	background: url("svg/sprite.css-1e9830ba.svg") 100% 19.047619047619047% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBBF-user-group-8 {
+	background: url("svg/sprite.css-1e9830ba.svg") 100% 23.80952380952381% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBC0-user-group-9 {
+	background: url("svg/sprite.css-1e9830ba.svg") 100% 28.571428571428573% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBC1-user-group {
+	background: url("svg/sprite.css-1e9830ba.svg") 100% 33.333333333333336% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBC2-user-line {
+	background: url("svg/sprite.css-1e9830ba.svg") 100% 38.095238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBC3-user-minus {
+	background: url("svg/sprite.css-1e9830ba.svg") 100% 42.857142857142854% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBC4-user-plus {
+	background: url("svg/sprite.css-1e9830ba.svg") 100% 47.61904761904762% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBC5-user-settings {
+	background: url("svg/sprite.css-1e9830ba.svg") 100% 52.38095238095238% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBC6-user-switch-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 100% 57.142857142857146% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBC7-user-switch-2 {
+	background: url("svg/sprite.css-1e9830ba.svg") 100% 61.904761904761905% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBC8-user-switch-3 {
+	background: url("svg/sprite.css-1e9830ba.svg") 100% 66.66666666666667% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBC9-user-switch {
+	background: url("svg/sprite.css-1e9830ba.svg") 100% 71.42857142857143% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBCA-user-time {
+	background: url("svg/sprite.css-1e9830ba.svg") 100% 76.19047619047619% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBCB-user-work-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 100% 80.95238095238095% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBCC-user-work-4 {
+	background: url("svg/sprite.css-1e9830ba.svg") 100% 85.71428571428571% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBCD-user-work-5 {
+	background: url("svg/sprite.css-1e9830ba.svg") 100% 90.47619047619048% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBCE-user-work {
+	background: url("svg/sprite.css-1e9830ba.svg") 100% 95.23809523809524% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBCF-user {
+	background: url("svg/sprite.css-1e9830ba.svg") 0 100% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBD0-value {
+	background: url("svg/sprite.css-1e9830ba.svg") 4.761904761904762% 100% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBD1-values {
+	background: url("svg/sprite.css-1e9830ba.svg") 9.523809523809524% 100% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBD2-view_all {
+	background: url("svg/sprite.css-1e9830ba.svg") 14.285714285714286% 100% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBD3-wallet-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 19.047619047619047% 100% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBD4-wallet {
+	background: url("svg/sprite.css-1e9830ba.svg") 23.80952380952381% 100% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBD5-warning-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 28.571428571428573% 100% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBD6-warning {
+	background: url("svg/sprite.css-1e9830ba.svg") 33.333333333333336% 100% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBD7-web {
+	background: url("svg/sprite.css-1e9830ba.svg") 38.095238095238095% 100% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBD8-wheel-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 42.857142857142854% 100% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBD9-wheel {
+	background: url("svg/sprite.css-1e9830ba.svg") 47.61904761904762% 100% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBDA-widget {
+	background: url("svg/sprite.css-1e9830ba.svg") 52.38095238095238% 100% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBDB-xls-file {
+	background: url("svg/sprite.css-1e9830ba.svg") 57.142857142857146% 100% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBDC-zip-file {
+	background: url("svg/sprite.css-1e9830ba.svg") 61.904761904761905% 100% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBDD-zoom-in-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 66.66666666666667% 100% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBDE-zoom-in {
+	background: url("svg/sprite.css-1e9830ba.svg") 71.42857142857143% 100% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBDF-zoom-out-1 {
+	background: url("svg/sprite.css-1e9830ba.svg") 76.19047619047619% 100% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-uEBE0-zoom-out {
+	background: url("svg/sprite.css-1e9830ba.svg") 80.95238095238095% 100% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+</style>
+
+<!--
+====================================================================================================
+-->
+
+	</head>
+	<body>
+		<header>
+			<h1>SVG CSS sprite preview</h1>
+			<p>This preview features the generated SVG file as a conventional CSS sprite. The shapes are displayed as background images of several <code>&lt;i&gt;</code> elements.</p>
+		</header>
+		<section>
+
+<!--
+
+Conventional CSS sprite
+====================================================================================================
+This technique uses CSS classes to display portions of the sprite as background image of
+appropriately sized elements.
+
+-->
+
+			<ul>
+				<li title="uEA01-add">
+					<div class="icon-box">
+
+						<!-- uEA01-add -->
+						<i class="svg-uEA01-add">uEA01-add</i>
+
+					</div>
+					<h2>uEA01-add</h2>
+				</li>
+				<li title="uEA02-analytics-t">
+					<div class="icon-box">
+
+						<!-- uEA02-analytics-t -->
+						<i class="svg-uEA02-analytics-t">uEA02-analytics-t</i>
+
+					</div>
+					<h2>uEA02-analytics-t</h2>
+				</li>
+				<li title="uEA03-archive-1">
+					<div class="icon-box">
+
+						<!-- uEA03-archive-1 -->
+						<i class="svg-uEA03-archive-1">uEA03-archive-1</i>
+
+					</div>
+					<h2>uEA03-archive-1</h2>
+				</li>
+				<li title="uEA04-archive">
+					<div class="icon-box">
+
+						<!-- uEA04-archive -->
+						<i class="svg-uEA04-archive">uEA04-archive</i>
+
+					</div>
+					<h2>uEA04-archive</h2>
+				</li>
+				<li title="uEA05-arrow-down-2">
+					<div class="icon-box">
+
+						<!-- uEA05-arrow-down-2 -->
+						<i class="svg-uEA05-arrow-down-2">uEA05-arrow-down-2</i>
+
+					</div>
+					<h2>uEA05-arrow-down-2</h2>
+				</li>
+				<li title="uEA06-arrow-down-3">
+					<div class="icon-box">
+
+						<!-- uEA06-arrow-down-3 -->
+						<i class="svg-uEA06-arrow-down-3">uEA06-arrow-down-3</i>
+
+					</div>
+					<h2>uEA06-arrow-down-3</h2>
+				</li>
+				<li title="uEA07-arrow-down">
+					<div class="icon-box">
+
+						<!-- uEA07-arrow-down -->
+						<i class="svg-uEA07-arrow-down">uEA07-arrow-down</i>
+
+					</div>
+					<h2>uEA07-arrow-down</h2>
+				</li>
+				<li title="uEA08-arrow-l-1">
+					<div class="icon-box">
+
+						<!-- uEA08-arrow-l-1 -->
+						<i class="svg-uEA08-arrow-l-1">uEA08-arrow-l-1</i>
+
+					</div>
+					<h2>uEA08-arrow-l-1</h2>
+				</li>
+				<li title="uEA09-arrow-l-3">
+					<div class="icon-box">
+
+						<!-- uEA09-arrow-l-3 -->
+						<i class="svg-uEA09-arrow-l-3">uEA09-arrow-l-3</i>
+
+					</div>
+					<h2>uEA09-arrow-l-3</h2>
+				</li>
+				<li title="uEA0A-arrow-l-4">
+					<div class="icon-box">
+
+						<!-- uEA0A-arrow-l-4 -->
+						<i class="svg-uEA0A-arrow-l-4">uEA0A-arrow-l-4</i>
+
+					</div>
+					<h2>uEA0A-arrow-l-4</h2>
+				</li>
+				<li title="uEA0B-arrow-l-5">
+					<div class="icon-box">
+
+						<!-- uEA0B-arrow-l-5 -->
+						<i class="svg-uEA0B-arrow-l-5">uEA0B-arrow-l-5</i>
+
+					</div>
+					<h2>uEA0B-arrow-l-5</h2>
+				</li>
+				<li title="uEA0C-arrow-l-6">
+					<div class="icon-box">
+
+						<!-- uEA0C-arrow-l-6 -->
+						<i class="svg-uEA0C-arrow-l-6">uEA0C-arrow-l-6</i>
+
+					</div>
+					<h2>uEA0C-arrow-l-6</h2>
+				</li>
+				<li title="uEA0D-arrow-l-7">
+					<div class="icon-box">
+
+						<!-- uEA0D-arrow-l-7 -->
+						<i class="svg-uEA0D-arrow-l-7">uEA0D-arrow-l-7</i>
+
+					</div>
+					<h2>uEA0D-arrow-l-7</h2>
+				</li>
+				<li title="uEA0E-arrow-l-8">
+					<div class="icon-box">
+
+						<!-- uEA0E-arrow-l-8 -->
+						<i class="svg-uEA0E-arrow-l-8">uEA0E-arrow-l-8</i>
+
+					</div>
+					<h2>uEA0E-arrow-l-8</h2>
+				</li>
+				<li title="uEA0F-arrow-l-9">
+					<div class="icon-box">
+
+						<!-- uEA0F-arrow-l-9 -->
+						<i class="svg-uEA0F-arrow-l-9">uEA0F-arrow-l-9</i>
+
+					</div>
+					<h2>uEA0F-arrow-l-9</h2>
+				</li>
+				<li title="uEA10-arrow-l">
+					<div class="icon-box">
+
+						<!-- uEA10-arrow-l -->
+						<i class="svg-uEA10-arrow-l">uEA10-arrow-l</i>
+
+					</div>
+					<h2>uEA10-arrow-l</h2>
+				</li>
+				<li title="uEA11-arrow-r-1">
+					<div class="icon-box">
+
+						<!-- uEA11-arrow-r-1 -->
+						<i class="svg-uEA11-arrow-r-1">uEA11-arrow-r-1</i>
+
+					</div>
+					<h2>uEA11-arrow-r-1</h2>
+				</li>
+				<li title="uEA12-arrow-r-2">
+					<div class="icon-box">
+
+						<!-- uEA12-arrow-r-2 -->
+						<i class="svg-uEA12-arrow-r-2">uEA12-arrow-r-2</i>
+
+					</div>
+					<h2>uEA12-arrow-r-2</h2>
+				</li>
+				<li title="uEA13-arrow-r-3">
+					<div class="icon-box">
+
+						<!-- uEA13-arrow-r-3 -->
+						<i class="svg-uEA13-arrow-r-3">uEA13-arrow-r-3</i>
+
+					</div>
+					<h2>uEA13-arrow-r-3</h2>
+				</li>
+				<li title="uEA14-arrow-r-4">
+					<div class="icon-box">
+
+						<!-- uEA14-arrow-r-4 -->
+						<i class="svg-uEA14-arrow-r-4">uEA14-arrow-r-4</i>
+
+					</div>
+					<h2>uEA14-arrow-r-4</h2>
+				</li>
+				<li title="uEA15-arrow-r-5">
+					<div class="icon-box">
+
+						<!-- uEA15-arrow-r-5 -->
+						<i class="svg-uEA15-arrow-r-5">uEA15-arrow-r-5</i>
+
+					</div>
+					<h2>uEA15-arrow-r-5</h2>
+				</li>
+				<li title="uEA16-arrow-r-6">
+					<div class="icon-box">
+
+						<!-- uEA16-arrow-r-6 -->
+						<i class="svg-uEA16-arrow-r-6">uEA16-arrow-r-6</i>
+
+					</div>
+					<h2>uEA16-arrow-r-6</h2>
+				</li>
+				<li title="uEA17-arrow-r-7">
+					<div class="icon-box">
+
+						<!-- uEA17-arrow-r-7 -->
+						<i class="svg-uEA17-arrow-r-7">uEA17-arrow-r-7</i>
+
+					</div>
+					<h2>uEA17-arrow-r-7</h2>
+				</li>
+				<li title="uEA18-arrow-r-8">
+					<div class="icon-box">
+
+						<!-- uEA18-arrow-r-8 -->
+						<i class="svg-uEA18-arrow-r-8">uEA18-arrow-r-8</i>
+
+					</div>
+					<h2>uEA18-arrow-r-8</h2>
+				</li>
+				<li title="uEA19-arrow-r-9">
+					<div class="icon-box">
+
+						<!-- uEA19-arrow-r-9 -->
+						<i class="svg-uEA19-arrow-r-9">uEA19-arrow-r-9</i>
+
+					</div>
+					<h2>uEA19-arrow-r-9</h2>
+				</li>
+				<li title="uEA1A-arrow-up-1">
+					<div class="icon-box">
+
+						<!-- uEA1A-arrow-up-1 -->
+						<i class="svg-uEA1A-arrow-up-1">uEA1A-arrow-up-1</i>
+
+					</div>
+					<h2>uEA1A-arrow-up-1</h2>
+				</li>
+				<li title="uEA1B-arrow-up-2">
+					<div class="icon-box">
+
+						<!-- uEA1B-arrow-up-2 -->
+						<i class="svg-uEA1B-arrow-up-2">uEA1B-arrow-up-2</i>
+
+					</div>
+					<h2>uEA1B-arrow-up-2</h2>
+				</li>
+				<li title="uEA1C-arrow-up-3">
+					<div class="icon-box">
+
+						<!-- uEA1C-arrow-up-3 -->
+						<i class="svg-uEA1C-arrow-up-3">uEA1C-arrow-up-3</i>
+
+					</div>
+					<h2>uEA1C-arrow-up-3</h2>
+				</li>
+				<li title="uEA1D-arrow-up">
+					<div class="icon-box">
+
+						<!-- uEA1D-arrow-up -->
+						<i class="svg-uEA1D-arrow-up">uEA1D-arrow-up</i>
+
+					</div>
+					<h2>uEA1D-arrow-up</h2>
+				</li>
+				<li title="uEA1E-attachment">
+					<div class="icon-box">
+
+						<!-- uEA1E-attachment -->
+						<i class="svg-uEA1E-attachment">uEA1E-attachment</i>
+
+					</div>
+					<h2>uEA1E-attachment</h2>
+				</li>
+				<li title="uEA1F-award-10">
+					<div class="icon-box">
+
+						<!-- uEA1F-award-10 -->
+						<i class="svg-uEA1F-award-10">uEA1F-award-10</i>
+
+					</div>
+					<h2>uEA1F-award-10</h2>
+				</li>
+				<li title="uEA20-award-2">
+					<div class="icon-box">
+
+						<!-- uEA20-award-2 -->
+						<i class="svg-uEA20-award-2">uEA20-award-2</i>
+
+					</div>
+					<h2>uEA20-award-2</h2>
+				</li>
+				<li title="uEA21-award-3">
+					<div class="icon-box">
+
+						<!-- uEA21-award-3 -->
+						<i class="svg-uEA21-award-3">uEA21-award-3</i>
+
+					</div>
+					<h2>uEA21-award-3</h2>
+				</li>
+				<li title="uEA22-award-4">
+					<div class="icon-box">
+
+						<!-- uEA22-award-4 -->
+						<i class="svg-uEA22-award-4">uEA22-award-4</i>
+
+					</div>
+					<h2>uEA22-award-4</h2>
+				</li>
+				<li title="uEA23-award-5">
+					<div class="icon-box">
+
+						<!-- uEA23-award-5 -->
+						<i class="svg-uEA23-award-5">uEA23-award-5</i>
+
+					</div>
+					<h2>uEA23-award-5</h2>
+				</li>
+				<li title="uEA24-award-6">
+					<div class="icon-box">
+
+						<!-- uEA24-award-6 -->
+						<i class="svg-uEA24-award-6">uEA24-award-6</i>
+
+					</div>
+					<h2>uEA24-award-6</h2>
+				</li>
+				<li title="uEA25-award-7">
+					<div class="icon-box">
+
+						<!-- uEA25-award-7 -->
+						<i class="svg-uEA25-award-7">uEA25-award-7</i>
+
+					</div>
+					<h2>uEA25-award-7</h2>
+				</li>
+				<li title="uEA26-award-8">
+					<div class="icon-box">
+
+						<!-- uEA26-award-8 -->
+						<i class="svg-uEA26-award-8">uEA26-award-8</i>
+
+					</div>
+					<h2>uEA26-award-8</h2>
+				</li>
+				<li title="uEA27-award-9">
+					<div class="icon-box">
+
+						<!-- uEA27-award-9 -->
+						<i class="svg-uEA27-award-9">uEA27-award-9</i>
+
+					</div>
+					<h2>uEA27-award-9</h2>
+				</li>
+				<li title="uEA28-award">
+					<div class="icon-box">
+
+						<!-- uEA28-award -->
+						<i class="svg-uEA28-award">uEA28-award</i>
+
+					</div>
+					<h2>uEA28-award</h2>
+				</li>
+				<li title="uEA29-azure-ad">
+					<div class="icon-box">
+
+						<!-- uEA29-azure-ad -->
+						<i class="svg-uEA29-azure-ad">uEA29-azure-ad</i>
+
+					</div>
+					<h2>uEA29-azure-ad</h2>
+				</li>
+				<li title="uEA2A-back-time">
+					<div class="icon-box">
+
+						<!-- uEA2A-back-time -->
+						<i class="svg-uEA2A-back-time">uEA2A-back-time</i>
+
+					</div>
+					<h2>uEA2A-back-time</h2>
+				</li>
+				<li title="uEA2B-back">
+					<div class="icon-box">
+
+						<!-- uEA2B-back -->
+						<i class="svg-uEA2B-back">uEA2B-back</i>
+
+					</div>
+					<h2>uEA2B-back</h2>
+				</li>
+				<li title="uEA2C-bell">
+					<div class="icon-box">
+
+						<!-- uEA2C-bell -->
+						<i class="svg-uEA2C-bell">uEA2C-bell</i>
+
+					</div>
+					<h2>uEA2C-bell</h2>
+				</li>
+				<li title="uEA2D-block-1">
+					<div class="icon-box">
+
+						<!-- uEA2D-block-1 -->
+						<i class="svg-uEA2D-block-1">uEA2D-block-1</i>
+
+					</div>
+					<h2>uEA2D-block-1</h2>
+				</li>
+				<li title="uEA2E-block-2">
+					<div class="icon-box">
+
+						<!-- uEA2E-block-2 -->
+						<i class="svg-uEA2E-block-2">uEA2E-block-2</i>
+
+					</div>
+					<h2>uEA2E-block-2</h2>
+				</li>
+				<li title="uEA2F-block">
+					<div class="icon-box">
+
+						<!-- uEA2F-block -->
+						<i class="svg-uEA2F-block">uEA2F-block</i>
+
+					</div>
+					<h2>uEA2F-block</h2>
+				</li>
+				<li title="uEA30-book-1">
+					<div class="icon-box">
+
+						<!-- uEA30-book-1 -->
+						<i class="svg-uEA30-book-1">uEA30-book-1</i>
+
+					</div>
+					<h2>uEA30-book-1</h2>
+				</li>
+				<li title="uEA31-book-2">
+					<div class="icon-box">
+
+						<!-- uEA31-book-2 -->
+						<i class="svg-uEA31-book-2">uEA31-book-2</i>
+
+					</div>
+					<h2>uEA31-book-2</h2>
+				</li>
+				<li title="uEA32-book-3">
+					<div class="icon-box">
+
+						<!-- uEA32-book-3 -->
+						<i class="svg-uEA32-book-3">uEA32-book-3</i>
+
+					</div>
+					<h2>uEA32-book-3</h2>
+				</li>
+				<li title="uEA33-book-4">
+					<div class="icon-box">
+
+						<!-- uEA33-book-4 -->
+						<i class="svg-uEA33-book-4">uEA33-book-4</i>
+
+					</div>
+					<h2>uEA33-book-4</h2>
+				</li>
+				<li title="uEA34-book-5">
+					<div class="icon-box">
+
+						<!-- uEA34-book-5 -->
+						<i class="svg-uEA34-book-5">uEA34-book-5</i>
+
+					</div>
+					<h2>uEA34-book-5</h2>
+				</li>
+				<li title="uEA35-book">
+					<div class="icon-box">
+
+						<!-- uEA35-book -->
+						<i class="svg-uEA35-book">uEA35-book</i>
+
+					</div>
+					<h2>uEA35-book</h2>
+				</li>
+				<li title="uEA36-bookmark">
+					<div class="icon-box">
+
+						<!-- uEA36-bookmark -->
+						<i class="svg-uEA36-bookmark">uEA36-bookmark</i>
+
+					</div>
+					<h2>uEA36-bookmark</h2>
+				</li>
+				<li title="uEA37-box-1">
+					<div class="icon-box">
+
+						<!-- uEA37-box-1 -->
+						<i class="svg-uEA37-box-1">uEA37-box-1</i>
+
+					</div>
+					<h2>uEA37-box-1</h2>
+				</li>
+				<li title="uEA38-box-2">
+					<div class="icon-box">
+
+						<!-- uEA38-box-2 -->
+						<i class="svg-uEA38-box-2">uEA38-box-2</i>
+
+					</div>
+					<h2>uEA38-box-2</h2>
+				</li>
+				<li title="uEA39-box-3">
+					<div class="icon-box">
+
+						<!-- uEA39-box-3 -->
+						<i class="svg-uEA39-box-3">uEA39-box-3</i>
+
+					</div>
+					<h2>uEA39-box-3</h2>
+				</li>
+				<li title="uEA3A-box">
+					<div class="icon-box">
+
+						<!-- uEA3A-box -->
+						<i class="svg-uEA3A-box">uEA3A-box</i>
+
+					</div>
+					<h2>uEA3A-box</h2>
+				</li>
+				<li title="uEA3B-boy">
+					<div class="icon-box">
+
+						<!-- uEA3B-boy -->
+						<i class="svg-uEA3B-boy">uEA3B-boy</i>
+
+					</div>
+					<h2>uEA3B-boy</h2>
+				</li>
+				<li title="uEA3C-brightness">
+					<div class="icon-box">
+
+						<!-- uEA3C-brightness -->
+						<i class="svg-uEA3C-brightness">uEA3C-brightness</i>
+
+					</div>
+					<h2>uEA3C-brightness</h2>
+				</li>
+				<li title="uEA3D-building-1">
+					<div class="icon-box">
+
+						<!-- uEA3D-building-1 -->
+						<i class="svg-uEA3D-building-1">uEA3D-building-1</i>
+
+					</div>
+					<h2>uEA3D-building-1</h2>
+				</li>
+				<li title="uEA3E-building-2">
+					<div class="icon-box">
+
+						<!-- uEA3E-building-2 -->
+						<i class="svg-uEA3E-building-2">uEA3E-building-2</i>
+
+					</div>
+					<h2>uEA3E-building-2</h2>
+				</li>
+				<li title="uEA3F-building">
+					<div class="icon-box">
+
+						<!-- uEA3F-building -->
+						<i class="svg-uEA3F-building">uEA3F-building</i>
+
+					</div>
+					<h2>uEA3F-building</h2>
+				</li>
+				<li title="uEA40-calender-1">
+					<div class="icon-box">
+
+						<!-- uEA40-calender-1 -->
+						<i class="svg-uEA40-calender-1">uEA40-calender-1</i>
+
+					</div>
+					<h2>uEA40-calender-1</h2>
+				</li>
+				<li title="uEA41-calender-2">
+					<div class="icon-box">
+
+						<!-- uEA41-calender-2 -->
+						<i class="svg-uEA41-calender-2">uEA41-calender-2</i>
+
+					</div>
+					<h2>uEA41-calender-2</h2>
+				</li>
+				<li title="uEA42-calender-3">
+					<div class="icon-box">
+
+						<!-- uEA42-calender-3 -->
+						<i class="svg-uEA42-calender-3">uEA42-calender-3</i>
+
+					</div>
+					<h2>uEA42-calender-3</h2>
+				</li>
+				<li title="uEA43-calender-4">
+					<div class="icon-box">
+
+						<!-- uEA43-calender-4 -->
+						<i class="svg-uEA43-calender-4">uEA43-calender-4</i>
+
+					</div>
+					<h2>uEA43-calender-4</h2>
+				</li>
+				<li title="uEA44-calender-5">
+					<div class="icon-box">
+
+						<!-- uEA44-calender-5 -->
+						<i class="svg-uEA44-calender-5">uEA44-calender-5</i>
+
+					</div>
+					<h2>uEA44-calender-5</h2>
+				</li>
+				<li title="uEA45-calender-6">
+					<div class="icon-box">
+
+						<!-- uEA45-calender-6 -->
+						<i class="svg-uEA45-calender-6">uEA45-calender-6</i>
+
+					</div>
+					<h2>uEA45-calender-6</h2>
+				</li>
+				<li title="uEA46-calender-7">
+					<div class="icon-box">
+
+						<!-- uEA46-calender-7 -->
+						<i class="svg-uEA46-calender-7">uEA46-calender-7</i>
+
+					</div>
+					<h2>uEA46-calender-7</h2>
+				</li>
+				<li title="uEA47-calender">
+					<div class="icon-box">
+
+						<!-- uEA47-calender -->
+						<i class="svg-uEA47-calender">uEA47-calender</i>
+
+					</div>
+					<h2>uEA47-calender</h2>
+				</li>
+				<li title="uEA48-cancel-1">
+					<div class="icon-box">
+
+						<!-- uEA48-cancel-1 -->
+						<i class="svg-uEA48-cancel-1">uEA48-cancel-1</i>
+
+					</div>
+					<h2>uEA48-cancel-1</h2>
+				</li>
+				<li title="uEA49-cancel-2">
+					<div class="icon-box">
+
+						<!-- uEA49-cancel-2 -->
+						<i class="svg-uEA49-cancel-2">uEA49-cancel-2</i>
+
+					</div>
+					<h2>uEA49-cancel-2</h2>
+				</li>
+				<li title="uEA4A-cancel-3">
+					<div class="icon-box">
+
+						<!-- uEA4A-cancel-3 -->
+						<i class="svg-uEA4A-cancel-3">uEA4A-cancel-3</i>
+
+					</div>
+					<h2>uEA4A-cancel-3</h2>
+				</li>
+				<li title="uEA4B-cancel">
+					<div class="icon-box">
+
+						<!-- uEA4B-cancel -->
+						<i class="svg-uEA4B-cancel">uEA4B-cancel</i>
+
+					</div>
+					<h2>uEA4B-cancel</h2>
+				</li>
+				<li title="uEA4C-caret-down">
+					<div class="icon-box">
+
+						<!-- uEA4C-caret-down -->
+						<i class="svg-uEA4C-caret-down">uEA4C-caret-down</i>
+
+					</div>
+					<h2>uEA4C-caret-down</h2>
+				</li>
+				<li title="uEA4D-caret-up">
+					<div class="icon-box">
+
+						<!-- uEA4D-caret-up -->
+						<i class="svg-uEA4D-caret-up">uEA4D-caret-up</i>
+
+					</div>
+					<h2>uEA4D-caret-up</h2>
+				</li>
+				<li title="uEA4E-chart-1">
+					<div class="icon-box">
+
+						<!-- uEA4E-chart-1 -->
+						<i class="svg-uEA4E-chart-1">uEA4E-chart-1</i>
+
+					</div>
+					<h2>uEA4E-chart-1</h2>
+				</li>
+				<li title="uEA4F-chart-2">
+					<div class="icon-box">
+
+						<!-- uEA4F-chart-2 -->
+						<i class="svg-uEA4F-chart-2">uEA4F-chart-2</i>
+
+					</div>
+					<h2>uEA4F-chart-2</h2>
+				</li>
+				<li title="uEA50-chart-3">
+					<div class="icon-box">
+
+						<!-- uEA50-chart-3 -->
+						<i class="svg-uEA50-chart-3">uEA50-chart-3</i>
+
+					</div>
+					<h2>uEA50-chart-3</h2>
+				</li>
+				<li title="uEA51-chart-4">
+					<div class="icon-box">
+
+						<!-- uEA51-chart-4 -->
+						<i class="svg-uEA51-chart-4">uEA51-chart-4</i>
+
+					</div>
+					<h2>uEA51-chart-4</h2>
+				</li>
+				<li title="uEA52-chart-5">
+					<div class="icon-box">
+
+						<!-- uEA52-chart-5 -->
+						<i class="svg-uEA52-chart-5">uEA52-chart-5</i>
+
+					</div>
+					<h2>uEA52-chart-5</h2>
+				</li>
+				<li title="uEA53-chart-6">
+					<div class="icon-box">
+
+						<!-- uEA53-chart-6 -->
+						<i class="svg-uEA53-chart-6">uEA53-chart-6</i>
+
+					</div>
+					<h2>uEA53-chart-6</h2>
+				</li>
+				<li title="uEA54-chart-7">
+					<div class="icon-box">
+
+						<!-- uEA54-chart-7 -->
+						<i class="svg-uEA54-chart-7">uEA54-chart-7</i>
+
+					</div>
+					<h2>uEA54-chart-7</h2>
+				</li>
+				<li title="uEA55-chart-circuar">
+					<div class="icon-box">
+
+						<!-- uEA55-chart-circuar -->
+						<i class="svg-uEA55-chart-circuar">uEA55-chart-circuar</i>
+
+					</div>
+					<h2>uEA55-chart-circuar</h2>
+				</li>
+				<li title="uEA56-chart-pie">
+					<div class="icon-box">
+
+						<!-- uEA56-chart-pie -->
+						<i class="svg-uEA56-chart-pie">uEA56-chart-pie</i>
+
+					</div>
+					<h2>uEA56-chart-pie</h2>
+				</li>
+				<li title="uEA57-chart">
+					<div class="icon-box">
+
+						<!-- uEA57-chart -->
+						<i class="svg-uEA57-chart">uEA57-chart</i>
+
+					</div>
+					<h2>uEA57-chart</h2>
+				</li>
+				<li title="uEA58-chat-1">
+					<div class="icon-box">
+
+						<!-- uEA58-chat-1 -->
+						<i class="svg-uEA58-chat-1">uEA58-chat-1</i>
+
+					</div>
+					<h2>uEA58-chat-1</h2>
+				</li>
+				<li title="uEA59-chat-10">
+					<div class="icon-box">
+
+						<!-- uEA59-chat-10 -->
+						<i class="svg-uEA59-chat-10">uEA59-chat-10</i>
+
+					</div>
+					<h2>uEA59-chat-10</h2>
+				</li>
+				<li title="uEA5A-chat-11">
+					<div class="icon-box">
+
+						<!-- uEA5A-chat-11 -->
+						<i class="svg-uEA5A-chat-11">uEA5A-chat-11</i>
+
+					</div>
+					<h2>uEA5A-chat-11</h2>
+				</li>
+				<li title="uEA5B-chat-12">
+					<div class="icon-box">
+
+						<!-- uEA5B-chat-12 -->
+						<i class="svg-uEA5B-chat-12">uEA5B-chat-12</i>
+
+					</div>
+					<h2>uEA5B-chat-12</h2>
+				</li>
+				<li title="uEA5C-chat-2">
+					<div class="icon-box">
+
+						<!-- uEA5C-chat-2 -->
+						<i class="svg-uEA5C-chat-2">uEA5C-chat-2</i>
+
+					</div>
+					<h2>uEA5C-chat-2</h2>
+				</li>
+				<li title="uEA5D-chat-3">
+					<div class="icon-box">
+
+						<!-- uEA5D-chat-3 -->
+						<i class="svg-uEA5D-chat-3">uEA5D-chat-3</i>
+
+					</div>
+					<h2>uEA5D-chat-3</h2>
+				</li>
+				<li title="uEA5E-chat-4">
+					<div class="icon-box">
+
+						<!-- uEA5E-chat-4 -->
+						<i class="svg-uEA5E-chat-4">uEA5E-chat-4</i>
+
+					</div>
+					<h2>uEA5E-chat-4</h2>
+				</li>
+				<li title="uEA5F-chat-5">
+					<div class="icon-box">
+
+						<!-- uEA5F-chat-5 -->
+						<i class="svg-uEA5F-chat-5">uEA5F-chat-5</i>
+
+					</div>
+					<h2>uEA5F-chat-5</h2>
+				</li>
+				<li title="uEA60-chat-6">
+					<div class="icon-box">
+
+						<!-- uEA60-chat-6 -->
+						<i class="svg-uEA60-chat-6">uEA60-chat-6</i>
+
+					</div>
+					<h2>uEA60-chat-6</h2>
+				</li>
+				<li title="uEA61-chat-7">
+					<div class="icon-box">
+
+						<!-- uEA61-chat-7 -->
+						<i class="svg-uEA61-chat-7">uEA61-chat-7</i>
+
+					</div>
+					<h2>uEA61-chat-7</h2>
+				</li>
+				<li title="uEA62-chat-8">
+					<div class="icon-box">
+
+						<!-- uEA62-chat-8 -->
+						<i class="svg-uEA62-chat-8">uEA62-chat-8</i>
+
+					</div>
+					<h2>uEA62-chat-8</h2>
+				</li>
+				<li title="uEA63-chat-9">
+					<div class="icon-box">
+
+						<!-- uEA63-chat-9 -->
+						<i class="svg-uEA63-chat-9">uEA63-chat-9</i>
+
+					</div>
+					<h2>uEA63-chat-9</h2>
+				</li>
+				<li title="uEA64-chat">
+					<div class="icon-box">
+
+						<!-- uEA64-chat -->
+						<i class="svg-uEA64-chat">uEA64-chat</i>
+
+					</div>
+					<h2>uEA64-chat</h2>
+				</li>
+				<li title="uEA65-check-1">
+					<div class="icon-box">
+
+						<!-- uEA65-check-1 -->
+						<i class="svg-uEA65-check-1">uEA65-check-1</i>
+
+					</div>
+					<h2>uEA65-check-1</h2>
+				</li>
+				<li title="uEA66-check-2">
+					<div class="icon-box">
+
+						<!-- uEA66-check-2 -->
+						<i class="svg-uEA66-check-2">uEA66-check-2</i>
+
+					</div>
+					<h2>uEA66-check-2</h2>
+				</li>
+				<li title="uEA67-check-3">
+					<div class="icon-box">
+
+						<!-- uEA67-check-3 -->
+						<i class="svg-uEA67-check-3">uEA67-check-3</i>
+
+					</div>
+					<h2>uEA67-check-3</h2>
+				</li>
+				<li title="uEA68-check-4">
+					<div class="icon-box">
+
+						<!-- uEA68-check-4 -->
+						<i class="svg-uEA68-check-4">uEA68-check-4</i>
+
+					</div>
+					<h2>uEA68-check-4</h2>
+				</li>
+				<li title="uEA69-check-fill">
+					<div class="icon-box">
+
+						<!-- uEA69-check-fill -->
+						<i class="svg-uEA69-check-fill">uEA69-check-fill</i>
+
+					</div>
+					<h2>uEA69-check-fill</h2>
+				</li>
+				<li title="uEA6A-check-line">
+					<div class="icon-box">
+
+						<!-- uEA6A-check-line -->
+						<i class="svg-uEA6A-check-line">uEA6A-check-line</i>
+
+					</div>
+					<h2>uEA6A-check-line</h2>
+				</li>
+				<li title="uEA6B-check">
+					<div class="icon-box">
+
+						<!-- uEA6B-check -->
+						<i class="svg-uEA6B-check">uEA6B-check</i>
+
+					</div>
+					<h2>uEA6B-check</h2>
+				</li>
+				<li title="uEA6C-checkbox-fill-1">
+					<div class="icon-box">
+
+						<!-- uEA6C-checkbox-fill-1 -->
+						<i class="svg-uEA6C-checkbox-fill-1">uEA6C-checkbox-fill-1</i>
+
+					</div>
+					<h2>uEA6C-checkbox-fill-1</h2>
+				</li>
+				<li title="uEA6D-checkbox-fill">
+					<div class="icon-box">
+
+						<!-- uEA6D-checkbox-fill -->
+						<i class="svg-uEA6D-checkbox-fill">uEA6D-checkbox-fill</i>
+
+					</div>
+					<h2>uEA6D-checkbox-fill</h2>
+				</li>
+				<li title="uEA6E-checkbox-line">
+					<div class="icon-box">
+
+						<!-- uEA6E-checkbox-line -->
+						<i class="svg-uEA6E-checkbox-line">uEA6E-checkbox-line</i>
+
+					</div>
+					<h2>uEA6E-checkbox-line</h2>
+				</li>
+				<li title="uEA6F-circle">
+					<div class="icon-box">
+
+						<!-- uEA6F-circle -->
+						<i class="svg-uEA6F-circle">uEA6F-circle</i>
+
+					</div>
+					<h2>uEA6F-circle</h2>
+				</li>
+				<li title="uEA70-city-1">
+					<div class="icon-box">
+
+						<!-- uEA70-city-1 -->
+						<i class="svg-uEA70-city-1">uEA70-city-1</i>
+
+					</div>
+					<h2>uEA70-city-1</h2>
+				</li>
+				<li title="uEA71-city-2">
+					<div class="icon-box">
+
+						<!-- uEA71-city-2 -->
+						<i class="svg-uEA71-city-2">uEA71-city-2</i>
+
+					</div>
+					<h2>uEA71-city-2</h2>
+				</li>
+				<li title="uEA72-city-3">
+					<div class="icon-box">
+
+						<!-- uEA72-city-3 -->
+						<i class="svg-uEA72-city-3">uEA72-city-3</i>
+
+					</div>
+					<h2>uEA72-city-3</h2>
+				</li>
+				<li title="uEA73-city-4">
+					<div class="icon-box">
+
+						<!-- uEA73-city-4 -->
+						<i class="svg-uEA73-city-4">uEA73-city-4</i>
+
+					</div>
+					<h2>uEA73-city-4</h2>
+				</li>
+				<li title="uEA74-city-5">
+					<div class="icon-box">
+
+						<!-- uEA74-city-5 -->
+						<i class="svg-uEA74-city-5">uEA74-city-5</i>
+
+					</div>
+					<h2>uEA74-city-5</h2>
+				</li>
+				<li title="uEA75-city-6">
+					<div class="icon-box">
+
+						<!-- uEA75-city-6 -->
+						<i class="svg-uEA75-city-6">uEA75-city-6</i>
+
+					</div>
+					<h2>uEA75-city-6</h2>
+				</li>
+				<li title="uEA76-city-7">
+					<div class="icon-box">
+
+						<!-- uEA76-city-7 -->
+						<i class="svg-uEA76-city-7">uEA76-city-7</i>
+
+					</div>
+					<h2>uEA76-city-7</h2>
+				</li>
+				<li title="uEA77-city-8">
+					<div class="icon-box">
+
+						<!-- uEA77-city-8 -->
+						<i class="svg-uEA77-city-8">uEA77-city-8</i>
+
+					</div>
+					<h2>uEA77-city-8</h2>
+				</li>
+				<li title="uEA78-city">
+					<div class="icon-box">
+
+						<!-- uEA78-city -->
+						<i class="svg-uEA78-city">uEA78-city</i>
+
+					</div>
+					<h2>uEA78-city</h2>
+				</li>
+				<li title="uEA79-clap">
+					<div class="icon-box">
+
+						<!-- uEA79-clap -->
+						<i class="svg-uEA79-clap">uEA79-clap</i>
+
+					</div>
+					<h2>uEA79-clap</h2>
+				</li>
+				<li title="uEA7A-clock-1">
+					<div class="icon-box">
+
+						<!-- uEA7A-clock-1 -->
+						<i class="svg-uEA7A-clock-1">uEA7A-clock-1</i>
+
+					</div>
+					<h2>uEA7A-clock-1</h2>
+				</li>
+				<li title="uEA7B-clock-2">
+					<div class="icon-box">
+
+						<!-- uEA7B-clock-2 -->
+						<i class="svg-uEA7B-clock-2">uEA7B-clock-2</i>
+
+					</div>
+					<h2>uEA7B-clock-2</h2>
+				</li>
+				<li title="uEA7C-clock-3">
+					<div class="icon-box">
+
+						<!-- uEA7C-clock-3 -->
+						<i class="svg-uEA7C-clock-3">uEA7C-clock-3</i>
+
+					</div>
+					<h2>uEA7C-clock-3</h2>
+				</li>
+				<li title="uEA7D-clock-4">
+					<div class="icon-box">
+
+						<!-- uEA7D-clock-4 -->
+						<i class="svg-uEA7D-clock-4">uEA7D-clock-4</i>
+
+					</div>
+					<h2>uEA7D-clock-4</h2>
+				</li>
+				<li title="uEA7E-clock-5">
+					<div class="icon-box">
+
+						<!-- uEA7E-clock-5 -->
+						<i class="svg-uEA7E-clock-5">uEA7E-clock-5</i>
+
+					</div>
+					<h2>uEA7E-clock-5</h2>
+				</li>
+				<li title="uEA7F-clock-6">
+					<div class="icon-box">
+
+						<!-- uEA7F-clock-6 -->
+						<i class="svg-uEA7F-clock-6">uEA7F-clock-6</i>
+
+					</div>
+					<h2>uEA7F-clock-6</h2>
+				</li>
+				<li title="uEA80-clock-7">
+					<div class="icon-box">
+
+						<!-- uEA80-clock-7 -->
+						<i class="svg-uEA80-clock-7">uEA80-clock-7</i>
+
+					</div>
+					<h2>uEA80-clock-7</h2>
+				</li>
+				<li title="uEA81-clock-8">
+					<div class="icon-box">
+
+						<!-- uEA81-clock-8 -->
+						<i class="svg-uEA81-clock-8">uEA81-clock-8</i>
+
+					</div>
+					<h2>uEA81-clock-8</h2>
+				</li>
+				<li title="uEA82-close-1">
+					<div class="icon-box">
+
+						<!-- uEA82-close-1 -->
+						<i class="svg-uEA82-close-1">uEA82-close-1</i>
+
+					</div>
+					<h2>uEA82-close-1</h2>
+				</li>
+				<li title="uEA83-close-2">
+					<div class="icon-box">
+
+						<!-- uEA83-close-2 -->
+						<i class="svg-uEA83-close-2">uEA83-close-2</i>
+
+					</div>
+					<h2>uEA83-close-2</h2>
+				</li>
+				<li title="uEA84-close">
+					<div class="icon-box">
+
+						<!-- uEA84-close -->
+						<i class="svg-uEA84-close">uEA84-close</i>
+
+					</div>
+					<h2>uEA84-close</h2>
+				</li>
+				<li title="uEA85-cloud">
+					<div class="icon-box">
+
+						<!-- uEA85-cloud -->
+						<i class="svg-uEA85-cloud">uEA85-cloud</i>
+
+					</div>
+					<h2>uEA85-cloud</h2>
+				</li>
+				<li title="uEA86-cog">
+					<div class="icon-box">
+
+						<!-- uEA86-cog -->
+						<i class="svg-uEA86-cog">uEA86-cog</i>
+
+					</div>
+					<h2>uEA86-cog</h2>
+				</li>
+				<li title="uEA87-collapse-1">
+					<div class="icon-box">
+
+						<!-- uEA87-collapse-1 -->
+						<i class="svg-uEA87-collapse-1">uEA87-collapse-1</i>
+
+					</div>
+					<h2>uEA87-collapse-1</h2>
+				</li>
+				<li title="uEA88-collapse">
+					<div class="icon-box">
+
+						<!-- uEA88-collapse -->
+						<i class="svg-uEA88-collapse">uEA88-collapse</i>
+
+					</div>
+					<h2>uEA88-collapse</h2>
+				</li>
+				<li title="uEA89-commands">
+					<div class="icon-box">
+
+						<!-- uEA89-commands -->
+						<i class="svg-uEA89-commands">uEA89-commands</i>
+
+					</div>
+					<h2>uEA89-commands</h2>
+				</li>
+				<li title="uEA8A-comment">
+					<div class="icon-box">
+
+						<!-- uEA8A-comment -->
+						<i class="svg-uEA8A-comment">uEA8A-comment</i>
+
+					</div>
+					<h2>uEA8A-comment</h2>
+				</li>
+				<li title="uEA8B-competency">
+					<div class="icon-box">
+
+						<!-- uEA8B-competency -->
+						<i class="svg-uEA8B-competency">uEA8B-competency</i>
+
+					</div>
+					<h2>uEA8B-competency</h2>
+				</li>
+				<li title="uEA8C-computer">
+					<div class="icon-box">
+
+						<!-- uEA8C-computer -->
+						<i class="svg-uEA8C-computer">uEA8C-computer</i>
+
+					</div>
+					<h2>uEA8C-computer</h2>
+				</li>
+				<li title="uEA8D-config-1">
+					<div class="icon-box">
+
+						<!-- uEA8D-config-1 -->
+						<i class="svg-uEA8D-config-1">uEA8D-config-1</i>
+
+					</div>
+					<h2>uEA8D-config-1</h2>
+				</li>
+				<li title="uEA8E-config-2">
+					<div class="icon-box">
+
+						<!-- uEA8E-config-2 -->
+						<i class="svg-uEA8E-config-2">uEA8E-config-2</i>
+
+					</div>
+					<h2>uEA8E-config-2</h2>
+				</li>
+				<li title="uEA8F-config-3">
+					<div class="icon-box">
+
+						<!-- uEA8F-config-3 -->
+						<i class="svg-uEA8F-config-3">uEA8F-config-3</i>
+
+					</div>
+					<h2>uEA8F-config-3</h2>
+				</li>
+				<li title="uEA90-config-4">
+					<div class="icon-box">
+
+						<!-- uEA90-config-4 -->
+						<i class="svg-uEA90-config-4">uEA90-config-4</i>
+
+					</div>
+					<h2>uEA90-config-4</h2>
+				</li>
+				<li title="uEA91-config">
+					<div class="icon-box">
+
+						<!-- uEA91-config -->
+						<i class="svg-uEA91-config">uEA91-config</i>
+
+					</div>
+					<h2>uEA91-config</h2>
+				</li>
+				<li title="uEA92-confirmation">
+					<div class="icon-box">
+
+						<!-- uEA92-confirmation -->
+						<i class="svg-uEA92-confirmation">uEA92-confirmation</i>
+
+					</div>
+					<h2>uEA92-confirmation</h2>
+				</li>
+				<li title="uEA93-contrast">
+					<div class="icon-box">
+
+						<!-- uEA93-contrast -->
+						<i class="svg-uEA93-contrast">uEA93-contrast</i>
+
+					</div>
+					<h2>uEA93-contrast</h2>
+				</li>
+				<li title="uEA94-conversation">
+					<div class="icon-box">
+
+						<!-- uEA94-conversation -->
+						<i class="svg-uEA94-conversation">uEA94-conversation</i>
+
+					</div>
+					<h2>uEA94-conversation</h2>
+				</li>
+				<li title="uEA95-copy-1">
+					<div class="icon-box">
+
+						<!-- uEA95-copy-1 -->
+						<i class="svg-uEA95-copy-1">uEA95-copy-1</i>
+
+					</div>
+					<h2>uEA95-copy-1</h2>
+				</li>
+				<li title="uEA96-copy-2">
+					<div class="icon-box">
+
+						<!-- uEA96-copy-2 -->
+						<i class="svg-uEA96-copy-2">uEA96-copy-2</i>
+
+					</div>
+					<h2>uEA96-copy-2</h2>
+				</li>
+				<li title="uEA97-copy">
+					<div class="icon-box">
+
+						<!-- uEA97-copy -->
+						<i class="svg-uEA97-copy">uEA97-copy</i>
+
+					</div>
+					<h2>uEA97-copy</h2>
+				</li>
+				<li title="uEA98-correct">
+					<div class="icon-box">
+
+						<!-- uEA98-correct -->
+						<i class="svg-uEA98-correct">uEA98-correct</i>
+
+					</div>
+					<h2>uEA98-correct</h2>
+				</li>
+				<li title="uEA99-crop">
+					<div class="icon-box">
+
+						<!-- uEA99-crop -->
+						<i class="svg-uEA99-crop">uEA99-crop</i>
+
+					</div>
+					<h2>uEA99-crop</h2>
+				</li>
+				<li title="uEA9A-crossover">
+					<div class="icon-box">
+
+						<!-- uEA9A-crossover -->
+						<i class="svg-uEA9A-crossover">uEA9A-crossover</i>
+
+					</div>
+					<h2>uEA9A-crossover</h2>
+				</li>
+				<li title="uEA9B-current-1">
+					<div class="icon-box">
+
+						<!-- uEA9B-current-1 -->
+						<i class="svg-uEA9B-current-1">uEA9B-current-1</i>
+
+					</div>
+					<h2>uEA9B-current-1</h2>
+				</li>
+				<li title="uEA9C-current-2">
+					<div class="icon-box">
+
+						<!-- uEA9C-current-2 -->
+						<i class="svg-uEA9C-current-2">uEA9C-current-2</i>
+
+					</div>
+					<h2>uEA9C-current-2</h2>
+				</li>
+				<li title="uEA9D-current-3">
+					<div class="icon-box">
+
+						<!-- uEA9D-current-3 -->
+						<i class="svg-uEA9D-current-3">uEA9D-current-3</i>
+
+					</div>
+					<h2>uEA9D-current-3</h2>
+				</li>
+				<li title="uEA9E-current">
+					<div class="icon-box">
+
+						<!-- uEA9E-current -->
+						<i class="svg-uEA9E-current">uEA9E-current</i>
+
+					</div>
+					<h2>uEA9E-current</h2>
+				</li>
+				<li title="uEA9F-cv-2">
+					<div class="icon-box">
+
+						<!-- uEA9F-cv-2 -->
+						<i class="svg-uEA9F-cv-2">uEA9F-cv-2</i>
+
+					</div>
+					<h2>uEA9F-cv-2</h2>
+				</li>
+				<li title="uEAA0-cv">
+					<div class="icon-box">
+
+						<!-- uEAA0-cv -->
+						<i class="svg-uEAA0-cv">uEAA0-cv</i>
+
+					</div>
+					<h2>uEAA0-cv</h2>
+				</li>
+				<li title="uEAA1-dashboard-1">
+					<div class="icon-box">
+
+						<!-- uEAA1-dashboard-1 -->
+						<i class="svg-uEAA1-dashboard-1">uEAA1-dashboard-1</i>
+
+					</div>
+					<h2>uEAA1-dashboard-1</h2>
+				</li>
+				<li title="uEAA2-dashboard">
+					<div class="icon-box">
+
+						<!-- uEAA2-dashboard -->
+						<i class="svg-uEAA2-dashboard">uEAA2-dashboard</i>
+
+					</div>
+					<h2>uEAA2-dashboard</h2>
+				</li>
+				<li title="uEAA3-diamond">
+					<div class="icon-box">
+
+						<!-- uEAA3-diamond -->
+						<i class="svg-uEAA3-diamond">uEAA3-diamond</i>
+
+					</div>
+					<h2>uEAA3-diamond</h2>
+				</li>
+				<li title="uEAA4-doc-duplicate-1">
+					<div class="icon-box">
+
+						<!-- uEAA4-doc-duplicate-1 -->
+						<i class="svg-uEAA4-doc-duplicate-1">uEAA4-doc-duplicate-1</i>
+
+					</div>
+					<h2>uEAA4-doc-duplicate-1</h2>
+				</li>
+				<li title="uEAA5-doc-duplicate">
+					<div class="icon-box">
+
+						<!-- uEAA5-doc-duplicate -->
+						<i class="svg-uEAA5-doc-duplicate">uEAA5-doc-duplicate</i>
+
+					</div>
+					<h2>uEAA5-doc-duplicate</h2>
+				</li>
+				<li title="uEAA6-doc-edit-2">
+					<div class="icon-box">
+
+						<!-- uEAA6-doc-edit-2 -->
+						<i class="svg-uEAA6-doc-edit-2">uEAA6-doc-edit-2</i>
+
+					</div>
+					<h2>uEAA6-doc-edit-2</h2>
+				</li>
+				<li title="uEAA7-doc-edit-3">
+					<div class="icon-box">
+
+						<!-- uEAA7-doc-edit-3 -->
+						<i class="svg-uEAA7-doc-edit-3">uEAA7-doc-edit-3</i>
+
+					</div>
+					<h2>uEAA7-doc-edit-3</h2>
+				</li>
+				<li title="uEAA8-doc-file">
+					<div class="icon-box">
+
+						<!-- uEAA8-doc-file -->
+						<i class="svg-uEAA8-doc-file">uEAA8-doc-file</i>
+
+					</div>
+					<h2>uEAA8-doc-file</h2>
+				</li>
+				<li title="uEAA9-doc-right">
+					<div class="icon-box">
+
+						<!-- uEAA9-doc-right -->
+						<i class="svg-uEAA9-doc-right">uEAA9-doc-right</i>
+
+					</div>
+					<h2>uEAA9-doc-right</h2>
+				</li>
+				<li title="uEAAA-doc-stack">
+					<div class="icon-box">
+
+						<!-- uEAAA-doc-stack -->
+						<i class="svg-uEAAA-doc-stack">uEAAA-doc-stack</i>
+
+					</div>
+					<h2>uEAAA-doc-stack</h2>
+				</li>
+				<li title="uEAAB-document-edit">
+					<div class="icon-box">
+
+						<!-- uEAAB-document-edit -->
+						<i class="svg-uEAAB-document-edit">uEAAB-document-edit</i>
+
+					</div>
+					<h2>uEAAB-document-edit</h2>
+				</li>
+				<li title="uEAAC-document">
+					<div class="icon-box">
+
+						<!-- uEAAC-document -->
+						<i class="svg-uEAAC-document">uEAAC-document</i>
+
+					</div>
+					<h2>uEAAC-document</h2>
+				</li>
+				<li title="uEAAD-documents">
+					<div class="icon-box">
+
+						<!-- uEAAD-documents -->
+						<i class="svg-uEAAD-documents">uEAAD-documents</i>
+
+					</div>
+					<h2>uEAAD-documents</h2>
+				</li>
+				<li title="uEAAE-edit-1">
+					<div class="icon-box">
+
+						<!-- uEAAE-edit-1 -->
+						<i class="svg-uEAAE-edit-1">uEAAE-edit-1</i>
+
+					</div>
+					<h2>uEAAE-edit-1</h2>
+				</li>
+				<li title="uEAAF-edit">
+					<div class="icon-box">
+
+						<!-- uEAAF-edit -->
+						<i class="svg-uEAAF-edit">uEAAF-edit</i>
+
+					</div>
+					<h2>uEAAF-edit</h2>
+				</li>
+				<li title="uEAB0-emoji-smile">
+					<div class="icon-box">
+
+						<!-- uEAB0-emoji-smile -->
+						<i class="svg-uEAB0-emoji-smile">uEAB0-emoji-smile</i>
+
+					</div>
+					<h2>uEAB0-emoji-smile</h2>
+				</li>
+				<li title="uEAB1-emoji-surprised">
+					<div class="icon-box">
+
+						<!-- uEAB1-emoji-surprised -->
+						<i class="svg-uEAB1-emoji-surprised">uEAB1-emoji-surprised</i>
+
+					</div>
+					<h2>uEAB1-emoji-surprised</h2>
+				</li>
+				<li title="uEAB2-enter-door">
+					<div class="icon-box">
+
+						<!-- uEAB2-enter-door -->
+						<i class="svg-uEAB2-enter-door">uEAB2-enter-door</i>
+
+					</div>
+					<h2>uEAB2-enter-door</h2>
+				</li>
+				<li title="uEAB3-enter">
+					<div class="icon-box">
+
+						<!-- uEAB3-enter -->
+						<i class="svg-uEAB3-enter">uEAB3-enter</i>
+
+					</div>
+					<h2>uEAB3-enter</h2>
+				</li>
+				<li title="uEAB4-equal">
+					<div class="icon-box">
+
+						<!-- uEAB4-equal -->
+						<i class="svg-uEAB4-equal">uEAB4-equal</i>
+
+					</div>
+					<h2>uEAB4-equal</h2>
+				</li>
+				<li title="uEAB5-evaluation">
+					<div class="icon-box">
+
+						<!-- uEAB5-evaluation -->
+						<i class="svg-uEAB5-evaluation">uEAB5-evaluation</i>
+
+					</div>
+					<h2>uEAB5-evaluation</h2>
+				</li>
+				<li title="uEAB6-exit-door">
+					<div class="icon-box">
+
+						<!-- uEAB6-exit-door -->
+						<i class="svg-uEAB6-exit-door">uEAB6-exit-door</i>
+
+					</div>
+					<h2>uEAB6-exit-door</h2>
+				</li>
+				<li title="uEAB7-expand-1">
+					<div class="icon-box">
+
+						<!-- uEAB7-expand-1 -->
+						<i class="svg-uEAB7-expand-1">uEAB7-expand-1</i>
+
+					</div>
+					<h2>uEAB7-expand-1</h2>
+				</li>
+				<li title="uEAB8-expand-2">
+					<div class="icon-box">
+
+						<!-- uEAB8-expand-2 -->
+						<i class="svg-uEAB8-expand-2">uEAB8-expand-2</i>
+
+					</div>
+					<h2>uEAB8-expand-2</h2>
+				</li>
+				<li title="uEAB9-expand">
+					<div class="icon-box">
+
+						<!-- uEAB9-expand -->
+						<i class="svg-uEAB9-expand">uEAB9-expand</i>
+
+					</div>
+					<h2>uEAB9-expand</h2>
+				</li>
+				<li title="uEABA-export">
+					<div class="icon-box">
+
+						<!-- uEABA-export -->
+						<i class="svg-uEABA-export">uEABA-export</i>
+
+					</div>
+					<h2>uEABA-export</h2>
+				</li>
+				<li title="uEABB-eye-1">
+					<div class="icon-box">
+
+						<!-- uEABB-eye-1 -->
+						<i class="svg-uEABB-eye-1">uEABB-eye-1</i>
+
+					</div>
+					<h2>uEABB-eye-1</h2>
+				</li>
+				<li title="uEABC-eye-block">
+					<div class="icon-box">
+
+						<!-- uEABC-eye-block -->
+						<i class="svg-uEABC-eye-block">uEABC-eye-block</i>
+
+					</div>
+					<h2>uEABC-eye-block</h2>
+				</li>
+				<li title="uEABD-eye">
+					<div class="icon-box">
+
+						<!-- uEABD-eye -->
+						<i class="svg-uEABD-eye">uEABD-eye</i>
+
+					</div>
+					<h2>uEABD-eye</h2>
+				</li>
+				<li title="uEABE-facebook">
+					<div class="icon-box">
+
+						<!-- uEABE-facebook -->
+						<i class="svg-uEABE-facebook">uEABE-facebook</i>
+
+					</div>
+					<h2>uEABE-facebook</h2>
+				</li>
+				<li title="uEABF-favourite">
+					<div class="icon-box">
+
+						<!-- uEABF-favourite -->
+						<i class="svg-uEABF-favourite">uEABF-favourite</i>
+
+					</div>
+					<h2>uEABF-favourite</h2>
+				</li>
+				<li title="uEAC0-feed">
+					<div class="icon-box">
+
+						<!-- uEAC0-feed -->
+						<i class="svg-uEAC0-feed">uEAC0-feed</i>
+
+					</div>
+					<h2>uEAC0-feed</h2>
+				</li>
+				<li title="uEAC1-feedback-2">
+					<div class="icon-box">
+
+						<!-- uEAC1-feedback-2 -->
+						<i class="svg-uEAC1-feedback-2">uEAC1-feedback-2</i>
+
+					</div>
+					<h2>uEAC1-feedback-2</h2>
+				</li>
+				<li title="uEAC2-feedback">
+					<div class="icon-box">
+
+						<!-- uEAC2-feedback -->
+						<i class="svg-uEAC2-feedback">uEAC2-feedback</i>
+
+					</div>
+					<h2>uEAC2-feedback</h2>
+				</li>
+				<li title="uEAC3-female">
+					<div class="icon-box">
+
+						<!-- uEAC3-female -->
+						<i class="svg-uEAC3-female">uEAC3-female</i>
+
+					</div>
+					<h2>uEAC3-female</h2>
+				</li>
+				<li title="uEAC4-files">
+					<div class="icon-box">
+
+						<!-- uEAC4-files -->
+						<i class="svg-uEAC4-files">uEAC4-files</i>
+
+					</div>
+					<h2>uEAC4-files</h2>
+				</li>
+				<li title="uEAC5-fill-dot-1">
+					<div class="icon-box">
+
+						<!-- uEAC5-fill-dot-1 -->
+						<i class="svg-uEAC5-fill-dot-1">uEAC5-fill-dot-1</i>
+
+					</div>
+					<h2>uEAC5-fill-dot-1</h2>
+				</li>
+				<li title="uEAC6-fill-dot">
+					<div class="icon-box">
+
+						<!-- uEAC6-fill-dot -->
+						<i class="svg-uEAC6-fill-dot">uEAC6-fill-dot</i>
+
+					</div>
+					<h2>uEAC6-fill-dot</h2>
+				</li>
+				<li title="uEAC7-filter-1">
+					<div class="icon-box">
+
+						<!-- uEAC7-filter-1 -->
+						<i class="svg-uEAC7-filter-1">uEAC7-filter-1</i>
+
+					</div>
+					<h2>uEAC7-filter-1</h2>
+				</li>
+				<li title="uEAC8-filter">
+					<div class="icon-box">
+
+						<!-- uEAC8-filter -->
+						<i class="svg-uEAC8-filter">uEAC8-filter</i>
+
+					</div>
+					<h2>uEAC8-filter</h2>
+				</li>
+				<li title="uEAC9-finger-print">
+					<div class="icon-box">
+
+						<!-- uEAC9-finger-print -->
+						<i class="svg-uEAC9-finger-print">uEAC9-finger-print</i>
+
+					</div>
+					<h2>uEAC9-finger-print</h2>
+				</li>
+				<li title="uEACA-fingerprint-1">
+					<div class="icon-box">
+
+						<!-- uEACA-fingerprint-1 -->
+						<i class="svg-uEACA-fingerprint-1">uEACA-fingerprint-1</i>
+
+					</div>
+					<h2>uEACA-fingerprint-1</h2>
+				</li>
+				<li title="uEACB-flag">
+					<div class="icon-box">
+
+						<!-- uEACB-flag -->
+						<i class="svg-uEACB-flag">uEACB-flag</i>
+
+					</div>
+					<h2>uEACB-flag</h2>
+				</li>
+				<li title="uEACC-folder-add">
+					<div class="icon-box">
+
+						<!-- uEACC-folder-add -->
+						<i class="svg-uEACC-folder-add">uEACC-folder-add</i>
+
+					</div>
+					<h2>uEACC-folder-add</h2>
+				</li>
+				<li title="uEACD-folder">
+					<div class="icon-box">
+
+						<!-- uEACD-folder -->
+						<i class="svg-uEACD-folder">uEACD-folder</i>
+
+					</div>
+					<h2>uEACD-folder</h2>
+				</li>
+				<li title="uEACE-food-1">
+					<div class="icon-box">
+
+						<!-- uEACE-food-1 -->
+						<i class="svg-uEACE-food-1">uEACE-food-1</i>
+
+					</div>
+					<h2>uEACE-food-1</h2>
+				</li>
+				<li title="uEACF-food-2">
+					<div class="icon-box">
+
+						<!-- uEACF-food-2 -->
+						<i class="svg-uEACF-food-2">uEACF-food-2</i>
+
+					</div>
+					<h2>uEACF-food-2</h2>
+				</li>
+				<li title="uEAD0-food-3">
+					<div class="icon-box">
+
+						<!-- uEAD0-food-3 -->
+						<i class="svg-uEAD0-food-3">uEAD0-food-3</i>
+
+					</div>
+					<h2>uEAD0-food-3</h2>
+				</li>
+				<li title="uEAD1-food-4">
+					<div class="icon-box">
+
+						<!-- uEAD1-food-4 -->
+						<i class="svg-uEAD1-food-4">uEAD1-food-4</i>
+
+					</div>
+					<h2>uEAD1-food-4</h2>
+				</li>
+				<li title="uEAD2-food-5">
+					<div class="icon-box">
+
+						<!-- uEAD2-food-5 -->
+						<i class="svg-uEAD2-food-5">uEAD2-food-5</i>
+
+					</div>
+					<h2>uEAD2-food-5</h2>
+				</li>
+				<li title="uEAD3-food-6">
+					<div class="icon-box">
+
+						<!-- uEAD3-food-6 -->
+						<i class="svg-uEAD3-food-6">uEAD3-food-6</i>
+
+					</div>
+					<h2>uEAD3-food-6</h2>
+				</li>
+				<li title="uEAD4-food-7">
+					<div class="icon-box">
+
+						<!-- uEAD4-food-7 -->
+						<i class="svg-uEAD4-food-7">uEAD4-food-7</i>
+
+					</div>
+					<h2>uEAD4-food-7</h2>
+				</li>
+				<li title="uEAD5-food">
+					<div class="icon-box">
+
+						<!-- uEAD5-food -->
+						<i class="svg-uEAD5-food">uEAD5-food</i>
+
+					</div>
+					<h2>uEAD5-food</h2>
+				</li>
+				<li title="uEAD6-gender">
+					<div class="icon-box">
+
+						<!-- uEAD6-gender -->
+						<i class="svg-uEAD6-gender">uEAD6-gender</i>
+
+					</div>
+					<h2>uEAD6-gender</h2>
+				</li>
+				<li title="uEAD7-girl-1">
+					<div class="icon-box">
+
+						<!-- uEAD7-girl-1 -->
+						<i class="svg-uEAD7-girl-1">uEAD7-girl-1</i>
+
+					</div>
+					<h2>uEAD7-girl-1</h2>
+				</li>
+				<li title="uEAD8-girl">
+					<div class="icon-box">
+
+						<!-- uEAD8-girl -->
+						<i class="svg-uEAD8-girl">uEAD8-girl</i>
+
+					</div>
+					<h2>uEAD8-girl</h2>
+				</li>
+				<li title="uEAD9-glass-1">
+					<div class="icon-box">
+
+						<!-- uEAD9-glass-1 -->
+						<i class="svg-uEAD9-glass-1">uEAD9-glass-1</i>
+
+					</div>
+					<h2>uEAD9-glass-1</h2>
+				</li>
+				<li title="uEADA-glass-2">
+					<div class="icon-box">
+
+						<!-- uEADA-glass-2 -->
+						<i class="svg-uEADA-glass-2">uEADA-glass-2</i>
+
+					</div>
+					<h2>uEADA-glass-2</h2>
+				</li>
+				<li title="uEADB-glass-3">
+					<div class="icon-box">
+
+						<!-- uEADB-glass-3 -->
+						<i class="svg-uEADB-glass-3">uEADB-glass-3</i>
+
+					</div>
+					<h2>uEADB-glass-3</h2>
+				</li>
+				<li title="uEADC-glass-4">
+					<div class="icon-box">
+
+						<!-- uEADC-glass-4 -->
+						<i class="svg-uEADC-glass-4">uEADC-glass-4</i>
+
+					</div>
+					<h2>uEADC-glass-4</h2>
+				</li>
+				<li title="uEADD-glass-5">
+					<div class="icon-box">
+
+						<!-- uEADD-glass-5 -->
+						<i class="svg-uEADD-glass-5">uEADD-glass-5</i>
+
+					</div>
+					<h2>uEADD-glass-5</h2>
+				</li>
+				<li title="uEADE-glass-7">
+					<div class="icon-box">
+
+						<!-- uEADE-glass-7 -->
+						<i class="svg-uEADE-glass-7">uEADE-glass-7</i>
+
+					</div>
+					<h2>uEADE-glass-7</h2>
+				</li>
+				<li title="uEADF-glass">
+					<div class="icon-box">
+
+						<!-- uEADF-glass -->
+						<i class="svg-uEADF-glass">uEADF-glass</i>
+
+					</div>
+					<h2>uEADF-glass</h2>
+				</li>
+				<li title="uEAE0-globe">
+					<div class="icon-box">
+
+						<!-- uEAE0-globe -->
+						<i class="svg-uEAE0-globe">uEAE0-globe</i>
+
+					</div>
+					<h2>uEAE0-globe</h2>
+				</li>
+				<li title="uEAE1-google">
+					<div class="icon-box">
+
+						<!-- uEAE1-google -->
+						<i class="svg-uEAE1-google">uEAE1-google</i>
+
+					</div>
+					<h2>uEAE1-google</h2>
+				</li>
+				<li title="uEAE2-greater-equal">
+					<div class="icon-box">
+
+						<!-- uEAE2-greater-equal -->
+						<i class="svg-uEAE2-greater-equal">uEAE2-greater-equal</i>
+
+					</div>
+					<h2>uEAE2-greater-equal</h2>
+				</li>
+				<li title="uEAE3-greater-than">
+					<div class="icon-box">
+
+						<!-- uEAE3-greater-than -->
+						<i class="svg-uEAE3-greater-than">uEAE3-greater-than</i>
+
+					</div>
+					<h2>uEAE3-greater-than</h2>
+				</li>
+				<li title="uEAE4-half-moon">
+					<div class="icon-box">
+
+						<!-- uEAE4-half-moon -->
+						<i class="svg-uEAE4-half-moon">uEAE4-half-moon</i>
+
+					</div>
+					<h2>uEAE4-half-moon</h2>
+				</li>
+				<li title="uEAE5-hammer">
+					<div class="icon-box">
+
+						<!-- uEAE5-hammer -->
+						<i class="svg-uEAE5-hammer">uEAE5-hammer</i>
+
+					</div>
+					<h2>uEAE5-hammer</h2>
+				</li>
+				<li title="uEAE6-hand-1">
+					<div class="icon-box">
+
+						<!-- uEAE6-hand-1 -->
+						<i class="svg-uEAE6-hand-1">uEAE6-hand-1</i>
+
+					</div>
+					<h2>uEAE6-hand-1</h2>
+				</li>
+				<li title="uEAE7-hand-2">
+					<div class="icon-box">
+
+						<!-- uEAE7-hand-2 -->
+						<i class="svg-uEAE7-hand-2">uEAE7-hand-2</i>
+
+					</div>
+					<h2>uEAE7-hand-2</h2>
+				</li>
+				<li title="uEAE8-hand-3">
+					<div class="icon-box">
+
+						<!-- uEAE8-hand-3 -->
+						<i class="svg-uEAE8-hand-3">uEAE8-hand-3</i>
+
+					</div>
+					<h2>uEAE8-hand-3</h2>
+				</li>
+				<li title="uEAE9-hand-4">
+					<div class="icon-box">
+
+						<!-- uEAE9-hand-4 -->
+						<i class="svg-uEAE9-hand-4">uEAE9-hand-4</i>
+
+					</div>
+					<h2>uEAE9-hand-4</h2>
+				</li>
+				<li title="uEAEA-hand-5">
+					<div class="icon-box">
+
+						<!-- uEAEA-hand-5 -->
+						<i class="svg-uEAEA-hand-5">uEAEA-hand-5</i>
+
+					</div>
+					<h2>uEAEA-hand-5</h2>
+				</li>
+				<li title="uEAEB-hand-6">
+					<div class="icon-box">
+
+						<!-- uEAEB-hand-6 -->
+						<i class="svg-uEAEB-hand-6">uEAEB-hand-6</i>
+
+					</div>
+					<h2>uEAEB-hand-6</h2>
+				</li>
+				<li title="uEAEC-hand">
+					<div class="icon-box">
+
+						<!-- uEAEC-hand -->
+						<i class="svg-uEAEC-hand">uEAEC-hand</i>
+
+					</div>
+					<h2>uEAEC-hand</h2>
+				</li>
+				<li title="uEAED-handshake-1">
+					<div class="icon-box">
+
+						<!-- uEAED-handshake-1 -->
+						<i class="svg-uEAED-handshake-1">uEAED-handshake-1</i>
+
+					</div>
+					<h2>uEAED-handshake-1</h2>
+				</li>
+				<li title="uEAEE-handshake">
+					<div class="icon-box">
+
+						<!-- uEAEE-handshake -->
+						<i class="svg-uEAEE-handshake">uEAEE-handshake</i>
+
+					</div>
+					<h2>uEAEE-handshake</h2>
+				</li>
+				<li title="uEAEF-head-count">
+					<div class="icon-box">
+
+						<!-- uEAEF-head-count -->
+						<i class="svg-uEAEF-head-count">uEAEF-head-count</i>
+
+					</div>
+					<h2>uEAEF-head-count</h2>
+				</li>
+				<li title="uEAF0-head-hunt">
+					<div class="icon-box">
+
+						<!-- uEAF0-head-hunt -->
+						<i class="svg-uEAF0-head-hunt">uEAF0-head-hunt</i>
+
+					</div>
+					<h2>uEAF0-head-hunt</h2>
+				</li>
+				<li title="uEAF1-heart-1">
+					<div class="icon-box">
+
+						<!-- uEAF1-heart-1 -->
+						<i class="svg-uEAF1-heart-1">uEAF1-heart-1</i>
+
+					</div>
+					<h2>uEAF1-heart-1</h2>
+				</li>
+				<li title="uEAF2-heart-2">
+					<div class="icon-box">
+
+						<!-- uEAF2-heart-2 -->
+						<i class="svg-uEAF2-heart-2">uEAF2-heart-2</i>
+
+					</div>
+					<h2>uEAF2-heart-2</h2>
+				</li>
+				<li title="uEAF3-heart">
+					<div class="icon-box">
+
+						<!-- uEAF3-heart -->
+						<i class="svg-uEAF3-heart">uEAF3-heart</i>
+
+					</div>
+					<h2>uEAF3-heart</h2>
+				</li>
+				<li title="uEAF4-holyday-1">
+					<div class="icon-box">
+
+						<!-- uEAF4-holyday-1 -->
+						<i class="svg-uEAF4-holyday-1">uEAF4-holyday-1</i>
+
+					</div>
+					<h2>uEAF4-holyday-1</h2>
+				</li>
+				<li title="uEAF5-holyday-2">
+					<div class="icon-box">
+
+						<!-- uEAF5-holyday-2 -->
+						<i class="svg-uEAF5-holyday-2">uEAF5-holyday-2</i>
+
+					</div>
+					<h2>uEAF5-holyday-2</h2>
+				</li>
+				<li title="uEAF6-holyday-3">
+					<div class="icon-box">
+
+						<!-- uEAF6-holyday-3 -->
+						<i class="svg-uEAF6-holyday-3">uEAF6-holyday-3</i>
+
+					</div>
+					<h2>uEAF6-holyday-3</h2>
+				</li>
+				<li title="uEAF7-holyday-4">
+					<div class="icon-box">
+
+						<!-- uEAF7-holyday-4 -->
+						<i class="svg-uEAF7-holyday-4">uEAF7-holyday-4</i>
+
+					</div>
+					<h2>uEAF7-holyday-4</h2>
+				</li>
+				<li title="uEAF8-home-2">
+					<div class="icon-box">
+
+						<!-- uEAF8-home-2 -->
+						<i class="svg-uEAF8-home-2">uEAF8-home-2</i>
+
+					</div>
+					<h2>uEAF8-home-2</h2>
+				</li>
+				<li title="uEAF9-home">
+					<div class="icon-box">
+
+						<!-- uEAF9-home -->
+						<i class="svg-uEAF9-home">uEAF9-home</i>
+
+					</div>
+					<h2>uEAF9-home</h2>
+				</li>
+				<li title="uEAFA-hr">
+					<div class="icon-box">
+
+						<!-- uEAFA-hr -->
+						<i class="svg-uEAFA-hr">uEAFA-hr</i>
+
+					</div>
+					<h2>uEAFA-hr</h2>
+				</li>
+				<li title="uEAFB-idea">
+					<div class="icon-box">
+
+						<!-- uEAFB-idea -->
+						<i class="svg-uEAFB-idea">uEAFB-idea</i>
+
+					</div>
+					<h2>uEAFB-idea</h2>
+				</li>
+				<li title="uEAFC-info">
+					<div class="icon-box">
+
+						<!-- uEAFC-info -->
+						<i class="svg-uEAFC-info">uEAFC-info</i>
+
+					</div>
+					<h2>uEAFC-info</h2>
+				</li>
+				<li title="uEAFD-job-hiring">
+					<div class="icon-box">
+
+						<!-- uEAFD-job-hiring -->
+						<i class="svg-uEAFD-job-hiring">uEAFD-job-hiring</i>
+
+					</div>
+					<h2>uEAFD-job-hiring</h2>
+				</li>
+				<li title="uEAFE-job">
+					<div class="icon-box">
+
+						<!-- uEAFE-job -->
+						<i class="svg-uEAFE-job">uEAFE-job</i>
+
+					</div>
+					<h2>uEAFE-job</h2>
+				</li>
+				<li title="uEAFF-jpg-file">
+					<div class="icon-box">
+
+						<!-- uEAFF-jpg-file -->
+						<i class="svg-uEAFF-jpg-file">uEAFF-jpg-file</i>
+
+					</div>
+					<h2>uEAFF-jpg-file</h2>
+				</li>
+				<li title="uEB00-keyboard">
+					<div class="icon-box">
+
+						<!-- uEB00-keyboard -->
+						<i class="svg-uEB00-keyboard">uEB00-keyboard</i>
+
+					</div>
+					<h2>uEB00-keyboard</h2>
+				</li>
+				<li title="uEB01-knowledge-sharing">
+					<div class="icon-box">
+
+						<!-- uEB01-knowledge-sharing -->
+						<i class="svg-uEB01-knowledge-sharing">uEB01-knowledge-sharing</i>
+
+					</div>
+					<h2>uEB01-knowledge-sharing</h2>
+				</li>
+				<li title="uEB02-lab">
+					<div class="icon-box">
+
+						<!-- uEB02-lab -->
+						<i class="svg-uEB02-lab">uEB02-lab</i>
+
+					</div>
+					<h2>uEB02-lab</h2>
+				</li>
+				<li title="uEB03-law-1">
+					<div class="icon-box">
+
+						<!-- uEB03-law-1 -->
+						<i class="svg-uEB03-law-1">uEB03-law-1</i>
+
+					</div>
+					<h2>uEB03-law-1</h2>
+				</li>
+				<li title="uEB04-law">
+					<div class="icon-box">
+
+						<!-- uEB04-law -->
+						<i class="svg-uEB04-law">uEB04-law</i>
+
+					</div>
+					<h2>uEB04-law</h2>
+				</li>
+				<li title="uEB05-left">
+					<div class="icon-box">
+
+						<!-- uEB05-left -->
+						<i class="svg-uEB05-left">uEB05-left</i>
+
+					</div>
+					<h2>uEB05-left</h2>
+				</li>
+				<li title="uEB06-less-equal">
+					<div class="icon-box">
+
+						<!-- uEB06-less-equal -->
+						<i class="svg-uEB06-less-equal">uEB06-less-equal</i>
+
+					</div>
+					<h2>uEB06-less-equal</h2>
+				</li>
+				<li title="uEB07-less-than">
+					<div class="icon-box">
+
+						<!-- uEB07-less-than -->
+						<i class="svg-uEB07-less-than">uEB07-less-than</i>
+
+					</div>
+					<h2>uEB07-less-than</h2>
+				</li>
+				<li title="uEB08-letter">
+					<div class="icon-box">
+
+						<!-- uEB08-letter -->
+						<i class="svg-uEB08-letter">uEB08-letter</i>
+
+					</div>
+					<h2>uEB08-letter</h2>
+				</li>
+				<li title="uEB09-lightning-1">
+					<div class="icon-box">
+
+						<!-- uEB09-lightning-1 -->
+						<i class="svg-uEB09-lightning-1">uEB09-lightning-1</i>
+
+					</div>
+					<h2>uEB09-lightning-1</h2>
+				</li>
+				<li title="uEB0A-lightning">
+					<div class="icon-box">
+
+						<!-- uEB0A-lightning -->
+						<i class="svg-uEB0A-lightning">uEB0A-lightning</i>
+
+					</div>
+					<h2>uEB0A-lightning</h2>
+				</li>
+				<li title="uEB0B-like">
+					<div class="icon-box">
+
+						<!-- uEB0B-like -->
+						<i class="svg-uEB0B-like">uEB0B-like</i>
+
+					</div>
+					<h2>uEB0B-like</h2>
+				</li>
+				<li title="uEB0C-linkedin">
+					<div class="icon-box">
+
+						<!-- uEB0C-linkedin -->
+						<i class="svg-uEB0C-linkedin">uEB0C-linkedin</i>
+
+					</div>
+					<h2>uEB0C-linkedin</h2>
+				</li>
+				<li title="uEB0D-list-1">
+					<div class="icon-box">
+
+						<!-- uEB0D-list-1 -->
+						<i class="svg-uEB0D-list-1">uEB0D-list-1</i>
+
+					</div>
+					<h2>uEB0D-list-1</h2>
+				</li>
+				<li title="uEB0E-list-3">
+					<div class="icon-box">
+
+						<!-- uEB0E-list-3 -->
+						<i class="svg-uEB0E-list-3">uEB0E-list-3</i>
+
+					</div>
+					<h2>uEB0E-list-3</h2>
+				</li>
+				<li title="uEB0F-list">
+					<div class="icon-box">
+
+						<!-- uEB0F-list -->
+						<i class="svg-uEB0F-list">uEB0F-list</i>
+
+					</div>
+					<h2>uEB0F-list</h2>
+				</li>
+				<li title="uEB10-loading">
+					<div class="icon-box">
+
+						<!-- uEB10-loading -->
+						<i class="svg-uEB10-loading">uEB10-loading</i>
+
+					</div>
+					<h2>uEB10-loading</h2>
+				</li>
+				<li title="uEB11-lock-1">
+					<div class="icon-box">
+
+						<!-- uEB11-lock-1 -->
+						<i class="svg-uEB11-lock-1">uEB11-lock-1</i>
+
+					</div>
+					<h2>uEB11-lock-1</h2>
+				</li>
+				<li title="uEB12-lock">
+					<div class="icon-box">
+
+						<!-- uEB12-lock -->
+						<i class="svg-uEB12-lock">uEB12-lock</i>
+
+					</div>
+					<h2>uEB12-lock</h2>
+				</li>
+				<li title="uEB13-login">
+					<div class="icon-box">
+
+						<!-- uEB13-login -->
+						<i class="svg-uEB13-login">uEB13-login</i>
+
+					</div>
+					<h2>uEB13-login</h2>
+				</li>
+				<li title="uEB14-logout">
+					<div class="icon-box">
+
+						<!-- uEB14-logout -->
+						<i class="svg-uEB14-logout">uEB14-logout</i>
+
+					</div>
+					<h2>uEB14-logout</h2>
+				</li>
+				<li title="uEB15-loop-2">
+					<div class="icon-box">
+
+						<!-- uEB15-loop-2 -->
+						<i class="svg-uEB15-loop-2">uEB15-loop-2</i>
+
+					</div>
+					<h2>uEB15-loop-2</h2>
+				</li>
+				<li title="uEB16-loop-3">
+					<div class="icon-box">
+
+						<!-- uEB16-loop-3 -->
+						<i class="svg-uEB16-loop-3">uEB16-loop-3</i>
+
+					</div>
+					<h2>uEB16-loop-3</h2>
+				</li>
+				<li title="uEB17-loop">
+					<div class="icon-box">
+
+						<!-- uEB17-loop -->
+						<i class="svg-uEB17-loop">uEB17-loop</i>
+
+					</div>
+					<h2>uEB17-loop</h2>
+				</li>
+				<li title="uEB18-lost-hours">
+					<div class="icon-box">
+
+						<!-- uEB18-lost-hours -->
+						<i class="svg-uEB18-lost-hours">uEB18-lost-hours</i>
+
+					</div>
+					<h2>uEB18-lost-hours</h2>
+				</li>
+				<li title="uEB19-mail-1">
+					<div class="icon-box">
+
+						<!-- uEB19-mail-1 -->
+						<i class="svg-uEB19-mail-1">uEB19-mail-1</i>
+
+					</div>
+					<h2>uEB19-mail-1</h2>
+				</li>
+				<li title="uEB1A-mail-2">
+					<div class="icon-box">
+
+						<!-- uEB1A-mail-2 -->
+						<i class="svg-uEB1A-mail-2">uEB1A-mail-2</i>
+
+					</div>
+					<h2>uEB1A-mail-2</h2>
+				</li>
+				<li title="uEB1B-mail">
+					<div class="icon-box">
+
+						<!-- uEB1B-mail -->
+						<i class="svg-uEB1B-mail">uEB1B-mail</i>
+
+					</div>
+					<h2>uEB1B-mail</h2>
+				</li>
+				<li title="uEB1C-male">
+					<div class="icon-box">
+
+						<!-- uEB1C-male -->
+						<i class="svg-uEB1C-male">uEB1C-male</i>
+
+					</div>
+					<h2>uEB1C-male</h2>
+				</li>
+				<li title="uEB1D-map-pin-1">
+					<div class="icon-box">
+
+						<!-- uEB1D-map-pin-1 -->
+						<i class="svg-uEB1D-map-pin-1">uEB1D-map-pin-1</i>
+
+					</div>
+					<h2>uEB1D-map-pin-1</h2>
+				</li>
+				<li title="uEB1E-map-pin-2">
+					<div class="icon-box">
+
+						<!-- uEB1E-map-pin-2 -->
+						<i class="svg-uEB1E-map-pin-2">uEB1E-map-pin-2</i>
+
+					</div>
+					<h2>uEB1E-map-pin-2</h2>
+				</li>
+				<li title="uEB1F-math-sets-1">
+					<div class="icon-box">
+
+						<!-- uEB1F-math-sets-1 -->
+						<i class="svg-uEB1F-math-sets-1">uEB1F-math-sets-1</i>
+
+					</div>
+					<h2>uEB1F-math-sets-1</h2>
+				</li>
+				<li title="uEB20-math-sets-2">
+					<div class="icon-box">
+
+						<!-- uEB20-math-sets-2 -->
+						<i class="svg-uEB20-math-sets-2">uEB20-math-sets-2</i>
+
+					</div>
+					<h2>uEB20-math-sets-2</h2>
+				</li>
+				<li title="uEB21-math-sets-3">
+					<div class="icon-box">
+
+						<!-- uEB21-math-sets-3 -->
+						<i class="svg-uEB21-math-sets-3">uEB21-math-sets-3</i>
+
+					</div>
+					<h2>uEB21-math-sets-3</h2>
+				</li>
+				<li title="uEB22-math-sets-4">
+					<div class="icon-box">
+
+						<!-- uEB22-math-sets-4 -->
+						<i class="svg-uEB22-math-sets-4">uEB22-math-sets-4</i>
+
+					</div>
+					<h2>uEB22-math-sets-4</h2>
+				</li>
+				<li title="uEB23-maximize">
+					<div class="icon-box">
+
+						<!-- uEB23-maximize -->
+						<i class="svg-uEB23-maximize">uEB23-maximize</i>
+
+					</div>
+					<h2>uEB23-maximize</h2>
+				</li>
+				<li title="uEB24-menu-1">
+					<div class="icon-box">
+
+						<!-- uEB24-menu-1 -->
+						<i class="svg-uEB24-menu-1">uEB24-menu-1</i>
+
+					</div>
+					<h2>uEB24-menu-1</h2>
+				</li>
+				<li title="uEB25-menu">
+					<div class="icon-box">
+
+						<!-- uEB25-menu -->
+						<i class="svg-uEB25-menu">uEB25-menu</i>
+
+					</div>
+					<h2>uEB25-menu</h2>
+				</li>
+				<li title="uEB26-milestones">
+					<div class="icon-box">
+
+						<!-- uEB26-milestones -->
+						<i class="svg-uEB26-milestones">uEB26-milestones</i>
+
+					</div>
+					<h2>uEB26-milestones</h2>
+				</li>
+				<li title="uEB27-minimize">
+					<div class="icon-box">
+
+						<!-- uEB27-minimize -->
+						<i class="svg-uEB27-minimize">uEB27-minimize</i>
+
+					</div>
+					<h2>uEB27-minimize</h2>
+				</li>
+				<li title="uEB28-minus-1">
+					<div class="icon-box">
+
+						<!-- uEB28-minus-1 -->
+						<i class="svg-uEB28-minus-1">uEB28-minus-1</i>
+
+					</div>
+					<h2>uEB28-minus-1</h2>
+				</li>
+				<li title="uEB29-minus-2">
+					<div class="icon-box">
+
+						<!-- uEB29-minus-2 -->
+						<i class="svg-uEB29-minus-2">uEB29-minus-2</i>
+
+					</div>
+					<h2>uEB29-minus-2</h2>
+				</li>
+				<li title="uEB2A-minus-3">
+					<div class="icon-box">
+
+						<!-- uEB2A-minus-3 -->
+						<i class="svg-uEB2A-minus-3">uEB2A-minus-3</i>
+
+					</div>
+					<h2>uEB2A-minus-3</h2>
+				</li>
+				<li title="uEB2B-minus">
+					<div class="icon-box">
+
+						<!-- uEB2B-minus -->
+						<i class="svg-uEB2B-minus">uEB2B-minus</i>
+
+					</div>
+					<h2>uEB2B-minus</h2>
+				</li>
+				<li title="uEB2C-mobile">
+					<div class="icon-box">
+
+						<!-- uEB2C-mobile -->
+						<i class="svg-uEB2C-mobile">uEB2C-mobile</i>
+
+					</div>
+					<h2>uEB2C-mobile</h2>
+				</li>
+				<li title="uEB2D-money-1">
+					<div class="icon-box">
+
+						<!-- uEB2D-money-1 -->
+						<i class="svg-uEB2D-money-1">uEB2D-money-1</i>
+
+					</div>
+					<h2>uEB2D-money-1</h2>
+				</li>
+				<li title="uEB2E-money-10">
+					<div class="icon-box">
+
+						<!-- uEB2E-money-10 -->
+						<i class="svg-uEB2E-money-10">uEB2E-money-10</i>
+
+					</div>
+					<h2>uEB2E-money-10</h2>
+				</li>
+				<li title="uEB2F-money-11">
+					<div class="icon-box">
+
+						<!-- uEB2F-money-11 -->
+						<i class="svg-uEB2F-money-11">uEB2F-money-11</i>
+
+					</div>
+					<h2>uEB2F-money-11</h2>
+				</li>
+				<li title="uEB30-money-12">
+					<div class="icon-box">
+
+						<!-- uEB30-money-12 -->
+						<i class="svg-uEB30-money-12">uEB30-money-12</i>
+
+					</div>
+					<h2>uEB30-money-12</h2>
+				</li>
+				<li title="uEB31-money-2">
+					<div class="icon-box">
+
+						<!-- uEB31-money-2 -->
+						<i class="svg-uEB31-money-2">uEB31-money-2</i>
+
+					</div>
+					<h2>uEB31-money-2</h2>
+				</li>
+				<li title="uEB32-money-3">
+					<div class="icon-box">
+
+						<!-- uEB32-money-3 -->
+						<i class="svg-uEB32-money-3">uEB32-money-3</i>
+
+					</div>
+					<h2>uEB32-money-3</h2>
+				</li>
+				<li title="uEB33-money-4">
+					<div class="icon-box">
+
+						<!-- uEB33-money-4 -->
+						<i class="svg-uEB33-money-4">uEB33-money-4</i>
+
+					</div>
+					<h2>uEB33-money-4</h2>
+				</li>
+				<li title="uEB34-money-5">
+					<div class="icon-box">
+
+						<!-- uEB34-money-5 -->
+						<i class="svg-uEB34-money-5">uEB34-money-5</i>
+
+					</div>
+					<h2>uEB34-money-5</h2>
+				</li>
+				<li title="uEB35-money-6">
+					<div class="icon-box">
+
+						<!-- uEB35-money-6 -->
+						<i class="svg-uEB35-money-6">uEB35-money-6</i>
+
+					</div>
+					<h2>uEB35-money-6</h2>
+				</li>
+				<li title="uEB36-money-7">
+					<div class="icon-box">
+
+						<!-- uEB36-money-7 -->
+						<i class="svg-uEB36-money-7">uEB36-money-7</i>
+
+					</div>
+					<h2>uEB36-money-7</h2>
+				</li>
+				<li title="uEB37-money-8">
+					<div class="icon-box">
+
+						<!-- uEB37-money-8 -->
+						<i class="svg-uEB37-money-8">uEB37-money-8</i>
+
+					</div>
+					<h2>uEB37-money-8</h2>
+				</li>
+				<li title="uEB38-money-9">
+					<div class="icon-box">
+
+						<!-- uEB38-money-9 -->
+						<i class="svg-uEB38-money-9">uEB38-money-9</i>
+
+					</div>
+					<h2>uEB38-money-9</h2>
+				</li>
+				<li title="uEB39-money">
+					<div class="icon-box">
+
+						<!-- uEB39-money -->
+						<i class="svg-uEB39-money">uEB39-money</i>
+
+					</div>
+					<h2>uEB39-money</h2>
+				</li>
+				<li title="uEB3A-more-2">
+					<div class="icon-box">
+
+						<!-- uEB3A-more-2 -->
+						<i class="svg-uEB3A-more-2">uEB3A-more-2</i>
+
+					</div>
+					<h2>uEB3A-more-2</h2>
+				</li>
+				<li title="uEB3B-more">
+					<div class="icon-box">
+
+						<!-- uEB3B-more -->
+						<i class="svg-uEB3B-more">uEB3B-more</i>
+
+					</div>
+					<h2>uEB3B-more</h2>
+				</li>
+				<li title="uEB3C-move-1">
+					<div class="icon-box">
+
+						<!-- uEB3C-move-1 -->
+						<i class="svg-uEB3C-move-1">uEB3C-move-1</i>
+
+					</div>
+					<h2>uEB3C-move-1</h2>
+				</li>
+				<li title="uEB3D-move-2">
+					<div class="icon-box">
+
+						<!-- uEB3D-move-2 -->
+						<i class="svg-uEB3D-move-2">uEB3D-move-2</i>
+
+					</div>
+					<h2>uEB3D-move-2</h2>
+				</li>
+				<li title="uEB3E-move">
+					<div class="icon-box">
+
+						<!-- uEB3E-move -->
+						<i class="svg-uEB3E-move">uEB3E-move</i>
+
+					</div>
+					<h2>uEB3E-move</h2>
+				</li>
+				<li title="uEB3F-new">
+					<div class="icon-box">
+
+						<!-- uEB3F-new -->
+						<i class="svg-uEB3F-new">uEB3F-new</i>
+
+					</div>
+					<h2>uEB3F-new</h2>
+				</li>
+				<li title="uEB40-not-equal">
+					<div class="icon-box">
+
+						<!-- uEB40-not-equal -->
+						<i class="svg-uEB40-not-equal">uEB40-not-equal</i>
+
+					</div>
+					<h2>uEB40-not-equal</h2>
+				</li>
+				<li title="uEB41-notice-board">
+					<div class="icon-box">
+
+						<!-- uEB41-notice-board -->
+						<i class="svg-uEB41-notice-board">uEB41-notice-board</i>
+
+					</div>
+					<h2>uEB41-notice-board</h2>
+				</li>
+				<li title="uEB42-notice-line">
+					<div class="icon-box">
+
+						<!-- uEB42-notice-line -->
+						<i class="svg-uEB42-notice-line">uEB42-notice-line</i>
+
+					</div>
+					<h2>uEB42-notice-line</h2>
+				</li>
+				<li title="uEB43-notice">
+					<div class="icon-box">
+
+						<!-- uEB43-notice -->
+						<i class="svg-uEB43-notice">uEB43-notice</i>
+
+					</div>
+					<h2>uEB43-notice</h2>
+				</li>
+				<li title="uEB44-onboard-task-2">
+					<div class="icon-box">
+
+						<!-- uEB44-onboard-task-2 -->
+						<i class="svg-uEB44-onboard-task-2">uEB44-onboard-task-2</i>
+
+					</div>
+					<h2>uEB44-onboard-task-2</h2>
+				</li>
+				<li title="uEB45-onboard-task">
+					<div class="icon-box">
+
+						<!-- uEB45-onboard-task -->
+						<i class="svg-uEB45-onboard-task">uEB45-onboard-task</i>
+
+					</div>
+					<h2>uEB45-onboard-task</h2>
+				</li>
+				<li title="uEB46-org-level">
+					<div class="icon-box">
+
+						<!-- uEB46-org-level -->
+						<i class="svg-uEB46-org-level">uEB46-org-level</i>
+
+					</div>
+					<h2>uEB46-org-level</h2>
+				</li>
+				<li title="uEB47-owl">
+					<div class="icon-box">
+
+						<!-- uEB47-owl -->
+						<i class="svg-uEB47-owl">uEB47-owl</i>
+
+					</div>
+					<h2>uEB47-owl</h2>
+				</li>
+				<li title="uEB48-page-break-1">
+					<div class="icon-box">
+
+						<!-- uEB48-page-break-1 -->
+						<i class="svg-uEB48-page-break-1">uEB48-page-break-1</i>
+
+					</div>
+					<h2>uEB48-page-break-1</h2>
+				</li>
+				<li title="uEB49-page-break">
+					<div class="icon-box">
+
+						<!-- uEB49-page-break -->
+						<i class="svg-uEB49-page-break">uEB49-page-break</i>
+
+					</div>
+					<h2>uEB49-page-break</h2>
+				</li>
+				<li title="uEB4A-pause-1">
+					<div class="icon-box">
+
+						<!-- uEB4A-pause-1 -->
+						<i class="svg-uEB4A-pause-1">uEB4A-pause-1</i>
+
+					</div>
+					<h2>uEB4A-pause-1</h2>
+				</li>
+				<li title="uEB4B-pause">
+					<div class="icon-box">
+
+						<!-- uEB4B-pause -->
+						<i class="svg-uEB4B-pause">uEB4B-pause</i>
+
+					</div>
+					<h2>uEB4B-pause</h2>
+				</li>
+				<li title="uEB4C-payment">
+					<div class="icon-box">
+
+						<!-- uEB4C-payment -->
+						<i class="svg-uEB4C-payment">uEB4C-payment</i>
+
+					</div>
+					<h2>uEB4C-payment</h2>
+				</li>
+				<li title="uEB4D-pdf-file">
+					<div class="icon-box">
+
+						<!-- uEB4D-pdf-file -->
+						<i class="svg-uEB4D-pdf-file">uEB4D-pdf-file</i>
+
+					</div>
+					<h2>uEB4D-pdf-file</h2>
+				</li>
+				<li title="uEB4E-people-1">
+					<div class="icon-box">
+
+						<!-- uEB4E-people-1 -->
+						<i class="svg-uEB4E-people-1">uEB4E-people-1</i>
+
+					</div>
+					<h2>uEB4E-people-1</h2>
+				</li>
+				<li title="uEB4F-people-2">
+					<div class="icon-box">
+
+						<!-- uEB4F-people-2 -->
+						<i class="svg-uEB4F-people-2">uEB4F-people-2</i>
+
+					</div>
+					<h2>uEB4F-people-2</h2>
+				</li>
+				<li title="uEB50-people-3">
+					<div class="icon-box">
+
+						<!-- uEB50-people-3 -->
+						<i class="svg-uEB50-people-3">uEB50-people-3</i>
+
+					</div>
+					<h2>uEB50-people-3</h2>
+				</li>
+				<li title="uEB51-people-4">
+					<div class="icon-box">
+
+						<!-- uEB51-people-4 -->
+						<i class="svg-uEB51-people-4">uEB51-people-4</i>
+
+					</div>
+					<h2>uEB51-people-4</h2>
+				</li>
+				<li title="uEB52-people-5">
+					<div class="icon-box">
+
+						<!-- uEB52-people-5 -->
+						<i class="svg-uEB52-people-5">uEB52-people-5</i>
+
+					</div>
+					<h2>uEB52-people-5</h2>
+				</li>
+				<li title="uEB53-people">
+					<div class="icon-box">
+
+						<!-- uEB53-people -->
+						<i class="svg-uEB53-people">uEB53-people</i>
+
+					</div>
+					<h2>uEB53-people</h2>
+				</li>
+				<li title="uEB54-play-1">
+					<div class="icon-box">
+
+						<!-- uEB54-play-1 -->
+						<i class="svg-uEB54-play-1">uEB54-play-1</i>
+
+					</div>
+					<h2>uEB54-play-1</h2>
+				</li>
+				<li title="uEB55-play">
+					<div class="icon-box">
+
+						<!-- uEB55-play -->
+						<i class="svg-uEB55-play">uEB55-play</i>
+
+					</div>
+					<h2>uEB55-play</h2>
+				</li>
+				<li title="uEB56-plus-1">
+					<div class="icon-box">
+
+						<!-- uEB56-plus-1 -->
+						<i class="svg-uEB56-plus-1">uEB56-plus-1</i>
+
+					</div>
+					<h2>uEB56-plus-1</h2>
+				</li>
+				<li title="uEB57-plus-line">
+					<div class="icon-box">
+
+						<!-- uEB57-plus-line -->
+						<i class="svg-uEB57-plus-line">uEB57-plus-line</i>
+
+					</div>
+					<h2>uEB57-plus-line</h2>
+				</li>
+				<li title="uEB58-plus">
+					<div class="icon-box">
+
+						<!-- uEB58-plus -->
+						<i class="svg-uEB58-plus">uEB58-plus</i>
+
+					</div>
+					<h2>uEB58-plus</h2>
+				</li>
+				<li title="uEB59-png-file">
+					<div class="icon-box">
+
+						<!-- uEB59-png-file -->
+						<i class="svg-uEB59-png-file">uEB59-png-file</i>
+
+					</div>
+					<h2>uEB59-png-file</h2>
+				</li>
+				<li title="uEB5A-post">
+					<div class="icon-box">
+
+						<!-- uEB5A-post -->
+						<i class="svg-uEB5A-post">uEB5A-post</i>
+
+					</div>
+					<h2>uEB5A-post</h2>
+				</li>
+				<li title="uEB5B-potential">
+					<div class="icon-box">
+
+						<!-- uEB5B-potential -->
+						<i class="svg-uEB5B-potential">uEB5B-potential</i>
+
+					</div>
+					<h2>uEB5B-potential</h2>
+				</li>
+				<li title="uEB5C-ppt-file">
+					<div class="icon-box">
+
+						<!-- uEB5C-ppt-file -->
+						<i class="svg-uEB5C-ppt-file">uEB5C-ppt-file</i>
+
+					</div>
+					<h2>uEB5C-ppt-file</h2>
+				</li>
+				<li title="uEB5D-present">
+					<div class="icon-box">
+
+						<!-- uEB5D-present -->
+						<i class="svg-uEB5D-present">uEB5D-present</i>
+
+					</div>
+					<h2>uEB5D-present</h2>
+				</li>
+				<li title="uEB5E-print">
+					<div class="icon-box">
+
+						<!-- uEB5E-print -->
+						<i class="svg-uEB5E-print">uEB5E-print</i>
+
+					</div>
+					<h2>uEB5E-print</h2>
+				</li>
+				<li title="uEB5F-profile-1">
+					<div class="icon-box">
+
+						<!-- uEB5F-profile-1 -->
+						<i class="svg-uEB5F-profile-1">uEB5F-profile-1</i>
+
+					</div>
+					<h2>uEB5F-profile-1</h2>
+				</li>
+				<li title="uEB60-profile-2">
+					<div class="icon-box">
+
+						<!-- uEB60-profile-2 -->
+						<i class="svg-uEB60-profile-2">uEB60-profile-2</i>
+
+					</div>
+					<h2>uEB60-profile-2</h2>
+				</li>
+				<li title="uEB61-profile-3">
+					<div class="icon-box">
+
+						<!-- uEB61-profile-3 -->
+						<i class="svg-uEB61-profile-3">uEB61-profile-3</i>
+
+					</div>
+					<h2>uEB61-profile-3</h2>
+				</li>
+				<li title="uEB62-profiles">
+					<div class="icon-box">
+
+						<!-- uEB62-profiles -->
+						<i class="svg-uEB62-profiles">uEB62-profiles</i>
+
+					</div>
+					<h2>uEB62-profiles</h2>
+				</li>
+				<li title="uEB63-protential">
+					<div class="icon-box">
+
+						<!-- uEB63-protential -->
+						<i class="svg-uEB63-protential">uEB63-protential</i>
+
+					</div>
+					<h2>uEB63-protential</h2>
+				</li>
+				<li title="uEB64-puzzle">
+					<div class="icon-box">
+
+						<!-- uEB64-puzzle -->
+						<i class="svg-uEB64-puzzle">uEB64-puzzle</i>
+
+					</div>
+					<h2>uEB64-puzzle</h2>
+				</li>
+				<li title="uEB65-quote-l">
+					<div class="icon-box">
+
+						<!-- uEB65-quote-l -->
+						<i class="svg-uEB65-quote-l">uEB65-quote-l</i>
+
+					</div>
+					<h2>uEB65-quote-l</h2>
+				</li>
+				<li title="uEB66-quote-r">
+					<div class="icon-box">
+
+						<!-- uEB66-quote-r -->
+						<i class="svg-uEB66-quote-r">uEB66-quote-r</i>
+
+					</div>
+					<h2>uEB66-quote-r</h2>
+				</li>
+				<li title="uEB67-radio-off-1">
+					<div class="icon-box">
+
+						<!-- uEB67-radio-off-1 -->
+						<i class="svg-uEB67-radio-off-1">uEB67-radio-off-1</i>
+
+					</div>
+					<h2>uEB67-radio-off-1</h2>
+				</li>
+				<li title="uEB68-radio-off">
+					<div class="icon-box">
+
+						<!-- uEB68-radio-off -->
+						<i class="svg-uEB68-radio-off">uEB68-radio-off</i>
+
+					</div>
+					<h2>uEB68-radio-off</h2>
+				</li>
+				<li title="uEB69-radio-on-1">
+					<div class="icon-box">
+
+						<!-- uEB69-radio-on-1 -->
+						<i class="svg-uEB69-radio-on-1">uEB69-radio-on-1</i>
+
+					</div>
+					<h2>uEB69-radio-on-1</h2>
+				</li>
+				<li title="uEB6A-radio-on-2">
+					<div class="icon-box">
+
+						<!-- uEB6A-radio-on-2 -->
+						<i class="svg-uEB6A-radio-on-2">uEB6A-radio-on-2</i>
+
+					</div>
+					<h2>uEB6A-radio-on-2</h2>
+				</li>
+				<li title="uEB6B-radio-on">
+					<div class="icon-box">
+
+						<!-- uEB6B-radio-on -->
+						<i class="svg-uEB6B-radio-on">uEB6B-radio-on</i>
+
+					</div>
+					<h2>uEB6B-radio-on</h2>
+				</li>
+				<li title="uEB6C-redu-1">
+					<div class="icon-box">
+
+						<!-- uEB6C-redu-1 -->
+						<i class="svg-uEB6C-redu-1">uEB6C-redu-1</i>
+
+					</div>
+					<h2>uEB6C-redu-1</h2>
+				</li>
+				<li title="uEB6D-redu-2">
+					<div class="icon-box">
+
+						<!-- uEB6D-redu-2 -->
+						<i class="svg-uEB6D-redu-2">uEB6D-redu-2</i>
+
+					</div>
+					<h2>uEB6D-redu-2</h2>
+				</li>
+				<li title="uEB6E-redu">
+					<div class="icon-box">
+
+						<!-- uEB6E-redu -->
+						<i class="svg-uEB6E-redu">uEB6E-redu</i>
+
+					</div>
+					<h2>uEB6E-redu</h2>
+				</li>
+				<li title="uEB6F-requisition">
+					<div class="icon-box">
+
+						<!-- uEB6F-requisition -->
+						<i class="svg-uEB6F-requisition">uEB6F-requisition</i>
+
+					</div>
+					<h2>uEB6F-requisition</h2>
+				</li>
+				<li title="uEB70-resize-window">
+					<div class="icon-box">
+
+						<!-- uEB70-resize-window -->
+						<i class="svg-uEB70-resize-window">uEB70-resize-window</i>
+
+					</div>
+					<h2>uEB70-resize-window</h2>
+				</li>
+				<li title="uEB71-restore-window">
+					<div class="icon-box">
+
+						<!-- uEB71-restore-window -->
+						<i class="svg-uEB71-restore-window">uEB71-restore-window</i>
+
+					</div>
+					<h2>uEB71-restore-window</h2>
+				</li>
+				<li title="uEB72-rocket-1">
+					<div class="icon-box">
+
+						<!-- uEB72-rocket-1 -->
+						<i class="svg-uEB72-rocket-1">uEB72-rocket-1</i>
+
+					</div>
+					<h2>uEB72-rocket-1</h2>
+				</li>
+				<li title="uEB73-rocket-2">
+					<div class="icon-box">
+
+						<!-- uEB73-rocket-2 -->
+						<i class="svg-uEB73-rocket-2">uEB73-rocket-2</i>
+
+					</div>
+					<h2>uEB73-rocket-2</h2>
+				</li>
+				<li title="uEB74-rocket">
+					<div class="icon-box">
+
+						<!-- uEB74-rocket -->
+						<i class="svg-uEB74-rocket">uEB74-rocket</i>
+
+					</div>
+					<h2>uEB74-rocket</h2>
+				</li>
+				<li title="uEB75-save-1">
+					<div class="icon-box">
+
+						<!-- uEB75-save-1 -->
+						<i class="svg-uEB75-save-1">uEB75-save-1</i>
+
+					</div>
+					<h2>uEB75-save-1</h2>
+				</li>
+				<li title="uEB76-save">
+					<div class="icon-box">
+
+						<!-- uEB76-save -->
+						<i class="svg-uEB76-save">uEB76-save</i>
+
+					</div>
+					<h2>uEB76-save</h2>
+				</li>
+				<li title="uEB77-separator">
+					<div class="icon-box">
+
+						<!-- uEB77-separator -->
+						<i class="svg-uEB77-separator">uEB77-separator</i>
+
+					</div>
+					<h2>uEB77-separator</h2>
+				</li>
+				<li title="uEB78-service-1">
+					<div class="icon-box">
+
+						<!-- uEB78-service-1 -->
+						<i class="svg-uEB78-service-1">uEB78-service-1</i>
+
+					</div>
+					<h2>uEB78-service-1</h2>
+				</li>
+				<li title="uEB79-service">
+					<div class="icon-box">
+
+						<!-- uEB79-service -->
+						<i class="svg-uEB79-service">uEB79-service</i>
+
+					</div>
+					<h2>uEB79-service</h2>
+				</li>
+				<li title="uEB7A-shield">
+					<div class="icon-box">
+
+						<!-- uEB7A-shield -->
+						<i class="svg-uEB7A-shield">uEB7A-shield</i>
+
+					</div>
+					<h2>uEB7A-shield</h2>
+				</li>
+				<li title="uEB7B-shortlist">
+					<div class="icon-box">
+
+						<!-- uEB7B-shortlist -->
+						<i class="svg-uEB7B-shortlist">uEB7B-shortlist</i>
+
+					</div>
+					<h2>uEB7B-shortlist</h2>
+				</li>
+				<li title="uEB7C-shuffle">
+					<div class="icon-box">
+
+						<!-- uEB7C-shuffle -->
+						<i class="svg-uEB7C-shuffle">uEB7C-shuffle</i>
+
+					</div>
+					<h2>uEB7C-shuffle</h2>
+				</li>
+				<li title="uEB7D-social-1">
+					<div class="icon-box">
+
+						<!-- uEB7D-social-1 -->
+						<i class="svg-uEB7D-social-1">uEB7D-social-1</i>
+
+					</div>
+					<h2>uEB7D-social-1</h2>
+				</li>
+				<li title="uEB7E-social-network">
+					<div class="icon-box">
+
+						<!-- uEB7E-social-network -->
+						<i class="svg-uEB7E-social-network">uEB7E-social-network</i>
+
+					</div>
+					<h2>uEB7E-social-network</h2>
+				</li>
+				<li title="uEB7F-social">
+					<div class="icon-box">
+
+						<!-- uEB7F-social -->
+						<i class="svg-uEB7F-social">uEB7F-social</i>
+
+					</div>
+					<h2>uEB7F-social</h2>
+				</li>
+				<li title="uEB80-sort-down">
+					<div class="icon-box">
+
+						<!-- uEB80-sort-down -->
+						<i class="svg-uEB80-sort-down">uEB80-sort-down</i>
+
+					</div>
+					<h2>uEB80-sort-down</h2>
+				</li>
+				<li title="uEB81-sort-up">
+					<div class="icon-box">
+
+						<!-- uEB81-sort-up -->
+						<i class="svg-uEB81-sort-up">uEB81-sort-up</i>
+
+					</div>
+					<h2>uEB81-sort-up</h2>
+				</li>
+				<li title="uEB82-spinner-1">
+					<div class="icon-box">
+
+						<!-- uEB82-spinner-1 -->
+						<i class="svg-uEB82-spinner-1">uEB82-spinner-1</i>
+
+					</div>
+					<h2>uEB82-spinner-1</h2>
+				</li>
+				<li title="uEB83-spinner-2">
+					<div class="icon-box">
+
+						<!-- uEB83-spinner-2 -->
+						<i class="svg-uEB83-spinner-2">uEB83-spinner-2</i>
+
+					</div>
+					<h2>uEB83-spinner-2</h2>
+				</li>
+				<li title="uEB84-spinner-3">
+					<div class="icon-box">
+
+						<!-- uEB84-spinner-3 -->
+						<i class="svg-uEB84-spinner-3">uEB84-spinner-3</i>
+
+					</div>
+					<h2>uEB84-spinner-3</h2>
+				</li>
+				<li title="uEB85-spinner-4">
+					<div class="icon-box">
+
+						<!-- uEB85-spinner-4 -->
+						<i class="svg-uEB85-spinner-4">uEB85-spinner-4</i>
+
+					</div>
+					<h2>uEB85-spinner-4</h2>
+				</li>
+				<li title="uEB86-spinner-5">
+					<div class="icon-box">
+
+						<!-- uEB86-spinner-5 -->
+						<i class="svg-uEB86-spinner-5">uEB86-spinner-5</i>
+
+					</div>
+					<h2>uEB86-spinner-5</h2>
+				</li>
+				<li title="uEB87-spinner-6">
+					<div class="icon-box">
+
+						<!-- uEB87-spinner-6 -->
+						<i class="svg-uEB87-spinner-6">uEB87-spinner-6</i>
+
+					</div>
+					<h2>uEB87-spinner-6</h2>
+				</li>
+				<li title="uEB88-spinner-7">
+					<div class="icon-box">
+
+						<!-- uEB88-spinner-7 -->
+						<i class="svg-uEB88-spinner-7">uEB88-spinner-7</i>
+
+					</div>
+					<h2>uEB88-spinner-7</h2>
+				</li>
+				<li title="uEB89-spinner-8">
+					<div class="icon-box">
+
+						<!-- uEB89-spinner-8 -->
+						<i class="svg-uEB89-spinner-8">uEB89-spinner-8</i>
+
+					</div>
+					<h2>uEB89-spinner-8</h2>
+				</li>
+				<li title="uEB8A-star-1">
+					<div class="icon-box">
+
+						<!-- uEB8A-star-1 -->
+						<i class="svg-uEB8A-star-1">uEB8A-star-1</i>
+
+					</div>
+					<h2>uEB8A-star-1</h2>
+				</li>
+				<li title="uEB8B-star">
+					<div class="icon-box">
+
+						<!-- uEB8B-star -->
+						<i class="svg-uEB8B-star">uEB8B-star</i>
+
+					</div>
+					<h2>uEB8B-star</h2>
+				</li>
+				<li title="uEB8C-stopwatch">
+					<div class="icon-box">
+
+						<!-- uEB8C-stopwatch -->
+						<i class="svg-uEB8C-stopwatch">uEB8C-stopwatch</i>
+
+					</div>
+					<h2>uEB8C-stopwatch</h2>
+				</li>
+				<li title="uEB8D-storage-1">
+					<div class="icon-box">
+
+						<!-- uEB8D-storage-1 -->
+						<i class="svg-uEB8D-storage-1">uEB8D-storage-1</i>
+
+					</div>
+					<h2>uEB8D-storage-1</h2>
+				</li>
+				<li title="uEB8E-storage-2">
+					<div class="icon-box">
+
+						<!-- uEB8E-storage-2 -->
+						<i class="svg-uEB8E-storage-2">uEB8E-storage-2</i>
+
+					</div>
+					<h2>uEB8E-storage-2</h2>
+				</li>
+				<li title="uEB8F-storage">
+					<div class="icon-box">
+
+						<!-- uEB8F-storage -->
+						<i class="svg-uEB8F-storage">uEB8F-storage</i>
+
+					</div>
+					<h2>uEB8F-storage</h2>
+				</li>
+				<li title="uEB90-suggetion">
+					<div class="icon-box">
+
+						<!-- uEB90-suggetion -->
+						<i class="svg-uEB90-suggetion">uEB90-suggetion</i>
+
+					</div>
+					<h2>uEB90-suggetion</h2>
+				</li>
+				<li title="uEB91-sun-half">
+					<div class="icon-box">
+
+						<!-- uEB91-sun-half -->
+						<i class="svg-uEB91-sun-half">uEB91-sun-half</i>
+
+					</div>
+					<h2>uEB91-sun-half</h2>
+				</li>
+				<li title="uEB92-sun">
+					<div class="icon-box">
+
+						<!-- uEB92-sun -->
+						<i class="svg-uEB92-sun">uEB92-sun</i>
+
+					</div>
+					<h2>uEB92-sun</h2>
+				</li>
+				<li title="uEB93-support">
+					<div class="icon-box">
+
+						<!-- uEB93-support -->
+						<i class="svg-uEB93-support">uEB93-support</i>
+
+					</div>
+					<h2>uEB93-support</h2>
+				</li>
+				<li title="uEB94-swap">
+					<div class="icon-box">
+
+						<!-- uEB94-swap -->
+						<i class="svg-uEB94-swap">uEB94-swap</i>
+
+					</div>
+					<h2>uEB94-swap</h2>
+				</li>
+				<li title="uEB95-switch">
+					<div class="icon-box">
+
+						<!-- uEB95-switch -->
+						<i class="svg-uEB95-switch">uEB95-switch</i>
+
+					</div>
+					<h2>uEB95-switch</h2>
+				</li>
+				<li title="uEB96-tactics">
+					<div class="icon-box">
+
+						<!-- uEB96-tactics -->
+						<i class="svg-uEB96-tactics">uEB96-tactics</i>
+
+					</div>
+					<h2>uEB96-tactics</h2>
+				</li>
+				<li title="uEB97-target">
+					<div class="icon-box">
+
+						<!-- uEB97-target -->
+						<i class="svg-uEB97-target">uEB97-target</i>
+
+					</div>
+					<h2>uEB97-target</h2>
+				</li>
+				<li title="uEB98-team">
+					<div class="icon-box">
+
+						<!-- uEB98-team -->
+						<i class="svg-uEB98-team">uEB98-team</i>
+
+					</div>
+					<h2>uEB98-team</h2>
+				</li>
+				<li title="uEB99-template">
+					<div class="icon-box">
+
+						<!-- uEB99-template -->
+						<i class="svg-uEB99-template">uEB99-template</i>
+
+					</div>
+					<h2>uEB99-template</h2>
+				</li>
+				<li title="uEB9A-thumb-down">
+					<div class="icon-box">
+
+						<!-- uEB9A-thumb-down -->
+						<i class="svg-uEB9A-thumb-down">uEB9A-thumb-down</i>
+
+					</div>
+					<h2>uEB9A-thumb-down</h2>
+				</li>
+				<li title="uEB9B-thumb-up">
+					<div class="icon-box">
+
+						<!-- uEB9B-thumb-up -->
+						<i class="svg-uEB9B-thumb-up">uEB9B-thumb-up</i>
+
+					</div>
+					<h2>uEB9B-thumb-up</h2>
+				</li>
+				<li title="uEB9C-toggle-off">
+					<div class="icon-box">
+
+						<!-- uEB9C-toggle-off -->
+						<i class="svg-uEB9C-toggle-off">uEB9C-toggle-off</i>
+
+					</div>
+					<h2>uEB9C-toggle-off</h2>
+				</li>
+				<li title="uEB9D-toggle-on">
+					<div class="icon-box">
+
+						<!-- uEB9D-toggle-on -->
+						<i class="svg-uEB9D-toggle-on">uEB9D-toggle-on</i>
+
+					</div>
+					<h2>uEB9D-toggle-on</h2>
+				</li>
+				<li title="uEB9E-total-expected">
+					<div class="icon-box">
+
+						<!-- uEB9E-total-expected -->
+						<i class="svg-uEB9E-total-expected">uEB9E-total-expected</i>
+
+					</div>
+					<h2>uEB9E-total-expected</h2>
+				</li>
+				<li title="uEB9F-transfer_learning">
+					<div class="icon-box">
+
+						<!-- uEB9F-transfer_learning -->
+						<i class="svg-uEB9F-transfer_learning">uEB9F-transfer_learning</i>
+
+					</div>
+					<h2>uEB9F-transfer_learning</h2>
+				</li>
+				<li title="uEBA0-transmission">
+					<div class="icon-box">
+
+						<!-- uEBA0-transmission -->
+						<i class="svg-uEBA0-transmission">uEBA0-transmission</i>
+
+					</div>
+					<h2>uEBA0-transmission</h2>
+				</li>
+				<li title="uEBA1-trash">
+					<div class="icon-box">
+
+						<!-- uEBA1-trash -->
+						<i class="svg-uEBA1-trash">uEBA1-trash</i>
+
+					</div>
+					<h2>uEBA1-trash</h2>
+				</li>
+				<li title="uEBA2-tube">
+					<div class="icon-box">
+
+						<!-- uEBA2-tube -->
+						<i class="svg-uEBA2-tube">uEBA2-tube</i>
+
+					</div>
+					<h2>uEBA2-tube</h2>
+				</li>
+				<li title="uEBA3-twitter">
+					<div class="icon-box">
+
+						<!-- uEBA3-twitter -->
+						<i class="svg-uEBA3-twitter">uEBA3-twitter</i>
+
+					</div>
+					<h2>uEBA3-twitter</h2>
+				</li>
+				<li title="uEBA4-txt-file">
+					<div class="icon-box">
+
+						<!-- uEBA4-txt-file -->
+						<i class="svg-uEBA4-txt-file">uEBA4-txt-file</i>
+
+					</div>
+					<h2>uEBA4-txt-file</h2>
+				</li>
+				<li title="uEBA5-undo-1">
+					<div class="icon-box">
+
+						<!-- uEBA5-undo-1 -->
+						<i class="svg-uEBA5-undo-1">uEBA5-undo-1</i>
+
+					</div>
+					<h2>uEBA5-undo-1</h2>
+				</li>
+				<li title="uEBA6-undo">
+					<div class="icon-box">
+
+						<!-- uEBA6-undo -->
+						<i class="svg-uEBA6-undo">uEBA6-undo</i>
+
+					</div>
+					<h2>uEBA6-undo</h2>
+				</li>
+				<li title="uEBA7-unlock-1">
+					<div class="icon-box">
+
+						<!-- uEBA7-unlock-1 -->
+						<i class="svg-uEBA7-unlock-1">uEBA7-unlock-1</i>
+
+					</div>
+					<h2>uEBA7-unlock-1</h2>
+				</li>
+				<li title="uEBA8-unlock">
+					<div class="icon-box">
+
+						<!-- uEBA8-unlock -->
+						<i class="svg-uEBA8-unlock">uEBA8-unlock</i>
+
+					</div>
+					<h2>uEBA8-unlock</h2>
+				</li>
+				<li title="uEBA9-upload">
+					<div class="icon-box">
+
+						<!-- uEBA9-upload -->
+						<i class="svg-uEBA9-upload">uEBA9-upload</i>
+
+					</div>
+					<h2>uEBA9-upload</h2>
+				</li>
+				<li title="uEBAA-usb-1">
+					<div class="icon-box">
+
+						<!-- uEBAA-usb-1 -->
+						<i class="svg-uEBAA-usb-1">uEBAA-usb-1</i>
+
+					</div>
+					<h2>uEBAA-usb-1</h2>
+				</li>
+				<li title="uEBAB-usb">
+					<div class="icon-box">
+
+						<!-- uEBAB-usb -->
+						<i class="svg-uEBAB-usb">uEBAB-usb</i>
+
+					</div>
+					<h2>uEBAB-usb</h2>
+				</li>
+				<li title="uEBAC-user-1">
+					<div class="icon-box">
+
+						<!-- uEBAC-user-1 -->
+						<i class="svg-uEBAC-user-1">uEBAC-user-1</i>
+
+					</div>
+					<h2>uEBAC-user-1</h2>
+				</li>
+				<li title="uEBAD-user-2">
+					<div class="icon-box">
+
+						<!-- uEBAD-user-2 -->
+						<i class="svg-uEBAD-user-2">uEBAD-user-2</i>
+
+					</div>
+					<h2>uEBAD-user-2</h2>
+				</li>
+				<li title="uEBAE-user-3">
+					<div class="icon-box">
+
+						<!-- uEBAE-user-3 -->
+						<i class="svg-uEBAE-user-3">uEBAE-user-3</i>
+
+					</div>
+					<h2>uEBAE-user-3</h2>
+				</li>
+				<li title="uEBAF-user-4">
+					<div class="icon-box">
+
+						<!-- uEBAF-user-4 -->
+						<i class="svg-uEBAF-user-4">uEBAF-user-4</i>
+
+					</div>
+					<h2>uEBAF-user-4</h2>
+				</li>
+				<li title="uEBB0-user-5">
+					<div class="icon-box">
+
+						<!-- uEBB0-user-5 -->
+						<i class="svg-uEBB0-user-5">uEBB0-user-5</i>
+
+					</div>
+					<h2>uEBB0-user-5</h2>
+				</li>
+				<li title="uEBB1-user-6">
+					<div class="icon-box">
+
+						<!-- uEBB1-user-6 -->
+						<i class="svg-uEBB1-user-6">uEBB1-user-6</i>
+
+					</div>
+					<h2>uEBB1-user-6</h2>
+				</li>
+				<li title="uEBB2-user-7">
+					<div class="icon-box">
+
+						<!-- uEBB2-user-7 -->
+						<i class="svg-uEBB2-user-7">uEBB2-user-7</i>
+
+					</div>
+					<h2>uEBB2-user-7</h2>
+				</li>
+				<li title="uEBB3-user-8">
+					<div class="icon-box">
+
+						<!-- uEBB3-user-8 -->
+						<i class="svg-uEBB3-user-8">uEBB3-user-8</i>
+
+					</div>
+					<h2>uEBB3-user-8</h2>
+				</li>
+				<li title="uEBB4-user-9">
+					<div class="icon-box">
+
+						<!-- uEBB4-user-9 -->
+						<i class="svg-uEBB4-user-9">uEBB4-user-9</i>
+
+					</div>
+					<h2>uEBB4-user-9</h2>
+				</li>
+				<li title="uEBB5-user-add">
+					<div class="icon-box">
+
+						<!-- uEBB5-user-add -->
+						<i class="svg-uEBB5-user-add">uEBB5-user-add</i>
+
+					</div>
+					<h2>uEBB5-user-add</h2>
+				</li>
+				<li title="uEBB6-user-check">
+					<div class="icon-box">
+
+						<!-- uEBB6-user-check -->
+						<i class="svg-uEBB6-user-check">uEBB6-user-check</i>
+
+					</div>
+					<h2>uEBB6-user-check</h2>
+				</li>
+				<li title="uEBB7-user-group-1">
+					<div class="icon-box">
+
+						<!-- uEBB7-user-group-1 -->
+						<i class="svg-uEBB7-user-group-1">uEBB7-user-group-1</i>
+
+					</div>
+					<h2>uEBB7-user-group-1</h2>
+				</li>
+				<li title="uEBB8-user-group-10">
+					<div class="icon-box">
+
+						<!-- uEBB8-user-group-10 -->
+						<i class="svg-uEBB8-user-group-10">uEBB8-user-group-10</i>
+
+					</div>
+					<h2>uEBB8-user-group-10</h2>
+				</li>
+				<li title="uEBB9-user-group-2">
+					<div class="icon-box">
+
+						<!-- uEBB9-user-group-2 -->
+						<i class="svg-uEBB9-user-group-2">uEBB9-user-group-2</i>
+
+					</div>
+					<h2>uEBB9-user-group-2</h2>
+				</li>
+				<li title="uEBBA-user-group-3">
+					<div class="icon-box">
+
+						<!-- uEBBA-user-group-3 -->
+						<i class="svg-uEBBA-user-group-3">uEBBA-user-group-3</i>
+
+					</div>
+					<h2>uEBBA-user-group-3</h2>
+				</li>
+				<li title="uEBBB-user-group-4">
+					<div class="icon-box">
+
+						<!-- uEBBB-user-group-4 -->
+						<i class="svg-uEBBB-user-group-4">uEBBB-user-group-4</i>
+
+					</div>
+					<h2>uEBBB-user-group-4</h2>
+				</li>
+				<li title="uEBBC-user-group-5">
+					<div class="icon-box">
+
+						<!-- uEBBC-user-group-5 -->
+						<i class="svg-uEBBC-user-group-5">uEBBC-user-group-5</i>
+
+					</div>
+					<h2>uEBBC-user-group-5</h2>
+				</li>
+				<li title="uEBBD-user-group-6">
+					<div class="icon-box">
+
+						<!-- uEBBD-user-group-6 -->
+						<i class="svg-uEBBD-user-group-6">uEBBD-user-group-6</i>
+
+					</div>
+					<h2>uEBBD-user-group-6</h2>
+				</li>
+				<li title="uEBBE-user-group-7">
+					<div class="icon-box">
+
+						<!-- uEBBE-user-group-7 -->
+						<i class="svg-uEBBE-user-group-7">uEBBE-user-group-7</i>
+
+					</div>
+					<h2>uEBBE-user-group-7</h2>
+				</li>
+				<li title="uEBBF-user-group-8">
+					<div class="icon-box">
+
+						<!-- uEBBF-user-group-8 -->
+						<i class="svg-uEBBF-user-group-8">uEBBF-user-group-8</i>
+
+					</div>
+					<h2>uEBBF-user-group-8</h2>
+				</li>
+				<li title="uEBC0-user-group-9">
+					<div class="icon-box">
+
+						<!-- uEBC0-user-group-9 -->
+						<i class="svg-uEBC0-user-group-9">uEBC0-user-group-9</i>
+
+					</div>
+					<h2>uEBC0-user-group-9</h2>
+				</li>
+				<li title="uEBC1-user-group">
+					<div class="icon-box">
+
+						<!-- uEBC1-user-group -->
+						<i class="svg-uEBC1-user-group">uEBC1-user-group</i>
+
+					</div>
+					<h2>uEBC1-user-group</h2>
+				</li>
+				<li title="uEBC2-user-line">
+					<div class="icon-box">
+
+						<!-- uEBC2-user-line -->
+						<i class="svg-uEBC2-user-line">uEBC2-user-line</i>
+
+					</div>
+					<h2>uEBC2-user-line</h2>
+				</li>
+				<li title="uEBC3-user-minus">
+					<div class="icon-box">
+
+						<!-- uEBC3-user-minus -->
+						<i class="svg-uEBC3-user-minus">uEBC3-user-minus</i>
+
+					</div>
+					<h2>uEBC3-user-minus</h2>
+				</li>
+				<li title="uEBC4-user-plus">
+					<div class="icon-box">
+
+						<!-- uEBC4-user-plus -->
+						<i class="svg-uEBC4-user-plus">uEBC4-user-plus</i>
+
+					</div>
+					<h2>uEBC4-user-plus</h2>
+				</li>
+				<li title="uEBC5-user-settings">
+					<div class="icon-box">
+
+						<!-- uEBC5-user-settings -->
+						<i class="svg-uEBC5-user-settings">uEBC5-user-settings</i>
+
+					</div>
+					<h2>uEBC5-user-settings</h2>
+				</li>
+				<li title="uEBC6-user-switch-1">
+					<div class="icon-box">
+
+						<!-- uEBC6-user-switch-1 -->
+						<i class="svg-uEBC6-user-switch-1">uEBC6-user-switch-1</i>
+
+					</div>
+					<h2>uEBC6-user-switch-1</h2>
+				</li>
+				<li title="uEBC7-user-switch-2">
+					<div class="icon-box">
+
+						<!-- uEBC7-user-switch-2 -->
+						<i class="svg-uEBC7-user-switch-2">uEBC7-user-switch-2</i>
+
+					</div>
+					<h2>uEBC7-user-switch-2</h2>
+				</li>
+				<li title="uEBC8-user-switch-3">
+					<div class="icon-box">
+
+						<!-- uEBC8-user-switch-3 -->
+						<i class="svg-uEBC8-user-switch-3">uEBC8-user-switch-3</i>
+
+					</div>
+					<h2>uEBC8-user-switch-3</h2>
+				</li>
+				<li title="uEBC9-user-switch">
+					<div class="icon-box">
+
+						<!-- uEBC9-user-switch -->
+						<i class="svg-uEBC9-user-switch">uEBC9-user-switch</i>
+
+					</div>
+					<h2>uEBC9-user-switch</h2>
+				</li>
+				<li title="uEBCA-user-time">
+					<div class="icon-box">
+
+						<!-- uEBCA-user-time -->
+						<i class="svg-uEBCA-user-time">uEBCA-user-time</i>
+
+					</div>
+					<h2>uEBCA-user-time</h2>
+				</li>
+				<li title="uEBCB-user-work-1">
+					<div class="icon-box">
+
+						<!-- uEBCB-user-work-1 -->
+						<i class="svg-uEBCB-user-work-1">uEBCB-user-work-1</i>
+
+					</div>
+					<h2>uEBCB-user-work-1</h2>
+				</li>
+				<li title="uEBCC-user-work-4">
+					<div class="icon-box">
+
+						<!-- uEBCC-user-work-4 -->
+						<i class="svg-uEBCC-user-work-4">uEBCC-user-work-4</i>
+
+					</div>
+					<h2>uEBCC-user-work-4</h2>
+				</li>
+				<li title="uEBCD-user-work-5">
+					<div class="icon-box">
+
+						<!-- uEBCD-user-work-5 -->
+						<i class="svg-uEBCD-user-work-5">uEBCD-user-work-5</i>
+
+					</div>
+					<h2>uEBCD-user-work-5</h2>
+				</li>
+				<li title="uEBCE-user-work">
+					<div class="icon-box">
+
+						<!-- uEBCE-user-work -->
+						<i class="svg-uEBCE-user-work">uEBCE-user-work</i>
+
+					</div>
+					<h2>uEBCE-user-work</h2>
+				</li>
+				<li title="uEBCF-user">
+					<div class="icon-box">
+
+						<!-- uEBCF-user -->
+						<i class="svg-uEBCF-user">uEBCF-user</i>
+
+					</div>
+					<h2>uEBCF-user</h2>
+				</li>
+				<li title="uEBD0-value">
+					<div class="icon-box">
+
+						<!-- uEBD0-value -->
+						<i class="svg-uEBD0-value">uEBD0-value</i>
+
+					</div>
+					<h2>uEBD0-value</h2>
+				</li>
+				<li title="uEBD1-values">
+					<div class="icon-box">
+
+						<!-- uEBD1-values -->
+						<i class="svg-uEBD1-values">uEBD1-values</i>
+
+					</div>
+					<h2>uEBD1-values</h2>
+				</li>
+				<li title="uEBD2-view_all">
+					<div class="icon-box">
+
+						<!-- uEBD2-view_all -->
+						<i class="svg-uEBD2-view_all">uEBD2-view_all</i>
+
+					</div>
+					<h2>uEBD2-view_all</h2>
+				</li>
+				<li title="uEBD3-wallet-1">
+					<div class="icon-box">
+
+						<!-- uEBD3-wallet-1 -->
+						<i class="svg-uEBD3-wallet-1">uEBD3-wallet-1</i>
+
+					</div>
+					<h2>uEBD3-wallet-1</h2>
+				</li>
+				<li title="uEBD4-wallet">
+					<div class="icon-box">
+
+						<!-- uEBD4-wallet -->
+						<i class="svg-uEBD4-wallet">uEBD4-wallet</i>
+
+					</div>
+					<h2>uEBD4-wallet</h2>
+				</li>
+				<li title="uEBD5-warning-1">
+					<div class="icon-box">
+
+						<!-- uEBD5-warning-1 -->
+						<i class="svg-uEBD5-warning-1">uEBD5-warning-1</i>
+
+					</div>
+					<h2>uEBD5-warning-1</h2>
+				</li>
+				<li title="uEBD6-warning">
+					<div class="icon-box">
+
+						<!-- uEBD6-warning -->
+						<i class="svg-uEBD6-warning">uEBD6-warning</i>
+
+					</div>
+					<h2>uEBD6-warning</h2>
+				</li>
+				<li title="uEBD7-web">
+					<div class="icon-box">
+
+						<!-- uEBD7-web -->
+						<i class="svg-uEBD7-web">uEBD7-web</i>
+
+					</div>
+					<h2>uEBD7-web</h2>
+				</li>
+				<li title="uEBD8-wheel-1">
+					<div class="icon-box">
+
+						<!-- uEBD8-wheel-1 -->
+						<i class="svg-uEBD8-wheel-1">uEBD8-wheel-1</i>
+
+					</div>
+					<h2>uEBD8-wheel-1</h2>
+				</li>
+				<li title="uEBD9-wheel">
+					<div class="icon-box">
+
+						<!-- uEBD9-wheel -->
+						<i class="svg-uEBD9-wheel">uEBD9-wheel</i>
+
+					</div>
+					<h2>uEBD9-wheel</h2>
+				</li>
+				<li title="uEBDA-widget">
+					<div class="icon-box">
+
+						<!-- uEBDA-widget -->
+						<i class="svg-uEBDA-widget">uEBDA-widget</i>
+
+					</div>
+					<h2>uEBDA-widget</h2>
+				</li>
+				<li title="uEBDB-xls-file">
+					<div class="icon-box">
+
+						<!-- uEBDB-xls-file -->
+						<i class="svg-uEBDB-xls-file">uEBDB-xls-file</i>
+
+					</div>
+					<h2>uEBDB-xls-file</h2>
+				</li>
+				<li title="uEBDC-zip-file">
+					<div class="icon-box">
+
+						<!-- uEBDC-zip-file -->
+						<i class="svg-uEBDC-zip-file">uEBDC-zip-file</i>
+
+					</div>
+					<h2>uEBDC-zip-file</h2>
+				</li>
+				<li title="uEBDD-zoom-in-1">
+					<div class="icon-box">
+
+						<!-- uEBDD-zoom-in-1 -->
+						<i class="svg-uEBDD-zoom-in-1">uEBDD-zoom-in-1</i>
+
+					</div>
+					<h2>uEBDD-zoom-in-1</h2>
+				</li>
+				<li title="uEBDE-zoom-in">
+					<div class="icon-box">
+
+						<!-- uEBDE-zoom-in -->
+						<i class="svg-uEBDE-zoom-in">uEBDE-zoom-in</i>
+
+					</div>
+					<h2>uEBDE-zoom-in</h2>
+				</li>
+				<li title="uEBDF-zoom-out-1">
+					<div class="icon-box">
+
+						<!-- uEBDF-zoom-out-1 -->
+						<i class="svg-uEBDF-zoom-out-1">uEBDF-zoom-out-1</i>
+
+					</div>
+					<h2>uEBDF-zoom-out-1</h2>
+				</li>
+				<li title="uEBE0-zoom-out">
+					<div class="icon-box">
+
+						<!-- uEBE0-zoom-out -->
+						<i class="svg-uEBE0-zoom-out">uEBE0-zoom-out</i>
+
+					</div>
+					<h2>uEBE0-zoom-out</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<footer>
+			<p>Generated at Wed, 11 Apr 2018 10:55:19 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
+		</footer>
+	</body>
+</html>
